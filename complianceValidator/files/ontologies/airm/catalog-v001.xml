@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1520251440709" name="http://www.best-project.org/owl/AIRM" uri="airm-mono.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1520251440709" name="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl" uri="aerodromeinfrastructure.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1520251440709" name="http://www.project-best.eu/owl/airm-mod/aircraft.owl" uri="aircraft.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1520251440709" name="http://www.project-best.eu/owl/airm-mod/baseinfrastructurecodelists.owl" uri="baseinfrastructurecodelists.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1520251440709" name="http://www.project-best.eu/owl/airm-mod/common.owl" uri="common.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1520251440709" name="http://www.project-best.eu/owl/airm-mod/meteorology.owl" uri="meteorology.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1520251440709" name="http://www.project-best.eu/owl/airm-mod/navigationinfrastructure.owl" uri="navigationinfrastructure.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1520251440709" name="http://www.project-best.eu/owl/airm-mod/obstacle.owl" uri="obstacle.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1520251440709" name="http://www.project-best.eu/owl/airm-mod/stakeholders.owl" uri="stakeholders.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1520251440709" name="http://www.project-best.eu/owl/airm-mod/surveillanceinfrastructure.owl" uri="surveillanceinfrastructure.owl"/>
+    </group>
+</catalog>

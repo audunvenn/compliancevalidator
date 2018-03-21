@@ -1,0 +1,639 @@
+<?xml version='1.0' encoding='utf-8' standalone='no'?>
+<rdf:RDF xmlns='http://knowledgeweb.semanticweb.org/heterogeneity/alignment#'
+         xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#'
+         xmlns:xsd='http://www.w3.org/2001/XMLSchema#'
+         xmlns:alext='http://exmo.inrialpes.fr/align/ext/1.0/'
+         xmlns:align='http://knowledgeweb.semanticweb.org/heterogeneity/alignment#'>
+<Alignment>
+  <xml>yes</xml>
+  <level>0</level>
+  <type>**</type>
+  <relationClass>fr.inrialpes.exmo.align.impl.rel.A5AlgebraRelation</relationClass>
+  <onto1>
+    <Ontology rdf:about="http://www.project-best.eu/owl/aixm/airportheliport#">
+      <location>http://www.project-best.eu/owl/aixm/airportheliport#</location>
+    </Ontology>
+  </onto1>
+  <onto2>
+    <Ontology rdf:about="http://www.project-best.eu/owl/airm-mono/airm.owl#">
+      <location>http://www.project-best.eu/owl/airm-mono/airm.owl#</location>
+    </Ontology>
+  </onto2>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://www.project-best.eu/owl/aixm.owl#GuidanceLineMarking'/>
+      <entity2 rdf:resource='http://www.project-best.eu/owl/airm-mono/airm.owl#GuidanceLineMarking'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://www.project-best.eu/owl/aixm.owl#SurfaceContaminationLayer'/>
+      <entity2 rdf:resource='http://www.project-best.eu/owl/airm-mono/airm.owl#SurfaceContaminationLayer'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://www.project-best.eu/owl/aixm.owl#GroundLightingAvailability'/>
+      <entity2 rdf:resource='http://www.project-best.eu/owl/airm-mono/airm.owl#GroundLightingAvailability'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://www.project-best.eu/owl/aixm.owl#Taxiway'/>
+      <entity2 rdf:resource='http://www.project-best.eu/owl/airm-mono/airm.owl#Taxiway'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://www.project-best.eu/owl/aixm.owl#ManoeuvringAreaUsage'/>
+      <entity2 rdf:resource='http://www.project-best.eu/owl/airm-mono/airm.owl#ManoeuvringAreaUsage'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://www.project-best.eu/owl/aixm.owl#AirportHeliport'/>
+      <entity2 rdf:resource='http://www.project-best.eu/owl/airm-mono/airm.owl#Aerodrome'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://www.project-best.eu/owl/aixm.owl#ApronContamination'/>
+      <entity2 rdf:resource='http://www.project-best.eu/owl/airm-mono/airm.owl#ApronContamination'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://www.project-best.eu/owl/aixm.owl#RunwayMarking'/>
+      <entity2 rdf:resource='http://www.project-best.eu/owl/airm-mono/airm.owl#RunwayMarking'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://www.project-best.eu/owl/aixm.owl#Marking'/>
+      <entity2 rdf:resource='http://www.project-best.eu/owl/airm-mono/airm.owl#Marking'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://www.project-best.eu/owl/aixm.owl#MarkingElement'/>
+      <entity2 rdf:resource='http://www.project-best.eu/owl/airm-mono/airm.owl#MarkingElement'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://www.project-best.eu/owl/aixm.owl#WorkArea'/>
+      <entity2 rdf:resource='http://www.project-best.eu/owl/airm-mono/airm.owl#WorkArea'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://www.project-best.eu/owl/aixm.owl#TaxiwayElement'/>
+      <entity2 rdf:resource='http://www.project-best.eu/owl/airm-mono/airm.owl#TaxiwayElement'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://www.project-best.eu/owl/aixm.owl#RunwayVisualRange'/>
+      <entity2 rdf:resource='http://www.project-best.eu/owl/airm-mono/airm.owl#RunwayVisualRange'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://www.project-best.eu/owl/aixm.owl#ApronMarking'/>
+      <entity2 rdf:resource='http://www.project-best.eu/owl/airm-mono/airm.owl#ApronMarking'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://www.project-best.eu/owl/aixm.owl#GroundLightSystem'/>
+      <entity2 rdf:resource='http://www.project-best.eu/owl/airm-mono/airm.owl#GroundLightSystem'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://www.project-best.eu/owl/aixm.owl#SeaplaneRampSite'/>
+      <entity2 rdf:resource='http://www.project-best.eu/owl/airm-mono/airm.owl#SeaplaneRampSite'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://www.project-best.eu/owl/aixm.owl#SurveyControlPoint'/>
+      <entity2 rdf:resource='http://www.project-best.eu/owl/airm-mono/airm.owl#CodePointUsageType'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://www.project-best.eu/owl/aixm.owl#RunwayDeclaredDistance'/>
+      <entity2 rdf:resource='http://www.project-best.eu/owl/airm-mono/airm.owl#RunwayDeclaredDistance'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://www.project-best.eu/owl/aixm.owl#RunwaySectionContamination'/>
+      <entity2 rdf:resource='http://www.project-best.eu/owl/airm-mono/airm.owl#RunwaySectionContamination'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://www.project-best.eu/owl/aixm.owl#RunwayProtectAreaLightSystem'/>
+      <entity2 rdf:resource='http://www.project-best.eu/owl/airm-mono/airm.owl#RunwayProtectAreaLightSystem'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://www.project-best.eu/owl/aixm.owl#LightActivation'/>
+      <entity2 rdf:resource='http://www.project-best.eu/owl/airm-mono/airm.owl#LightActivation'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://www.project-best.eu/owl/aixm.owl#GuidanceLine'/>
+      <entity2 rdf:resource='http://www.project-best.eu/owl/airm-mono/airm.owl#GuidanceLine'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://www.project-best.eu/owl/aixm.owl#SurfaceContamination'/>
+      <entity2 rdf:resource='http://www.project-best.eu/owl/airm-mono/airm.owl#SurfaceContamination'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://www.project-best.eu/owl/aixm.owl#AirportHeliportResponsibilityOrganisation'/>
+      <entity2 rdf:resource='http://www.project-best.eu/owl/airm-mono/airm.owl#AerodromeResponsibilityOrganisation'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://www.project-best.eu/owl/aixm.owl#GuidanceLineLightSystem'/>
+      <entity2 rdf:resource='http://www.project-best.eu/owl/airm-mono/airm.owl#GuidanceLineLightSystem'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://www.project-best.eu/owl/aixm.owl#RunwayContamination'/>
+      <entity2 rdf:resource='http://www.project-best.eu/owl/airm-mono/airm.owl#RunwayContamination'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://www.project-best.eu/owl/aixm.owl#VisualGlideSlopeIndicator'/>
+      <entity2 rdf:resource='http://www.project-best.eu/owl/airm-mono/airm.owl#VisualGlideSlopeIndicator'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://www.project-best.eu/owl/aixm.owl#StandMarking'/>
+      <entity2 rdf:resource='http://www.project-best.eu/owl/airm-mono/airm.owl#StandMarking'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://www.project-best.eu/owl/aixm.owl#ArrestingGear'/>
+      <entity2 rdf:resource='http://www.project-best.eu/owl/airm-mono/airm.owl#ArrestingGear'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://www.project-best.eu/owl/aixm.owl#AltimeterSourceStatus'/>
+      <entity2 rdf:resource='http://www.project-best.eu/owl/airm-mono/airm.owl#AltimeterSourceStatus'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://www.project-best.eu/owl/aixm.owl#AirportHeliportAvailability'/>
+      <entity2 rdf:resource='http://www.project-best.eu/owl/airm-mono/airm.owl#AerodromeAvailability'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://www.project-best.eu/owl/aixm.owl#Apron'/>
+      <entity2 rdf:resource='http://www.project-best.eu/owl/airm-mono/airm.owl#Apron'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://www.project-best.eu/owl/aixm.owl#AirportProtectionAreaMarking'/>
+      <entity2 rdf:resource='http://www.project-best.eu/owl/airm-mono/airm.owl#AerodromeProtectionAreaMarking'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://www.project-best.eu/owl/aixm.owl#RunwayDeclaredDistanceValue'/>
+      <entity2 rdf:resource='http://www.project-best.eu/owl/airm-mono/airm.owl#RunwayDeclaredDistance'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://www.project-best.eu/owl/aixm.owl#AirportHeliportProtectionArea'/>
+      <entity2 rdf:resource='http://www.project-best.eu/owl/airm-mono/airm.owl#AerodromeProtectionArea'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://www.project-best.eu/owl/aixm.owl#RunwayBlastPad'/>
+      <entity2 rdf:resource='http://www.project-best.eu/owl/airm-mono/airm.owl#RunwayBlastPad'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://www.project-best.eu/owl/aixm.owl#FloatingDockSite'/>
+      <entity2 rdf:resource='http://www.project-best.eu/owl/airm-mono/airm.owl#FloatingDockSite'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://www.project-best.eu/owl/aixm.owl#TouchDownLiftOffSafeArea'/>
+      <entity2 rdf:resource='http://www.project-best.eu/owl/airm-mono/airm.owl#TouchDownLiftOffSafeArea'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://www.project-best.eu/owl/aixm.owl#TouchDownLiftOffMarking'/>
+      <entity2 rdf:resource='http://www.project-best.eu/owl/airm-mono/airm.owl#TouchDownLiftOffMarking'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://www.project-best.eu/owl/aixm.owl#Road'/>
+      <entity2 rdf:resource='http://www.project-best.eu/owl/airm-mono/airm.owl#Road'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://www.project-best.eu/owl/aixm.owl#UsageCondition'/>
+      <entity2 rdf:resource='http://www.project-best.eu/owl/airm-mono/airm.owl#UsageCondition'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://www.project-best.eu/owl/aixm.owl#TaxiwayMarking'/>
+      <entity2 rdf:resource='http://www.project-best.eu/owl/airm-mono/airm.owl#TaxiwayMarking'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://www.project-best.eu/owl/aixm.owl#AirportHeliportCollocation'/>
+      <entity2 rdf:resource='http://www.project-best.eu/owl/airm-mono/airm.owl#AerodromeCollocation'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://www.project-best.eu/owl/aixm.owl#Runway'/>
+      <entity2 rdf:resource='http://www.project-best.eu/owl/airm-mono/airm.owl#Runway'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://www.project-best.eu/owl/aixm.owl#ApronElement'/>
+      <entity2 rdf:resource='http://www.project-best.eu/owl/airm-mono/airm.owl#ApronElement'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://www.project-best.eu/owl/aixm.owl#City'/>
+      <entity2 rdf:resource='http://www.project-best.eu/owl/airm-mono/airm.owl#City'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://www.project-best.eu/owl/aixm.owl#DeicingAreaMarking'/>
+      <entity2 rdf:resource='http://www.project-best.eu/owl/airm-mono/airm.owl#DeicingAreaMarking'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://www.project-best.eu/owl/aixm.owl#TouchDownLiftOffLightSystem'/>
+      <entity2 rdf:resource='http://www.project-best.eu/owl/airm-mono/airm.owl#TouchDownLiftOffLightSystem'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://www.project-best.eu/owl/aixm.owl#NavaidEquipmentDistance'/>
+      <entity2 rdf:resource='http://www.project-best.eu/owl/airm-mono/airm.owl#NavaidEquipmentDistance'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://www.project-best.eu/owl/aixm.owl#ApronAreaUsage'/>
+      <entity2 rdf:resource='http://www.project-best.eu/owl/airm-mono/airm.owl#ApronAreaUsage'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://www.project-best.eu/owl/aixm.owl#ManoeuvringAreaAvailability'/>
+      <entity2 rdf:resource='http://www.project-best.eu/owl/airm-mono/airm.owl#ManoeuvringAreaAvailability'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://www.project-best.eu/owl/aixm.owl#TaxiHoldingPositionMarking'/>
+      <entity2 rdf:resource='http://www.project-best.eu/owl/airm-mono/airm.owl#TaxiwayHoldingPositionMarking'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://www.project-best.eu/owl/aixm.owl#AircraftStandContamination'/>
+      <entity2 rdf:resource='http://www.project-best.eu/owl/airm-mono/airm.owl#AircraftStandContamination'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://www.project-best.eu/owl/aixm.owl#AirportHeliportUsage'/>
+      <entity2 rdf:resource='http://www.project-best.eu/owl/airm-mono/airm.owl#AerodromeUsage'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://www.project-best.eu/owl/aixm.owl#AirportHeliportContamination'/>
+      <entity2 rdf:resource='http://www.project-best.eu/owl/airm-mono/airm.owl#AerodromeContamination'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://www.project-best.eu/owl/aixm.owl#AirportHotSpot'/>
+      <entity2 rdf:resource='http://www.project-best.eu/owl/airm-mono/airm.owl#AerodromeHotSpot'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://www.project-best.eu/owl/aixm.owl#AircraftStand'/>
+      <entity2 rdf:resource='http://www.project-best.eu/owl/airm-mono/airm.owl#AircraftStand'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://www.project-best.eu/owl/aixm.owl#SurfaceCharacteristics'/>
+      <entity2 rdf:resource='http://www.project-best.eu/owl/airm-mono/airm.owl#SurfaceCharacteristics'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://www.project-best.eu/owl/aixm.owl#RunwayDirection'/>
+      <entity2 rdf:resource='http://www.project-best.eu/owl/airm-mono/airm.owl#RunwayDirection'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://www.project-best.eu/owl/aixm.owl#TouchDownLiftOffContamination'/>
+      <entity2 rdf:resource='http://www.project-best.eu/owl/airm-mono/airm.owl#TouchDownLiftOffContamination'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://www.project-best.eu/owl/aixm.owl#DeicingArea'/>
+      <entity2 rdf:resource='http://www.project-best.eu/owl/airm-mono/airm.owl#DeicingArea'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://www.project-best.eu/owl/aixm.owl#RunwayProtectArea'/>
+      <entity2 rdf:resource='http://www.project-best.eu/owl/airm-mono/airm.owl#RunwayProtectArea'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://www.project-best.eu/owl/aixm.owl#NonMovementArea'/>
+      <entity2 rdf:resource='http://www.project-best.eu/owl/airm-mono/airm.owl#NonMovementArea'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://www.project-best.eu/owl/aixm.owl#TouchDownLiftOff'/>
+      <entity2 rdf:resource='http://www.project-best.eu/owl/airm-mono/airm.owl#TouchDownLiftOff'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://www.project-best.eu/owl/aixm.owl#AltimeterSource'/>
+      <entity2 rdf:resource='http://www.project-best.eu/owl/airm-mono/airm.owl#AltimeterSource'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://www.project-best.eu/owl/aixm.owl#ApproachLightingSystem'/>
+      <entity2 rdf:resource='http://www.project-best.eu/owl/airm-mono/airm.owl#ApproachLightingSystem'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://www.project-best.eu/owl/aixm.owl#TaxiHoldingPositionLightSystem'/>
+      <entity2 rdf:resource='http://www.project-best.eu/owl/airm-mono/airm.owl#TaxiwayHoldingPositionLightSystem'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://www.project-best.eu/owl/aixm.owl#ApronLightSystem'/>
+      <entity2 rdf:resource='http://www.project-best.eu/owl/airm-mono/airm.owl#ApronLightSystem'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://www.project-best.eu/owl/aixm.owl#ApronAreaAvailability'/>
+      <entity2 rdf:resource='http://www.project-best.eu/owl/airm-mono/airm.owl#ApronAreaAvailability'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://www.project-best.eu/owl/aixm.owl#TaxiwayLightSystem'/>
+      <entity2 rdf:resource='http://www.project-best.eu/owl/airm-mono/airm.owl#TaxiwayLightSystem'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://www.project-best.eu/owl/aixm.owl#RunwayDirectionLightSystem'/>
+      <entity2 rdf:resource='http://www.project-best.eu/owl/airm-mono/airm.owl#RunwayDirectionLightSystem'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://www.project-best.eu/owl/aixm.owl#Ridge'/>
+      <entity2 rdf:resource='http://www.project-best.eu/owl/airm-mono/airm.owl#Ridge'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://www.project-best.eu/owl/aixm.owl#TaxiHoldingPosition'/>
+      <entity2 rdf:resource='http://www.project-best.eu/owl/airm-mono/airm.owl#TaxiwayHoldingPosition'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://www.project-best.eu/owl/aixm.owl#SeaplaneLandingArea'/>
+      <entity2 rdf:resource='http://www.project-best.eu/owl/airm-mono/airm.owl#SeaplaneLandingArea'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://www.project-best.eu/owl/aixm.owl#PassengerLoadingBridge'/>
+      <entity2 rdf:resource='http://www.project-best.eu/owl/airm-mono/airm.owl#PassengerLoadingBridge'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://www.project-best.eu/owl/aixm.owl#TaxiwayContamination'/>
+      <entity2 rdf:resource='http://www.project-best.eu/owl/airm-mono/airm.owl#TaxiwayContamination'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://www.project-best.eu/owl/aixm.owl#MarkingBuoy'/>
+      <entity2 rdf:resource='http://www.project-best.eu/owl/airm-mono/airm.owl#MarkingBuoy'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+</Alignment>
+</rdf:RDF>

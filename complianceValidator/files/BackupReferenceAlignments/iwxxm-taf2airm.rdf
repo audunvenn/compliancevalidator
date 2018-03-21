@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns='http://knowledgeweb.semanticweb.org/heterogeneity/alignment' 
+   	  xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#' 
+         xmlns:xsd='http://www.w3.org/2001/XMLSchema#'>
+  <Alignment>
+    <xml>yes</xml>
+    <level>0</level>
+    <type>**</type>
+    <relationClass>fr.inrialpes.exmo.align.impl.rel.A5AlgebraRelation</relationClass>
+    <onto1>
+      <Ontology rdf:about="http://www.project-best.eu/owl/iwxxm-mod/taf#">
+        <location>http://www.project-best.eu/owl/iwxxm-mod/taf#</location>
+      </Ontology>
+    </onto1>
+    <onto2>
+      <Ontology rdf:about="http://www.project-best.eu/owl/airm-mono/airm.owl#">
+        <location>http://www.project-best.eu/owl/airm-mono/airm.owl#</location>
+      </Ontology>
+    </onto2>
+      <map>
+        <Cell cid="1">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#TAF"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#TAF"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="2">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#AerodromeAirTemperatureForecastType.maximumAirTemperature"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#AviationCondition.maximumAirTemperature"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>&lt;</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="3">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#AerodromeAirTemperatureForecastType.maximumAirTemperatureTime"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#AviationCondition.maximumAirTemperatureTime"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>&lt;</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="4">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#AerodromeAirTemperatureForecastType.minimumAirTemperature"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#AviationCondition.minimumAirTemperature"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>&lt;</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="5">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#AerodromeAirTemperatureForecastType.minimumAirTemperatureTime"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#AviationCondition.minimumAirTemperatureTime"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>&lt;</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="6">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#MeteorologicalAerodromeForecastRecordType.prevailingVisibility"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#HorizontalVisibility.prevailingVisibility"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="7">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#MeteorologicalAerodromeForecastRecordType.prevailingVisibilityOperator"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#RunwayVisualRange.rvrValueInterpretation"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>&lt;</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="8">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#MeteorologicalAerodromeForecastRecordType.weather"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#WeatherPhenomenon"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>&lt;</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="9">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#MeteorologicalAerodromeForecastRecordType.cloud"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#Cloud"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>&lt;</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="10">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#MeteorologicalAerodromeForecastRecordType.changeIndicator"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#WeatherCondition.changeIndicator"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>&lt;</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="11">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#MeteorologicalAerodromeForecastRecordType.cloudAndVisibilityOK"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#AerodromeCondition.cavok"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+  </Alignment>
+</rdf:RDF>

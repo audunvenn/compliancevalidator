@@ -1,0 +1,2149 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rdf:RDF xmlns='http://knowledgeweb.semanticweb.org/heterogeneity/alignment' 
+   	  xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#' 
+         xmlns:xsd='http://www.w3.org/2001/XMLSchema#'>
+  <Alignment>
+    <xml>yes</xml>
+    <level>0</level>
+    <type>**</type>
+    <relationClass>fr.inrialpes.exmo.align.impl.rel.A5AlgebraRelation</relationClass>
+    <onto1>
+      <Ontology rdf:about="http://www.project-best.eu/owl/aixm/airportheliport#">
+        <location>http://www.project-best.eu/owl/aixm/airportheliport#</location>
+      </Ontology>
+    </onto1>
+    <onto2>
+      <Ontology rdf:about="http://www.project-best.eu/owl/airm-mono/airm.owl#">
+        <location>http://www.project-best.eu/owl/airm-mono/airm.owl#</location>
+      </Ontology>
+    </onto2>
+      <map>
+        <Cell cid="1">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#AerialRefuelling"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#AerialRefuelling"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="2">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#AerialRefuellingAnchor"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#AerialRefuellingAnchor"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="3">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#AerialRefuellingPoint"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#CodeSignificantPointDesignatorType"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>&lt;</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="4">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#AerialRefuellingTrack"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#AerialRefuellingTrack"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="5">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#AeronauticalGroundLight"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#AeronauticalGroundLight"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="6">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#AircraftCharacteristic"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#Aircraft"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>&lt;</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="7">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#AircraftGroundService"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#AircraftGroundService"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="8">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#AircraftStand"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#AircraftStand"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="9">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#AircraftStandContamination"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#AircraftStandContamination"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="10">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#AirportClearanceService"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#AirportClearanceService"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="11">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#AirportGroundService"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#AirportGroundService"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="12">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#AirportHeliport"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#Aerodrome"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="13">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#AirportHeliportAvailability"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#AerodromeAvailability"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="14">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#AirportHeliportCollocation"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#AerodromeCollocation"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="15">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#AirportHeliportContamination"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#AerodromeContamination"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="16">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#AirportHeliportProtectionArea"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#AerodromeProtectionArea"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="17">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#AirportHeliportResponsibilityOrganisation"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#AerodromeResponsibilityOrganisation"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="18">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#AirportHeliportUsage"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#AerodromeUsage"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="19">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#AirportHotSpot"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#AerodromeHotSpot"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="20">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#AirportProtectionAreaMarking"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#AerodromeProtectionAreaMarking"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="21">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#AirportSuppliesService"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#AirportSuppliesService"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="22">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#Airspace"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#Airspace"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="23">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#AirspaceActivation"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#AirspaceActivation"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="24">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#AirspaceBorderCrossing"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#AirspaceEntry"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>&lt;</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="25">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#AirspaceBorderCrossing"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#AirspaceExit"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>&lt;</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="26">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#AirspaceGeometryComponent"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#AirspaceGeometryComponent"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="27">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#AirspaceLayer"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#AirspaceLayer"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="28">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#AirspaceLayerClass"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#AirspaceLayerClass"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="29">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#AirspaceVolume"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#AirspaceVolume"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="30">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#AirspaceVolumeDependency"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#AirspaceVolumeDependency"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="31">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#AirTrafficControlService"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#AirTrafficControlService"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="32">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#AirTrafficManagementService"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#AirTrafficManagementService"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="33">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#AltimeterSource"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#AltimeterSource"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="34">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#AltimeterSourceStatus"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#AltimeterSourceStatus"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="35">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#AltitudeAdjustment"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#AltitudeAdjustment"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="36">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#AngleIndication"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#AngleIndication"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="37">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#AngleUse"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#AngleUse"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="38">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#ApproachAltitudeTable"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#ApproachAltitudeTable"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="39">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#ApproachCondition"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#ApproachCondition"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="40">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#ApproachDistanceTable"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#ApproachDistanceTable"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="41">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#ApproachLeg"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#ApproachLeg"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="42">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#ApproachLightingSystem"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#ApproachLightingSystem"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="43">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#ApproachTimingTable"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#ApproachTimingTable"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="44">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#Apron"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#Apron"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="45">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#ApronAreaAvailability"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#ApronAreaAvailability"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="46">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#ApronAreaUsage"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#ApronAreaUsage"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="47">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#ApronContamination"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#ApronContamination"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="48">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#ApronElement"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#ApronElement"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="49">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#ApronLightSystem"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#ApronLightSystem"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="50">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#ApronMarking"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#ApronMarking"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="51">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#ArrestingGear"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#ArrestingGear"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="52">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#ArrestingGearExtent"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#GeoEnabledEntity"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>&lt;</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="53">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#ArrivalFeederLeg"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#ArrivalFeederLeg"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="54">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#ArrivalLeg"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#ArrivalLeg"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="55">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#AuthorityForAerialRefuelling"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#AuthorityForAerialRefuelling"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="56">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#AuthorityForAirspace"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#AuthorityForAirspace"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="57">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#AuthorityForNavaidEquipment"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#AuthorityForNavaidEquipment"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="58">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#AuthorityForSpecialNavigationStation"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#AuthorityForSpecialNavigationStation"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="59">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#AuthorityForSpecialNavigationSystem"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#AuthorityForSpecialNavigationSystem"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="60">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#Azimuth"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#MLSAzimuth"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="61">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#CallsignDetail"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#ServiceProviderCallsign"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="62">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#ChangeOverPoint"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#CodePointUsageType"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>&lt;</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="63">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#CheckpointINS"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#CodePointUsageType"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>&lt;</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="64">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#CheckpointVOR"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#CodePointUsageType"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>&lt;</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="65">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#CircleSector"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#CircleSector"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="66">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#CirclingArea"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#CirclingArea"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="67">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#CirclingRestriction"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#CirclingRestriction"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="68">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#City"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#City"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="69">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#ContactInformation"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#ContactInformation"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="70">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#Curve"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#TwoDimensionalCurveType"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>&lt;</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="71">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#DeicingArea"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#DeicingArea"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="72">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#DeicingAreaMarking"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#DeicingAreaMarking"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="73">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#DepartureArrivalCondition"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#DepartureLegCondition"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>&gt;</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="74">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#DepartureLeg"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#DepartureLeg"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="75">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#DesignatedPoint"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#DesignatedPoint"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="76">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#DirectFlight"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#Trajectory"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>&lt;</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="77">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#DirectFlightClass"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#TrajectorySegment"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>&lt;</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="78">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#DirectFlightSegment"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#TrajectorySegment"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>&lt;</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="79">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#DirectionFinder"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#DirectionFinder"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="80">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#DistanceIndication"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#DistanceIndication"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="81">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#DME"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#DME"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="82">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#ElevatedCurve"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#ThreeDimensionalCurveType"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="83">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#ElevatedPoint"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#ThreeDimensionalPointType"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="84">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#ElevatedSurface"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#ThreeDimensionalSurfaceType"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="85">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#Elevation"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#MLSElevation"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="86">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#EnRouteSegmentPoint"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#CodePointUsageType"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>&lt;</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="87">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#EquipmentUnavailableAdjustment"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#EquipmentUnavailableAdjustment"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="88">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#EquipmentUnavailableAdjustmentColumn"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#EquipmentUnavailableAdjustmentColumn"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="89">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#FASDataBlock"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#FinalApproachSegmentDataBlock"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="90">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#FinalLeg"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#FinalLeg"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="91">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#FinalProfile"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#FinalProfile"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="92">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#FireFightingService"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#FireFightingService"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="93">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#FlightCharacteristic"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#Flight"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>&lt;</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="94">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#FlightConditionCircumstance"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#FlightConditionCircumstance"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="95">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#FlightConditionCombination"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#FlightConditionCombination"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="96">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#FlightConditionElement"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#FlightConditionElement"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="97">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#FlightRestriction"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#FlightRestriction"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="98">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#FlightRestrictionLevel"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#FlightRestrictionLevel"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="99">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#FlightRestrictionRoute"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#FlightRestrictionRoute"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="100">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#FlightRoutingElement"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#FlightRoutingElement"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="101">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#FloatingDockSite"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#FloatingDockSite"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="102">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#Fuel"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#Fuel"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="103">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#GeoBorder"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#GeoBorder"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="104">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#Glidepath"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#ILSGlidepath"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="105">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#GroundLightingAvailability"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#GroundLightingAvailability"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="106">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#GroundLightSystem"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#GroundLightSystem"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="107">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#GroundTrafficControlService"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#GroundTrafficControlService"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="108">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#GuidanceLine"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#GuidanceLine"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="109">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#GuidanceLineLightSystem"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#GuidanceLineLightSystem"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="110">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#GuidanceLineMarking"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#GuidanceLineMarking"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="111">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#HoldingAssessment"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#HoldingAssessment"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="112">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#HoldingPattern"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#HoldingProcedure"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="113">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#HoldingPatternDistance"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#HoldingProcedure.outboundLegEndDistance"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="114">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#HoldingPatternDuration"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#HoldingProcedure.outboundLegEndTime"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="115">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#HoldingUse"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#HoldingUse"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="116">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#InformationService"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#InformationService"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="117">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#InitialLeg"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#InitialLeg"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="118">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#InstrumentApproachProcedure"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#InstrumentApproachProcedure"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="119">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#IntermediateLeg"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#IntermediateLeg"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="120">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#LandingTakeoffAreaCollection"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#Procedure.servedRunwayDirection"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="121">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#LightActivation"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#LightActivation"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="122">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#LightElement"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#LightElement"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="123">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#LightElementStatus"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#LightStatus"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="124">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#LinguisticNote"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#LinguisticNote"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>&lt;</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="125">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#Localizer"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#Localizer"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="126">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#ManoeuvringAreaAvailability"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#ManoeuvringAreaAvailability"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="127">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#ManoeuvringAreaUsage"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#ManoeuvringAreaUsage"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="128">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#MarkerBeacon"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#MarkerBeacon"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="129">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#Marking"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#Marking"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="130">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#MarkingBuoy"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#MarkingBuoy"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="131">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#MarkingElement"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#MarkingElement"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="132">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#MarkingExtent"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#GeoEnabledEntity"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>&lt;</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="133">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#Meteorology"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#WeatherCondition"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="134">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#Minima"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#Minima"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="135">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#MissedApproachGroup"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#MissedApproachProcedure"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>&lt;</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="136">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#MissedApproachLeg"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#MissedApproachLeg"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="137">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#Navaid"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#RadioNavigationAid"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="138">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#NavaidComponent"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#NavaidComponent"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="139">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#NavaidEquipment"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#RadioNavigationAid"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>&lt;</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="140">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#NavaidEquipmentDistance"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#NavaidEquipmentDistance"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="141">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#NavaidEquipmentMonitoring"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#NavaidEquipmentMonitoring"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="142">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#NavaidOperationalStatus"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#NavaidOperationalStatus"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="143">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#NavigationArea"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#NavigationArea"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="144">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#NavigationAreaRestriction"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#NavigationAreaRestriction"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="145">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#NavigationAreaSector"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#NavigationAreaSector"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="146">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#NavigationSystemCheckpoint"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#CodePointUsageType"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>&lt;</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="147">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#NDB"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#NDB"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="148">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#Nitrogen"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#NitrogenSupply"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="149">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#NonMovementArea"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#NonMovementArea"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="150">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#Note"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#Note"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="151">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#ObstacleArea"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#ObstacleArea"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="152">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#ObstacleAssessmentArea"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#ObstacleAssessmentArea"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="153">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#ObstaclePlacement"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#ObstaclePlacement"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="154">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#Obstruction"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#Obstruction"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="155">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#Oil"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#Oil"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="156">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#OnlineContact"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#OnlineContact"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="157">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#OrganisationAuthority"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#Organisation"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="158">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#OrganisationAuthorityAssociation"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#OrganisationAssociation"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="159">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#Oxygen"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#OxygenSupply"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="160">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#PassengerLoadingBridge"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#PassengerLoadingBridge"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="161">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#PassengerService"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#PassengerService"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="162">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#PilotControlledLighting"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#PilotControlledLighting"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="163">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#Point"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#TwoDimensionalPointType"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="164">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#PointReference"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#PointReference"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="165">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#PostalAddress"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#PostalAddress"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="166">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#PrecisionApproachRadar"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#PrecisionApproachRadar"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="167">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#PrimarySurveillanceRadar"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#PrecisionApproachRadar"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="168">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#Procedure"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#Procedure"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="169">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#ProcedureAvailability"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#ProcedureAvailability"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="170">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#ProcedureDME"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#ProcedureDME"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="171">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#ProcedureTransition"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#ProcedureTransition"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="172">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#ProcedureTransitionLeg"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#SegmentLeg"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>&lt;</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="173">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#PropertiesWithSchedule"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#ObjectWithSchedule"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="174">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#RadarComponent"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#RadarComponent"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="175">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#RadarEquipment"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#RadarEquipment"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="176">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#RadarSystem"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#RadarSystem"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="177">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#RadioCommunicationChannel"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#RadioCommunicationChannel"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="178">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#RadioCommunicationOperationalStatus"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#RadioCommunicationOperationalStatus"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="179">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#RadioFrequencyArea"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#RadioFrequencyArea"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="180">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#Reflector"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#Reflector"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="181">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#Ridge"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#Ridge"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="182">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#Road"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#Road"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="183">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#Route"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#Route"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="184">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#RouteAvailability"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#RouteAvailability"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="185">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#RouteDME"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#RouteDME"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="186">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#RoutePortion"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#RoutePortion"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="187">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#RouteSegment"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#RouteSegment"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="188">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#RulesProcedures"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#RulesProcedures"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="189">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#Runway"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#Runway"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="190">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#RunwayBlastPad"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#RunwayBlastPad"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="191">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#RunwayCentrelinePoint"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#CodePointUsageType"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>&lt;</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="192">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#RunwayContamination"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#RunwayContamination"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="193">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#RunwayDeclaredDistance"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#RunwayDeclaredDistance"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="194">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#RunwayDeclaredDistanceValue"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#RunwayDeclaredDistance"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="195">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#RunwayDirection"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#RunwayDirection"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="196">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#RunwayDirectionLightSystem"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#RunwayDirectionLightSystem"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="197">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#RunwayElement"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#RunwayElement"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>&lt;</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="198">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#RunwayMarking"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#RunwayMarking"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="199">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#RunwayProtectArea"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#RunwayProtectArea"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="200">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#RunwayProtectAreaLightSystem"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#RunwayProtectAreaLightSystem"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="201">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#RunwaySectionContamination"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#RunwaySectionContamination"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="202">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#RunwayVisualRange"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#RunwayVisualRange"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="203">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#SafeAltitudeArea"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#SafeAltitudeArea"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="204">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#SafeAltitudeAreaSector"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#SafeAltitudeAreaSector"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="205">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#SDF"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#SimplifiedDirectionalFacility"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="206">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#SeaplaneLandingArea"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#SeaplaneLandingArea"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="207">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#SeaplaneRampSite"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#SeaplaneRampSite"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="208">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#SearchRescueService"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#SearchAndRescueService"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="209">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#SecondarySurveillanceRadar"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#SecondarySurveillanceRadar"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="210">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#SectorDesign"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#SectorDesign"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="211">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#SegmentLeg"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#SegmentLeg"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="212">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#SegmentPoint"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#CodePointUsageType"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>&lt;</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="213">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#Service"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#Service"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>&lt;</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="214">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#ServiceOperationalStatus"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#ServiceOperationalStatus"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="215">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#SignificantPointInAirspace"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#SignificantPoint"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>&lt;</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="216">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#SpecialDate"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#SpecialDate"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="217">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#SpecialNavigationStation"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#SpecialNavigationStation"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="218">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#SpecialNavigationStationStatus"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#SpecialNavigationStationStatus"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="219">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#SpecialNavigationSystem"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#SpecialNavigationSystem"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="220">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#StandardInstrumentArrival"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#StandardInstrumentArrival"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="221">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#StandardInstrumentDeparture"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#StandardInstrumentDeparture"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="222">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#StandardLevel"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#StandardLevelTable"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>&lt;</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="223">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#StandardLevelColumn"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#StandardLevelColumn"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="224">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#StandardLevelSector"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#StandardLevelSector"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="225">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#StandardLevelTable"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#StandardLevelTable"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="226">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#StandMarking"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#StandMarking"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="227">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#Surface"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#TwoDimensionalSurfaceType"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>&lt;</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="228">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#SurfaceCharacteristics"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#SurfaceCharacteristics"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="229">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#SurfaceContamination"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#SurfaceContamination"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="230">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#SurfaceContaminationLayer"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#SurfaceContaminationLayer"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="231">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#SurveillanceGroundStation"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#SurveillanceGroundStation"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="232">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#SurveillanceRadar"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#SurveillanceRadar"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="233">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#SurveyControlPoint"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#CodePointUsageType"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="234">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#TACAN"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#TACAN"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="235">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#TaxiHoldingPosition"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#TaxiwayHoldingPosition"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="236">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#TaxiHoldingPositionLightSystem"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#TaxiwayHoldingPositionLightSystem"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="237">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#TaxiHoldingPositionMarking"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#TaxiwayHoldingPositionMarking"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="238">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#Taxiway"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#Taxiway"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="239">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#TaxiwayContamination"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#TaxiwayContamination"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="240">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#TaxiwayElement"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#TaxiwayElement"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="241">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#TaxiwayLightSystem"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#TaxiwayLightSystem"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="242">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#TaxiwayMarking"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#TaxiwayMarking"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="243">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#TelephoneContact"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#TelephoneContact"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="244">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#TerminalArrivalArea"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#TerminalArrivalAltitude"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="245">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#TerminalArrivalAreaSector"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#TerminalArrivalAreaSector"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="246">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#TerminalSegmentPoint"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#CodePointUsageType"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="247">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#Timesheet"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#Timesheet"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="248">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#TouchDownLiftOff"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#TouchDownLiftOff"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="249">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#TouchDownLiftOffContamination"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#TouchDownLiftOffContamination"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="250">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#TouchDownLiftOffLightSystem"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#TouchDownLiftOffLightSystem"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="251">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#TouchDownLiftOffMarking"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#TouchDownLiftOffMarking"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="252">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#TouchDownLiftOffSafeArea"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#TouchDownLiftOffSafeArea"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="253">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#TrafficSeparationService"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#TrafficSeparationService"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="254">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#Unit"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#Unit"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="255">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#UnitAvailability"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#UnitAvailability"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="256">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#UnitDependency"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#UnitDependency"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="257">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#UnplannedHolding"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#UnplannedHolding"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="258">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#UsageCondition"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#UsageCondition"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="259">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#VerticalStructure"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#VerticalStructure"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="260">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#VerticalStructureLightingStatus"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#LightStatus"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>&lt;</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="261">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#VerticalStructurePart"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#VerticalStructurePart"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="262">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#VerticalStructurePartGeometry"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#GeoEnabledEntity"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>&lt;</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="263">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#VisualGlideSlopeIndicator"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#VisualGlideSlopeIndicator"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="264">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#VOR"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#VOR"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="265">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#WorkArea"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#WorkArea"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+      <map>
+        <Cell cid="266">
+          <entity1 rdf:resource="http://www.project-best.eu/owl/aixm.owl#WorkareaActivity"/>
+          <entity2 rdf:resource="http://www.project-best.eu/owl/airm-mono/airm.owl#WorkAreaActivity"/>
+          <measure rdf:datatype="xsd:float">1.0</measure>
+          <relation>=</relation>
+        </Cell>
+      </map>
+  </Alignment>
+</rdf:RDF>

@@ -1,0 +1,815 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://project-best.eu/owl/iwxxm/taf#"
+     xml:base="http://project-best.eu/owl/iwxxm/taf"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:iwxxm-taf="http://www.project-best.eu/owl/iwxxm-mod/taf#">
+    <owl:Ontology rdf:about="http://www.project-best.eu/owl/iwxxm-mod/taf">
+        <owl:imports rdf:resource="http://www.w3.org/2006/time"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.project-best.eu/owl/iwxxm-mod/taf#Aerodrome-designator -->
+
+    <owl:ObjectProperty rdf:about="http://www.project-best.eu/owl/iwxxm-mod/taf#Aerodrome-designator">
+        <rdfs:subPropertyOf rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#Aerodrome_OP_"/>
+        <rdfs:range rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#CodeAirportHeliportDesignatorType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.project-best.eu/owl/iwxxm-mod/taf#Aerodrome-designatorIATA -->
+
+    <owl:ObjectProperty rdf:about="http://www.project-best.eu/owl/iwxxm-mod/taf#Aerodrome-designatorIATA">
+        <rdfs:subPropertyOf rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#Aerodrome_OP_"/>
+        <rdfs:range rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#CodeIATAType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.project-best.eu/owl/iwxxm-mod/taf#Aerodrome-locationIndicatorICAO -->
+
+    <owl:ObjectProperty rdf:about="http://www.project-best.eu/owl/iwxxm-mod/taf#Aerodrome-locationIndicatorICAO">
+        <rdfs:subPropertyOf rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#Aerodrome_OP_"/>
+        <rdfs:range rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#CodeICAOType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.project-best.eu/owl/iwxxm-mod/taf#AerodromeAirTemperatureForecast-maximumAirTemperatureTime -->
+
+    <owl:ObjectProperty rdf:about="http://www.project-best.eu/owl/iwxxm-mod/taf#AerodromeAirTemperatureForecast-maximumAirTemperatureTime">
+        <rdfs:comment xml:lang="en">The time of occurrence of the maximum air temperature.  This must be within the period of the phenomenon time for this forecast record</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#AerodromeAirTemperatureForecast"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#AerodromeAirTemperatureForecast_OP_"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2006/time#Instant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.project-best.eu/owl/iwxxm-mod/taf#AerodromeAirTemperatureForecast-minimumAirTemperatureTime -->
+
+    <owl:ObjectProperty rdf:about="http://www.project-best.eu/owl/iwxxm-mod/taf#AerodromeAirTemperatureForecast-minimumAirTemperatureTime">
+        <rdfs:comment xml:lang="en">The time of occurrence of the minimum air temperature.  This must be within the period of the phenomenon time for this forecast record</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#AerodromeAirTemperatureForecast"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#AerodromeAirTemperatureForecast_OP_"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2006/time#Instant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.project-best.eu/owl/iwxxm-mod/taf#AerodromeAirTemperatureForecast_OP_ -->
+
+    <owl:ObjectProperty rdf:about="http://www.project-best.eu/owl/iwxxm-mod/taf#AerodromeAirTemperatureForecast_OP_"/>
+    
+
+
+    <!-- http://www.project-best.eu/owl/iwxxm-mod/taf#AerodromeCloudForecast-layer -->
+
+    <owl:ObjectProperty rdf:about="http://www.project-best.eu/owl/iwxxm-mod/taf#AerodromeCloudForecast-layer">
+        <rdfs:domain rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#AerodromeCloudForecast"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#AerodromeCloudForecast_OP_"/>
+        <rdfs:range rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#CloudLayer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.project-best.eu/owl/iwxxm-mod/taf#AerodromeCloudForecast_OP_ -->
+
+    <owl:ObjectProperty rdf:about="http://www.project-best.eu/owl/iwxxm-mod/taf#AerodromeCloudForecast_OP_"/>
+    
+
+
+    <!-- http://www.project-best.eu/owl/iwxxm-mod/taf#Aerodrome_OP_ -->
+
+    <owl:ObjectProperty rdf:about="http://www.project-best.eu/owl/iwxxm-mod/taf#Aerodrome_OP_"/>
+    
+
+
+    <!-- http://www.project-best.eu/owl/iwxxm-mod/taf#CloudLayer-amount -->
+
+    <owl:ObjectProperty rdf:about="http://www.project-best.eu/owl/iwxxm-mod/taf#CloudLayer-amount">
+        <rdfs:comment xml:lang="en">The observed cloud amount</rdfs:comment>
+        <rdfs:range rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#CloudAmountReportedAtAerodrome"/>
+        <rdfs:domain rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#CloudLayer"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#CloudLayer_OP_"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.project-best.eu/owl/iwxxm-mod/taf#CloudLayer-cloudType -->
+
+    <owl:ObjectProperty rdf:about="http://www.project-best.eu/owl/iwxxm-mod/taf#CloudLayer-cloudType">
+        <rdfs:comment xml:lang="en">The observed significant cloud types: cumulonimbus or towering cumulus</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#CloudLayer"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#CloudLayer_OP_"/>
+        <rdfs:range rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#SigConvectiveCloudType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.project-best.eu/owl/iwxxm-mod/taf#CloudLayer_OP_ -->
+
+    <owl:ObjectProperty rdf:about="http://www.project-best.eu/owl/iwxxm-mod/taf#CloudLayer_OP_"/>
+    
+
+
+    <!-- http://www.project-best.eu/owl/iwxxm-mod/taf#ComplexSamplingMeasurement-featureOfInterestpropertyValueProvider -->
+
+    <owl:ObjectProperty rdf:about="http://www.project-best.eu/owl/iwxxm-mod/taf#ComplexSamplingMeasurement-featureOfInterestpropertyValueProvider">
+        <rdfs:domain rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#ComplexSamplingMeasurement"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#ComplexSamplingMeasurement_OP_"/>
+        <rdfs:range rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#SF_SpatialSamplingFeature"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.project-best.eu/owl/iwxxm-mod/taf#ComplexSamplingMeasurement_OP_ -->
+
+    <owl:ObjectProperty rdf:about="http://www.project-best.eu/owl/iwxxm-mod/taf#ComplexSamplingMeasurement_OP_"/>
+    
+
+
+    <!-- http://www.project-best.eu/owl/iwxxm-mod/taf#MeteorologicalAerodromeForecast-featureOfInterestProvider -->
+
+    <owl:ObjectProperty rdf:about="http://www.project-best.eu/owl/iwxxm-mod/taf#MeteorologicalAerodromeForecast-featureOfInterestProvider">
+        <rdfs:domain rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#MeteorologicalAerodromeForecast"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#MeteorologicalAerodromeForecast_OP_"/>
+        <rdfs:range rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#SF_SamplingPoint"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.project-best.eu/owl/iwxxm-mod/taf#MeteorologicalAerodromeForecast-result -->
+
+    <owl:ObjectProperty rdf:about="http://www.project-best.eu/owl/iwxxm-mod/taf#MeteorologicalAerodromeForecast-result">
+        <rdfs:domain rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#MeteorologicalAerodromeForecast"/>
+        <rdfs:range rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#MeteorologicalAerodromeForecastRecord"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#MeteorologicalAerodromeForecast_OP_"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.project-best.eu/owl/iwxxm-mod/taf#MeteorologicalAerodromeForecastRecord-changeIndicator -->
+
+    <owl:ObjectProperty rdf:about="http://www.project-best.eu/owl/iwxxm-mod/taf#MeteorologicalAerodromeForecastRecord-changeIndicator">
+        <rdfs:comment xml:lang="en">The type of change being reported (FROM, BECOMING,  TEMPORARY, etc.).</rdfs:comment>
+        <rdfs:range rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#AerodromeForecastChangeIndicator"/>
+        <rdfs:domain rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#MeteorologicalAerodromeForecastRecord"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#MeteorologicalAerodromeForecastRecord_OP_"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.project-best.eu/owl/iwxxm-mod/taf#MeteorologicalAerodromeForecastRecord-cloud -->
+
+    <owl:ObjectProperty rdf:about="http://www.project-best.eu/owl/iwxxm-mod/taf#MeteorologicalAerodromeForecastRecord-cloud">
+        <rdfs:comment xml:lang="en">Cloud phenomenon of operational significance, including cloud type and cloud layers.  To be included whenever applicable, so as to convey a complete description of the clouds of significance to flight operations.</rdfs:comment>
+        <rdfs:range rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#AerodromeCloudForecast"/>
+        <rdfs:domain rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#MeteorologicalAerodromeForecastRecord"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#MeteorologicalAerodromeForecastRecord_OP_"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.project-best.eu/owl/iwxxm-mod/taf#MeteorologicalAerodromeForecastRecord-prevailingVisibilityOperator -->
+
+    <owl:ObjectProperty rdf:about="http://www.project-best.eu/owl/iwxxm-mod/taf#MeteorologicalAerodromeForecastRecord-prevailingVisibilityOperator">
+        <rdfs:comment xml:lang="en">The reported relational operator for the prevailing horizontal visibility.  When reported, this operator is reported in conjunction with prevailing visibility.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#MeteorologicalAerodromeForecastRecord"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#MeteorologicalAerodromeForecastRecord_OP_"/>
+        <rdfs:range rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#RelationalOperator"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.project-best.eu/owl/iwxxm-mod/taf#MeteorologicalAerodromeForecastRecord-surfaceWind -->
+
+    <owl:ObjectProperty rdf:about="http://www.project-best.eu/owl/iwxxm-mod/taf#MeteorologicalAerodromeForecastRecord-surfaceWind">
+        <rdfs:range rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#AerodromeSurfaceWindForecast"/>
+        <rdfs:domain rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#MeteorologicalAerodromeForecastRecord"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#MeteorologicalAerodromeForecastRecord_OP_"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.project-best.eu/owl/iwxxm-mod/taf#MeteorologicalAerodromeForecastRecord-temperature -->
+
+    <owl:ObjectProperty rdf:about="http://www.project-best.eu/owl/iwxxm-mod/taf#MeteorologicalAerodromeForecastRecord-temperature">
+        <rdfs:comment xml:lang="en">Minimum and maximum temperatures observed at specific times, consisting of up to a maximum of four temperatures (two maximum temperatures and two minimum temperatures).</rdfs:comment>
+        <rdfs:range rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#AerodromeAirTemperatureForecast"/>
+        <rdfs:domain rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#MeteorologicalAerodromeForecastRecord"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#MeteorologicalAerodromeForecastRecord_OP_"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.project-best.eu/owl/iwxxm-mod/taf#MeteorologicalAerodromeForecastRecord-weather -->
+
+    <owl:ObjectProperty rdf:about="http://www.project-best.eu/owl/iwxxm-mod/taf#MeteorologicalAerodromeForecastRecord-weather">
+        <rdfs:comment xml:lang="en">Weather phenomenon: characteristics and type.  To be included whenever applicable.</rdfs:comment>
+        <rdfs:range rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#AerodromeForecastWeather"/>
+        <rdfs:domain rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#MeteorologicalAerodromeForecastRecord"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#MeteorologicalAerodromeForecastRecord_OP_"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.project-best.eu/owl/iwxxm-mod/taf#MeteorologicalAerodromeForecastRecord_OP_ -->
+
+    <owl:ObjectProperty rdf:about="http://www.project-best.eu/owl/iwxxm-mod/taf#MeteorologicalAerodromeForecastRecord_OP_"/>
+    
+
+
+    <!-- http://www.project-best.eu/owl/iwxxm-mod/taf#MeteorologicalAerodromeForecast_OP_ -->
+
+    <owl:ObjectProperty rdf:about="http://www.project-best.eu/owl/iwxxm-mod/taf#MeteorologicalAerodromeForecast_OP_"/>
+    
+
+
+    <!-- http://www.project-best.eu/owl/iwxxm-mod/taf#TAF-baseForecast -->
+
+    <owl:ObjectProperty rdf:about="http://www.project-best.eu/owl/iwxxm-mod/taf#TAF-baseForecast">
+        <rdfs:comment xml:lang="en">The prevailing conditions.  Mandatory in all cases except missing or cancelled reports</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#TAF_OP_"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.project-best.eu/owl/iwxxm-mod/taf#TAF-changeForecast -->
+
+    <owl:ObjectProperty rdf:about="http://www.project-best.eu/owl/iwxxm-mod/taf#TAF-changeForecast">
+        <rdfs:comment xml:lang="en">Forecast that modifies the base forecast.  While there is no maximum number of forecasts, this should normally not exceed five in number.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#TAF_OP_"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.project-best.eu/owl/iwxxm-mod/taf#TAF-issueTime -->
+
+    <owl:ObjectProperty rdf:about="http://www.project-best.eu/owl/iwxxm-mod/taf#TAF-issueTime">
+        <rdfs:comment xml:lang="en">The time at which this report was issued.  Note that this should be identical to the resultTime of each MeteorologicalAerodromeForecast, whose results are made available at the same time as this report.  TAF reports have an issueTime to assist in discovery and to provide unambiguous semantics at the report level.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#TAF"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#TAF_OP_"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2006/time#Instant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.project-best.eu/owl/iwxxm-mod/taf#TAF-previousReportAerodrome -->
+
+    <owl:ObjectProperty rdf:about="http://www.project-best.eu/owl/iwxxm-mod/taf#TAF-previousReportAerodrome">
+        <rdfs:comment xml:lang="en">The aerodrome of the previously-issued report being amended or cancelled</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#TAF"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#TAF_OP_"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.project-best.eu/owl/iwxxm-mod/taf#TAF-previousReportValidPeriod -->
+
+    <owl:ObjectProperty rdf:about="http://www.project-best.eu/owl/iwxxm-mod/taf#TAF-previousReportValidPeriod">
+        <rdfs:comment xml:lang="en">The valid time period for the previously amended and/or cancelled report</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#TAF"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#TAF_OP_"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2006/time#DateTimeInterval"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.project-best.eu/owl/iwxxm-mod/taf#TAF-status -->
+
+    <owl:ObjectProperty rdf:about="http://www.project-best.eu/owl/iwxxm-mod/taf#TAF-status">
+        <rdfs:comment xml:lang="en">The status of this report, including amended, cancelled, normal, or corrected.  </rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#TAF"/>
+        <rdfs:range rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#TAFReportStatus"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#TAF_OP_"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.project-best.eu/owl/iwxxm-mod/taf#TAF-validTime -->
+
+    <owl:ObjectProperty rdf:about="http://www.project-best.eu/owl/iwxxm-mod/taf#TAF-validTime">
+        <rdfs:comment xml:lang="en">The time frame at which this report is valid.  All forecast elements should be valid within this period</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#TAF"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#TAF_OP_"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2006/time#DateTimeInterval"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.project-best.eu/owl/iwxxm-mod/taf#TAF_OP_ -->
+
+    <owl:ObjectProperty rdf:about="http://www.project-best.eu/owl/iwxxm-mod/taf#TAF_OP_"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.project-best.eu/owl/iwxxm-mod/taf#Aerodrome-fieldElevation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.project-best.eu/owl/iwxxm-mod/taf#Aerodrome-fieldElevation">
+        <rdfs:subPropertyOf rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#Aerodrome_DP_"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.project-best.eu/owl/iwxxm-mod/taf#Aerodrome-name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.project-best.eu/owl/iwxxm-mod/taf#Aerodrome-name">
+        <rdfs:subPropertyOf rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#Aerodrome_DP_"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.project-best.eu/owl/iwxxm-mod/taf#AerodromeAirTemperatureForecast -->
+
+    <owl:DatatypeProperty rdf:about="http://www.project-best.eu/owl/iwxxm-mod/taf#AerodromeAirTemperatureForecast">
+        <rdfs:comment xml:lang="en">An aggregation of air temperature forecast conditions typically reported together at an aerodrome, including the minimum and maximum anticipated air temperatures and when they occur.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.project-best.eu/owl/iwxxm-mod/taf#AerodromeAirTemperatureForecast-maximumAirTemperatureTime -->
+
+    <owl:DatatypeProperty rdf:about="http://www.project-best.eu/owl/iwxxm-mod/taf#AerodromeAirTemperatureForecast-maximumAirTemperatureTime">
+        <rdfs:comment xml:lang="en">The time of occurrence of the maximum air temperature.  This must be within the period of the phenomenon time for this forecast record</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#AerodromeAirTemperatureForecast"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.project-best.eu/owl/iwxxm-mod/taf#AerodromeAirTemperatureForecast-minimumAirTemperature -->
+
+    <owl:DatatypeProperty rdf:about="http://www.project-best.eu/owl/iwxxm-mod/taf#AerodromeAirTemperatureForecast-minimumAirTemperature">
+        <rdfs:comment xml:lang="en">The minimum air temperature</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#AerodromeAirTemperatureForecast"/>
+        <rdfs:domain rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#AerodromeAirTemperatureForecast"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.project-best.eu/owl/iwxxm-mod/taf#AerodromeCloudForecast-verticalVisibility -->
+
+    <owl:DatatypeProperty rdf:about="http://www.project-best.eu/owl/iwxxm-mod/taf#AerodromeCloudForecast-verticalVisibility">
+        <rdfs:comment xml:lang="en">The vertical visibility.  Vertical visibility is defined as the vertical visual range into an obscuring medium.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#AerodromeCloudForecast"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#AerodromeCloudForecast_DP_"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.project-best.eu/owl/iwxxm-mod/taf#AerodromeCloudForecast_DP_ -->
+
+    <owl:DatatypeProperty rdf:about="http://www.project-best.eu/owl/iwxxm-mod/taf#AerodromeCloudForecast_DP_"/>
+    
+
+
+    <!-- http://www.project-best.eu/owl/iwxxm-mod/taf#AerodromeSurfaceWindTrendForecast-meanWindDirection -->
+
+    <owl:DatatypeProperty rdf:about="http://www.project-best.eu/owl/iwxxm-mod/taf#AerodromeSurfaceWindTrendForecast-meanWindDirection">
+        <rdfs:comment xml:lang="en">The forecast average wind direction from which wind is blowing</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#AerodromeSurfaceWindTrendForecast"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#AerodromeSurfaceWindTrendForecast_DP_"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.project-best.eu/owl/iwxxm-mod/taf#AerodromeSurfaceWindTrendForecast-meanWindSpeed -->
+
+    <owl:DatatypeProperty rdf:about="http://www.project-best.eu/owl/iwxxm-mod/taf#AerodromeSurfaceWindTrendForecast-meanWindSpeed">
+        <rdfs:comment xml:lang="en">The forecast average wind speed</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#AerodromeSurfaceWindTrendForecast"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#AerodromeSurfaceWindTrendForecast_DP_"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.project-best.eu/owl/iwxxm-mod/taf#AerodromeSurfaceWindTrendForecast-windGustSpeed -->
+
+    <owl:DatatypeProperty rdf:about="http://www.project-best.eu/owl/iwxxm-mod/taf#AerodromeSurfaceWindTrendForecast-windGustSpeed">
+        <rdfs:comment xml:lang="en">The forecast maximum speed of a gust.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#AerodromeSurfaceWindTrendForecast"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#AerodromeSurfaceWindTrendForecast_DP_"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.project-best.eu/owl/iwxxm-mod/taf#AerodromeSurfaceWindTrendForecast_DP_ -->
+
+    <owl:DatatypeProperty rdf:about="http://www.project-best.eu/owl/iwxxm-mod/taf#AerodromeSurfaceWindTrendForecast_DP_"/>
+    
+
+
+    <!-- http://www.project-best.eu/owl/iwxxm-mod/taf#Aerodrome_DP_ -->
+
+    <owl:DatatypeProperty rdf:about="http://www.project-best.eu/owl/iwxxm-mod/taf#Aerodrome_DP_"/>
+    
+
+
+    <!-- http://www.project-best.eu/owl/iwxxm-mod/taf#CloudLayer-base -->
+
+    <owl:DatatypeProperty rdf:about="http://www.project-best.eu/owl/iwxxm-mod/taf#CloudLayer-base">
+        <rdfs:comment xml:lang="en">For a given cloud or cloud layer, height of the lowest level in the atmosphere at which the air contains a perceptible quantity of cloud particles.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#CloudLayer"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#CloudLayer_DP_"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.project-best.eu/owl/iwxxm-mod/taf#CloudLayer_DP_ -->
+
+    <owl:DatatypeProperty rdf:about="http://www.project-best.eu/owl/iwxxm-mod/taf#CloudLayer_DP_"/>
+    
+
+
+    <!-- http://www.project-best.eu/owl/iwxxm-mod/taf#TAF-issueTime -->
+
+    <owl:DatatypeProperty rdf:about="http://www.project-best.eu/owl/iwxxm-mod/taf#TAF-issueTime">
+        <rdfs:comment xml:lang="en">The time at which this report was issued.  Note that this should be identical to the resultTime of each MeteorologicalAerodromeForecast, whose results are made available at the same time as this report.  TAF reports have an issueTime to assist in discovery and to provide unambiguous semantics at the report level.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.project-best.eu/owl/iwxxm-mod/taf#Aerodrome -->
+
+    <owl:Class rdf:about="http://www.project-best.eu/owl/iwxxm-mod/taf#Aerodrome"/>
+    
+
+
+    <!-- http://www.project-best.eu/owl/iwxxm-mod/taf#AerodromeAirTemperatureForecast -->
+
+    <owl:Class rdf:about="http://www.project-best.eu/owl/iwxxm-mod/taf#AerodromeAirTemperatureForecast">
+        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#Datatypes"/>
+        <rdfs:comment xml:lang="en">An aggregation of air temperature forecast conditions typically reported together at an aerodrome, including the minimum and maximum anticipated air temperatures and when they occur.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.project-best.eu/owl/iwxxm-mod/taf#AerodromeCloudForecast -->
+
+    <owl:Class rdf:about="http://www.project-best.eu/owl/iwxxm-mod/taf#AerodromeCloudForecast">
+        <rdfs:comment xml:lang="en">Forecast cloud conditions, including predicted vertical visibility and cloud layers.  </rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.project-best.eu/owl/iwxxm-mod/taf#AerodromeForecastChangeIndicator -->
+
+    <owl:Class rdf:about="http://www.project-best.eu/owl/iwxxm-mod/taf#AerodromeForecastChangeIndicator">
+        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#Enumerations"/>
+        <rdfs:comment xml:lang="en">The forecast change indicator type, including temporary, permanent, or probable conditions.  This is an extension of ForecastChangeIndicator that includes report-specific entries, and in particular the 30 and 40% probability conditions.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.project-best.eu/owl/iwxxm-mod/taf#AerodromeForecastWeather -->
+
+    <owl:Class rdf:about="http://www.project-best.eu/owl/iwxxm-mod/taf#AerodromeForecastWeather">
+        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#Codelists"/>
+        <rdfs:comment xml:lang="en">AerodromeForecastWeather enables the forecast weather at an aerodrome to be reported.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.project-best.eu/owl/iwxxm-mod/taf#AerodromeSurfaceWindForecast -->
+
+    <owl:Class rdf:about="http://www.project-best.eu/owl/iwxxm-mod/taf#AerodromeSurfaceWindForecast">
+        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#AerodromeSurfaceWindTrendForecast"/>
+        <rdfs:comment xml:lang="en">A forecast of wind conditions at an aerodrome.  </rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.project-best.eu/owl/iwxxm-mod/taf#AerodromeSurfaceWindForecast-variableWindDirection -->
+
+    <owl:Class rdf:about="http://www.project-best.eu/owl/iwxxm-mod/taf#AerodromeSurfaceWindForecast-variableWindDirection">
+        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#AerodromeSurfaceWindForecast"/>
+        <rdfs:comment xml:lang="en">Indicates variable wind direction.  Cannot be reported with a mean wind direction</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.project-best.eu/owl/iwxxm-mod/taf#AerodromeSurfaceWindTrendForecast -->
+
+    <owl:Class rdf:about="http://www.project-best.eu/owl/iwxxm-mod/taf#AerodromeSurfaceWindTrendForecast">
+        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#Datatypes"/>
+        <rdfs:comment xml:lang="en">A trend forecast of surface wind conditions at an aerodrome.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.project-best.eu/owl/iwxxm-mod/taf#CloudAmountReportedAtAerodrome -->
+
+    <owl:Class rdf:about="http://www.project-best.eu/owl/iwxxm-mod/taf#CloudAmountReportedAtAerodrome">
+        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#Codelists"/>
+        <rdfs:comment xml:lang="en">Amount of cloud - assessed by category:</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.project-best.eu/owl/iwxxm-mod/taf#CloudLayer -->
+
+    <owl:Class rdf:about="http://www.project-best.eu/owl/iwxxm-mod/taf#CloudLayer">
+        <rdfs:comment xml:lang="en">A cloud layer, including a cloud amount, cloud base and cloud type</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.project-best.eu/owl/iwxxm-mod/taf#CodeAirportHeliportDesignatorType -->
+
+    <owl:Class rdf:about="http://www.project-best.eu/owl/iwxxm-mod/taf#CodeAirportHeliportDesignatorType">
+        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#Datatypes"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.project-best.eu/owl/iwxxm-mod/taf#CodeIATAType -->
+
+    <owl:Class rdf:about="http://www.project-best.eu/owl/iwxxm-mod/taf#CodeIATAType">
+        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#Datatypes"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.project-best.eu/owl/iwxxm-mod/taf#CodeICAOType -->
+
+    <owl:Class rdf:about="http://www.project-best.eu/owl/iwxxm-mod/taf#CodeICAOType">
+        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#Datatypes"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.project-best.eu/owl/iwxxm-mod/taf#Codelists -->
+
+    <owl:Class rdf:about="http://www.project-best.eu/owl/iwxxm-mod/taf#Codelists"/>
+    
+
+
+    <!-- http://www.project-best.eu/owl/iwxxm-mod/taf#ComplexSamplingMeasurement -->
+
+    <owl:Class rdf:about="http://www.project-best.eu/owl/iwxxm-mod/taf#ComplexSamplingMeasurement"/>
+    
+
+
+    <!-- http://www.project-best.eu/owl/iwxxm-mod/taf#Datatypes -->
+
+    <owl:Class rdf:about="http://www.project-best.eu/owl/iwxxm-mod/taf#Datatypes"/>
+    
+
+
+    <!-- http://www.project-best.eu/owl/iwxxm-mod/taf#Enumerations -->
+
+    <owl:Class rdf:about="http://www.project-best.eu/owl/iwxxm-mod/taf#Enumerations"/>
+    
+
+
+    <!-- http://www.project-best.eu/owl/iwxxm-mod/taf#MeteorologicalAerodromeForecast -->
+
+    <owl:Class rdf:about="http://www.project-best.eu/owl/iwxxm-mod/taf#MeteorologicalAerodromeForecast">
+        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#ComplexSamplingMeasurement"/>
+        <rdfs:comment xml:lang="en">A specialized OM_Observation type used for reporting an aggregate set of forecast meteorological conditions at an Aerodrome. The result of this observation type refers to an entity of type MeteorologicalAerodromeForecastRecord.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.project-best.eu/owl/iwxxm-mod/taf#MeteorologicalAerodromeForecastRecord -->
+
+    <owl:Class rdf:about="http://www.project-best.eu/owl/iwxxm-mod/taf#MeteorologicalAerodromeForecastRecord">
+        <rdfs:comment xml:lang="en">A specialized Record type containing meteorological conditions forecast at an aerodrome.  This class is also related but not identical to MeteorologicalAerodromeTrendForecastRecord, which is reported on a METAR/SPECI - conditions reported in trend forecasts in METAR/SPECI differ from forecast groups in a TAF.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.project-best.eu/owl/iwxxm-mod/taf#RelationalOperator -->
+
+    <owl:Class rdf:about="http://www.project-best.eu/owl/iwxxm-mod/taf#RelationalOperator">
+        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#Enumerations"/>
+        <rdfs:comment xml:lang="en">RelationalOperator defines the restricted set of operators that may be specified alongside numerical quantities in ICAO Annex 3/WMO No. 49.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.project-best.eu/owl/iwxxm-mod/taf#SF_SamplingPoint -->
+
+    <owl:Class rdf:about="http://www.project-best.eu/owl/iwxxm-mod/taf#SF_SamplingPoint">
+        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#SF_SpatialSamplingFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.project-best.eu/owl/iwxxm-mod/taf#SF_SpatialSamplingFeature -->
+
+    <owl:Class rdf:about="http://www.project-best.eu/owl/iwxxm-mod/taf#SF_SpatialSamplingFeature"/>
+    
+
+
+    <!-- http://www.project-best.eu/owl/iwxxm-mod/taf#SigConvectiveCloudType -->
+
+    <owl:Class rdf:about="http://www.project-best.eu/owl/iwxxm-mod/taf#SigConvectiveCloudType">
+        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#Codelists"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.project-best.eu/owl/iwxxm-mod/taf#TAF -->
+
+    <owl:Class rdf:about="http://www.project-best.eu/owl/iwxxm-mod/taf#TAF">
+        <rdfs:comment xml:lang="en">An Aerodrome Forecast (TAF) report is a routine aerodrome forecast intended for distribution beyond an aerodrome.  TAF reports report base forecast conditions, and modifications to those conditions throughout the valid period.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.project-best.eu/owl/iwxxm-mod/taf#TAFReportStatus -->
+
+    <owl:Class rdf:about="http://www.project-best.eu/owl/iwxxm-mod/taf#TAFReportStatus">
+        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#Enumerations"/>
+        <rdfs:comment xml:lang="en">The report status for a TAF report (e.g., a normal issuance, an amendment of an earlier report, a cancellation of an earlier report)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.project-best.eu/owl/iwxxm-mod/taf#AerodromeForecastChangeIndicator-BECOMING -->
+
+    <owl:NamedIndividual rdf:about="http://www.project-best.eu/owl/iwxxm-mod/taf#AerodromeForecastChangeIndicator-BECOMING">
+        <rdf:type rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#AerodromeForecastChangeIndicator"/>
+        <rdfs:comment xml:lang="en">Conditions are expected to reach or pass through specified threshold values at a regular or irregular rate and at an unspecified time during the time period.  The time period should normally not exceed 2 hours but in any case should not exceed 4 hours.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.project-best.eu/owl/iwxxm-mod/taf#AerodromeForecastChangeIndicator-FROM -->
+
+    <owl:NamedIndividual rdf:about="http://www.project-best.eu/owl/iwxxm-mod/taf#AerodromeForecastChangeIndicator-FROM">
+        <rdf:type rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#AerodromeForecastChangeIndicator"/>
+        <rdfs:comment xml:lang="en">One set of prevailing weather conditions is expected to change significantly and more or less completely to a different set of conditions. Conditions in a FROM group supersede conditions in earlier groups.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.project-best.eu/owl/iwxxm-mod/taf#AerodromeForecastChangeIndicator-PROBABILITY_30 -->
+
+    <owl:NamedIndividual rdf:about="http://www.project-best.eu/owl/iwxxm-mod/taf#AerodromeForecastChangeIndicator-PROBABILITY_30">
+        <rdf:type rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#AerodromeForecastChangeIndicator"/>
+        <rdfs:comment xml:lang="en">A 30% probability of occurrence of an alternative value of a forecast element or elements.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.project-best.eu/owl/iwxxm-mod/taf#AerodromeForecastChangeIndicator-PROBABILITY_30_TEMPORARY_FLUCTUATIONS -->
+
+    <owl:NamedIndividual rdf:about="http://www.project-best.eu/owl/iwxxm-mod/taf#AerodromeForecastChangeIndicator-PROBABILITY_30_TEMPORARY_FLUCTUATIONS">
+        <rdf:type rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#AerodromeForecastChangeIndicator"/>
+        <rdfs:comment xml:lang="en">A 30% probability of occurrence of temporary conditions of an alternative value of a forecast element or elements.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.project-best.eu/owl/iwxxm-mod/taf#AerodromeForecastChangeIndicator-PROBABILITY_40 -->
+
+    <owl:NamedIndividual rdf:about="http://www.project-best.eu/owl/iwxxm-mod/taf#AerodromeForecastChangeIndicator-PROBABILITY_40">
+        <rdf:type rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#AerodromeForecastChangeIndicator"/>
+        <rdfs:comment xml:lang="en">A 40% probability of occurrence of an alternative value of a forecast element or elements.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.project-best.eu/owl/iwxxm-mod/taf#AerodromeForecastChangeIndicator-PROBABILITY_40_TEMPORARY_FLUCTUATIONS -->
+
+    <owl:NamedIndividual rdf:about="http://www.project-best.eu/owl/iwxxm-mod/taf#AerodromeForecastChangeIndicator-PROBABILITY_40_TEMPORARY_FLUCTUATIONS">
+        <rdf:type rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#AerodromeForecastChangeIndicator"/>
+        <rdfs:comment xml:lang="en">A 40% probability of occurrence of temporary conditions of an alternative value of a forecast element or elements.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.project-best.eu/owl/iwxxm-mod/taf#AerodromeForecastChangeIndicator-TEMPORARY_FLUCTUATIONS -->
+
+    <owl:NamedIndividual rdf:about="http://www.project-best.eu/owl/iwxxm-mod/taf#AerodromeForecastChangeIndicator-TEMPORARY_FLUCTUATIONS">
+        <rdf:type rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#AerodromeForecastChangeIndicator"/>
+        <rdfs:comment xml:lang="en">Expected temporary fluctuations to meteorological conditions which reach or pass specified threshold criteria and last for a period of less than one hour in each instance and in the aggregate cover less than half of the forecast period during which the fluctuations are expected to occur.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.project-best.eu/owl/iwxxm-mod/taf#RelationalOperator-ABOVE -->
+
+    <owl:NamedIndividual rdf:about="http://www.project-best.eu/owl/iwxxm-mod/taf#RelationalOperator-ABOVE">
+        <rdf:type rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#RelationalOperator"/>
+        <rdfs:comment xml:lang="en">The actual value is above the maximum value that can be determined by the system (&quot;ABV&quot;, &quot;P&quot;)</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.project-best.eu/owl/iwxxm-mod/taf#RelationalOperator-BELOW -->
+
+    <owl:NamedIndividual rdf:about="http://www.project-best.eu/owl/iwxxm-mod/taf#RelationalOperator-BELOW">
+        <rdf:type rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#RelationalOperator"/>
+        <rdfs:comment xml:lang="en">The actual value is below the minimum value that can be determined by the system (&quot;BLW&quot;, &quot;M&quot;)</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.project-best.eu/owl/iwxxm-mod/taf#TAFReportStatus-AMENDMENT -->
+
+    <owl:NamedIndividual rdf:about="http://www.project-best.eu/owl/iwxxm-mod/taf#TAFReportStatus-AMENDMENT">
+        <rdf:type rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#TAFReportStatus"/>
+        <rdfs:comment xml:lang="en">An amendment of an earlier TAF</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.project-best.eu/owl/iwxxm-mod/taf#TAFReportStatus-CANCELLATION -->
+
+    <owl:NamedIndividual rdf:about="http://www.project-best.eu/owl/iwxxm-mod/taf#TAFReportStatus-CANCELLATION">
+        <rdf:type rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#TAFReportStatus"/>
+        <rdfs:comment xml:lang="en">A cancellation of an earlier TAF</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.project-best.eu/owl/iwxxm-mod/taf#TAFReportStatus-CORRECTION -->
+
+    <owl:NamedIndividual rdf:about="http://www.project-best.eu/owl/iwxxm-mod/taf#TAFReportStatus-CORRECTION">
+        <rdf:type rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#TAFReportStatus"/>
+        <rdfs:comment xml:lang="en">A correction of an earlier TAF</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.project-best.eu/owl/iwxxm-mod/taf#TAFReportStatus-MISSING -->
+
+    <owl:NamedIndividual rdf:about="http://www.project-best.eu/owl/iwxxm-mod/taf#TAFReportStatus-MISSING">
+        <rdf:type rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#TAFReportStatus"/>
+        <rdfs:comment xml:lang="en">The report is missing (&quot;NIL&quot; from ICAO Annex 3 / WMO No. 49)</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.project-best.eu/owl/iwxxm-mod/taf#TAFReportStatus-NORMAL -->
+
+    <owl:NamedIndividual rdf:about="http://www.project-best.eu/owl/iwxxm-mod/taf#TAFReportStatus-NORMAL">
+        <rdf:type rdf:resource="http://www.project-best.eu/owl/iwxxm-mod/taf#TAFReportStatus"/>
+        <rdfs:comment xml:lang="en">An normal issuance of a TAF</rdfs:comment>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 1.3.8.1099) http://owlapi.sourceforge.net -->
+

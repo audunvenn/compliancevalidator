@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8' standalone='no'?>
+<rdf:RDF xmlns='http://knowledgeweb.semanticweb.org/heterogeneity/alignment#'
+         xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#'
+         xmlns:xsd='http://www.w3.org/2001/XMLSchema#'
+         xmlns:alext='http://exmo.inrialpes.fr/align/ext/1.0/'
+         xmlns:align='http://knowledgeweb.semanticweb.org/heterogeneity/alignment#'>
+<Alignment>
+  <xml>yes</xml>
+  <level>0</level>
+  <type>**</type>
+  <alext:method>compliancevalidator.matchers.equivalence.PropertyMatcher#clone</alext:method>
+  <onto1>
+    <Ontology rdf:about="http://www.semanticweb.org/audunvennesland/ontologies/2018/2/untitled-ontology-72">
+      <location>file:/Users/audunvennesland/git/AIRMComplianceValidator/./files/test/Agent.owl</location>
+      <formalism>
+        <Formalism align:name="OWL2.0" align:uri="http://www.w3.org/2002/07/owl#"/>
+      </formalism>
+    </Ontology>
+  </onto1>
+  <onto2>
+    <Ontology rdf:about="http://www.semanticweb.org/audunvennesland/ontologies/2018/2/untitled-ontology-71">
+      <location>file:/Users/audunvennesland/git/AIRMComplianceValidator/./files/test/Person.owl</location>
+      <formalism>
+        <Formalism align:name="OWL2.0" align:uri="http://www.w3.org/2002/07/owl#"/>
+      </formalism>
+    </Ontology>
+  </onto2>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://www.semanticweb.org/audunvennesland/ontologies/2018/2/untitled-ontology-72#Agent'/>
+      <entity2 rdf:resource='http://www.semanticweb.org/audunvennesland/ontologies/2018/2/untitled-ontology-71#Person'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+</Alignment>
+</rdf:RDF>
