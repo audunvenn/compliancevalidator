@@ -32,20 +32,20 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/Users/audunvennesland/git/AIRMComplianceValidator/lib/align.jar"/>
-	<classpathentry kind="lib" path="/Users/audunvennesland/git/AIRMComplianceValidator/lib/alignsvc.jar"/>
-	<classpathentry kind="lib" path="/Users/audunvennesland/git/AIRMComplianceValidator/lib/HermiT.jar"/>
-	<classpathentry kind="lib" path="/Users/audunvennesland/git/AIRMComplianceValidator/lib/ontowrap.jar"/>
-	<classpathentry kind="lib" path="/Users/audunvennesland/git/AIRMComplianceValidator/lib/org.semanticweb.HermiT.jar"/>
-	<classpathentry kind="lib" path="/Users/audunvennesland/git/AIRMComplianceValidator/lib/procalign.jar"/>
-	<classpathentry kind="lib" path="/Users/audunvennesland/git/AIRMComplianceValidator/lib/ontosim.jar"/>
-	<classpathentry kind="lib" path="/Users/audunvennesland/git/AIRMComplianceValidator/lib/rita.jar"/>
-	<classpathentry kind="lib" path="/Users/audunvennesland/git/AIRMComplianceValidator/lib/jwnl.jar"/>
-	<classpathentry kind="lib" path="/Users/audunvennesland/git/AIRMComplianceValidator/lib/pellet-core-2.3.2-SNAPSHOT.jar"/>
-	<classpathentry kind="lib" path="/Users/audunvennesland/git/AIRMComplianceValidator/lib/pellet-examples-2.3.2-SNAPSHOT.jar"/>
-	<classpathentry kind="lib" path="/Users/audunvennesland/git/AIRMComplianceValidator/lib/pellet-owlapiv3-2.3.2-SNAPSHOT.jar"/>
-	<classpathentry kind="lib" path="/Users/audunvennesland/git/AIRMComplianceValidator/lib/jaws-bin.jar"/>
-	<classpathentry kind="lib" path="/Users/audunvennesland/git/AIRMComplianceValidator/lib/rita.support.jar"/>
-	<classpathentry kind="lib" path="/Users/audunvennesland/git/AIRMComplianceValidator/lib/ws4j-1.0.1.jar"/>
+	<classpathentry kind="lib" path="/Users/audunvennesland/git/compliancevalidator/complianceValidator/lib/align.jar"/>
+	<classpathentry kind="lib" path="/Users/audunvennesland/git/compliancevalidator/complianceValidator/lib/alignsvc.jar"/>
+	<classpathentry kind="lib" path="/Users/audunvennesland/git/compliancevalidator/complianceValidator/lib/HermiT.jar"/>
+	<classpathentry kind="lib" path="/Users/audunvennesland/git/compliancevalidator/complianceValidator/lib/jaws-bin.jar"/>
+	<classpathentry kind="lib" path="/Users/audunvennesland/git/compliancevalidator/complianceValidator/lib/jwnl.jar"/>
+	<classpathentry kind="lib" path="/Users/audunvennesland/git/compliancevalidator/complianceValidator/lib/ontosim.jar"/>
+	<classpathentry kind="lib" path="/Users/audunvennesland/git/compliancevalidator/complianceValidator/lib/ontowrap.jar"/>
+	<classpathentry kind="lib" path="/Users/audunvennesland/git/compliancevalidator/complianceValidator/lib/org.semanticweb.HermiT.jar"/>
+	<classpathentry kind="lib" path="/Users/audunvennesland/git/compliancevalidator/complianceValidator/lib/pellet-core-2.3.2-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="/Users/audunvennesland/git/compliancevalidator/complianceValidator/lib/pellet-examples-2.3.2-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="/Users/audunvennesland/git/compliancevalidator/complianceValidator/lib/pellet-owlapiv3-2.3.2-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="/Users/audunvennesland/git/compliancevalidator/complianceValidator/lib/procalign.jar"/>
+	<classpathentry kind="lib" path="/Users/audunvennesland/git/compliancevalidator/complianceValidator/lib/rita.jar"/>
+	<classpathentry kind="lib" path="/Users/audunvennesland/git/compliancevalidator/complianceValidator/lib/rita.support.jar"/>
+	<classpathentry kind="lib" path="/Users/audunvennesland/git/compliancevalidator/complianceValidator/lib/ws4j-1.0.1.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
