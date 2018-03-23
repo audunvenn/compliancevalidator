@@ -104,6 +104,7 @@ public class AutoWeight {
 		
 
 	}
+	
 
 	public static Alignment runAutoweightPlusPlus (ArrayList<Alignment> initialAlignments) throws AlignmentException {
 
