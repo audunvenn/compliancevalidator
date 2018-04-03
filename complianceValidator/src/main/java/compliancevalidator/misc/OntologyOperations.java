@@ -18,7 +18,7 @@ import org.semanticweb.owlapi.util.OWLEntityRemover;
 public class OntologyOperations {
 	
 	public static void main(String[] args) throws OWLOntologyCreationException, OWLOntologyStorageException {
-		File ontology = new File("./files/experiment_06032018/datasets/d2/ontologies/iwxxm_common.owl");
+		File ontology = new File("./files/experiment_06032018/datasets/d1/ontologies/aerodromeinfrastructure.owl");
 		
 		OWLOntologyManager manager = OWLManager.createOWLOntologyManager();
 		

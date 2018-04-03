@@ -3824,7 +3824,6 @@
     <!-- http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#ATCBlindSpot -->
 
     <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#ATCBlindSpot">
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#_AerodromeInfrastructure_"/>
         <rdfs:comment xml:lang="en">A location on an aerodrome movement area that is not visible to ATC personnel due to obstructions and is not designated as a Hot Spot.</rdfs:comment>
     </owl:Class>
     
@@ -3833,62 +3832,7 @@
     <!-- http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#Aerodrome -->
 
     <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#Aerodrome">
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#_AerodromeInfrastructure_"/>
         <rdfs:comment xml:lang="en">A defined area on land or water (including any buildings, installations and equipment) intended to be used either wholly or in part for the arrival, departure and surface movement of aircraft.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#Aerodrome-isAbandoned -->
-
-    <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#Aerodrome-isAbandoned">
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#Aerodrome"/>
-        <rdfs:comment xml:lang="en">An indicator that the aerodrome is no longer in operational use, but its infrastructure is still present and visible from the air.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#Aerodrome-isAltimeterCheckLocationAvailable -->
-
-    <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#Aerodrome-isAltimeterCheckLocationAvailable">
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#Aerodrome"/>
-        <rdfs:comment xml:lang="en">The availability of a point or area designated at an aerodrome where the checking of an altimeter system can be accomplished.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#Aerodrome-isLandingDirectionIndicatorAvailable -->
-
-    <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#Aerodrome-isLandingDirectionIndicatorAvailable">
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#Aerodrome"/>
-        <rdfs:comment xml:lang="en">The availability of a device that indicates visually the direction currently designated for landing and for take-off.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#Aerodrome-isPrivateUse -->
-
-    <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#Aerodrome-isPrivateUse">
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#Aerodrome"/>
-        <rdfs:comment xml:lang="en">Indication whether the aerodrome is only for the use of the owners and not open for the public.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#Aerodrome-isSecondaryPowerSupplyAvailable -->
-
-    <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#Aerodrome-isSecondaryPowerSupplyAvailable">
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#Aerodrome"/>
-        <rdfs:comment xml:lang="en">The availability of emergency power supply for the aerodrome.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#Aerodrome-isWindDirectionIndicatorAvailable -->
-
-    <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#Aerodrome-isWindDirectionIndicatorAvailable">
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#Aerodrome"/>
-        <rdfs:comment xml:lang="en">The availability of a device at the aerodrome that indicates the direction and the intensity of the wind.</rdfs:comment>
     </owl:Class>
     
 
@@ -3896,7 +3840,6 @@
     <!-- http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#AerodromeAvailability -->
 
     <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#AerodromeAvailability">
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#_AerodromeInfrastructure_"/>
         <rdfs:comment xml:lang="en">Information about the operational status of the aerodrome.</rdfs:comment>
     </owl:Class>
     
@@ -3905,7 +3848,6 @@
     <!-- http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#AerodromeCollocation -->
 
     <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#AerodromeCollocation">
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#_AerodromeInfrastructure_"/>
         <rdfs:comment xml:lang="en">The sharing by two aerodromes of some or all of their ground facilities.</rdfs:comment>
     </owl:Class>
     
@@ -3920,7 +3862,6 @@
     <!-- http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#AerodromeHotSpot -->
 
     <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#AerodromeHotSpot">
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#_AerodromeInfrastructure_"/>
         <rdfs:comment xml:lang="en">A location on an aerodrome movement area with a history or potential risk of collision or runway incursion, and where heightened attention by pilots/drivers is necessary.</rdfs:comment>
     </owl:Class>
     
@@ -3929,26 +3870,7 @@
     <!-- http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#AerodromeProtectionArea -->
 
     <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#AerodromeProtectionArea">
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#_AerodromeInfrastructure_"/>
         <rdfs:comment xml:lang="en">An area situated in the vicinity of a runway, Final Approach and Take-Off Area (FATO) or Touchdown and Liftoff Area (TLOF), provided to protect aircraft during manoeuvring, take-off and/or landing operations.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#AerodromeProtectionArea-isLightingAvailable -->
-
-    <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#AerodromeProtectionArea-isLightingAvailable">
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#AerodromeProtectionArea"/>
-        <rdfs:comment xml:lang="en">The availability of a lighting system that visually identifies the Protection Area in low visibility conditions.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#AerodromeProtectionArea-isObstacleFree -->
-
-    <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#AerodromeProtectionArea-isObstacleFree">
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#AerodromeProtectionArea"/>
-        <rdfs:comment xml:lang="en">An indicator that the protection area is obstacle free.</rdfs:comment>
     </owl:Class>
     
 
@@ -3957,7 +3879,6 @@
 
     <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#AerodromeProtectionAreaMarking">
         <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#Marking"/>
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#_AerodromeInfrastructure_"/>
         <rdfs:comment xml:lang="en">A symbol or group of symbols displayed on the edge of the landing protection area at an aerodrome.</rdfs:comment>
     </owl:Class>
     
@@ -3966,7 +3887,6 @@
     <!-- http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#AerodromeResponsibilityOrganisation -->
 
     <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#AerodromeResponsibilityOrganisation">
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#_AerodromeInfrastructure_"/>
         <rdfs:comment xml:lang="en">The role of the organisation which is responsible for the aerodrome.</rdfs:comment>
     </owl:Class>
     
@@ -3975,7 +3895,6 @@
     <!-- http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#AerodromeSign -->
 
     <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#AerodromeSign">
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#_AerodromeInfrastructure_"/>
         <rdfs:comment xml:lang="en">A sign presenting messages related to aircraft and vehicle movement.</rdfs:comment>
     </owl:Class>
     
@@ -3984,7 +3903,6 @@
     <!-- http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#AerodromeSurfaceRoutingNetwork -->
 
     <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#AerodromeSurfaceRoutingNetwork">
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#_AerodromeInfrastructure_"/>
         <rdfs:comment xml:lang="en">A connected and directed graph defined by Node and Edge features that represents logical and physical connections between taxiways, runways and other features related to the movement area of an aerodrome. </rdfs:comment>
     </owl:Class>
     
@@ -3993,7 +3911,6 @@
     <!-- http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#AerodromeSurfaceRoutingNetworkEdge -->
 
     <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#AerodromeSurfaceRoutingNetworkEdge">
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#_AerodromeInfrastructure_"/>
         <rdfs:comment xml:lang="en">A directional or bi-directional connection between nodes having an attached geometry which can be used for a graphical depiction of the taxi route.</rdfs:comment>
     </owl:Class>
     
@@ -4002,7 +3919,6 @@
     <!-- http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#AerodromeSurfaceRoutingNetworkNode -->
 
     <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#AerodromeSurfaceRoutingNetworkNode">
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#_AerodromeInfrastructure_"/>
         <rdfs:comment xml:lang="en">Representation of the intersection of two or more aerodrome features related to taxi operations, or other special location such as holding position or entry or exit to a parking area.</rdfs:comment>
     </owl:Class>
     
@@ -4011,7 +3927,6 @@
     <!-- http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#AerodromeSystem -->
 
     <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#AerodromeSystem">
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#_AerodromeInfrastructure_"/>
         <rdfs:comment xml:lang="en">A system at an aerodrome.</rdfs:comment>
     </owl:Class>
     
@@ -4020,7 +3935,6 @@
     <!-- http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#AerodromeTerrain -->
 
     <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#AerodromeTerrain">
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#_AerodromeInfrastructure_"/>
         <rdfs:comment xml:lang="en">The terrain near an aerodrome.</rdfs:comment>
     </owl:Class>
     
@@ -4030,7 +3944,6 @@
 
     <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#AerodromeUsage">
         <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#UsageCondition"/>
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#_AerodromeInfrastructure_"/>
         <rdfs:comment xml:lang="en">A rule governing the functions that may be performed on an aerodrome.</rdfs:comment>
     </owl:Class>
     
@@ -4045,7 +3958,6 @@
     <!-- http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#AircraftStand -->
 
     <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#AircraftStand">
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#_AerodromeInfrastructure_"/>
         <rdfs:comment xml:lang="en">A designated area on an apron intended to be used for parking an aircraft.</rdfs:comment>
     </owl:Class>
     
@@ -4054,7 +3966,6 @@
     <!-- http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#AircraftStandConfiguration -->
 
     <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#AircraftStandConfiguration">
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#_AerodromeInfrastructure_"/>
         <rdfs:comment xml:lang="en">Configuration of aircraft stands available for use in a given airport operational mode.</rdfs:comment>
     </owl:Class>
     
@@ -4099,26 +4010,7 @@
     <!-- http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#AltimeterSource -->
 
     <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#AltimeterSource">
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#_AerodromeInfrastructure_"/>
         <rdfs:comment xml:lang="en">An instrument which measures vertical distance with respect to a reference level.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#AltimeterSource-isPrimary -->
-
-    <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#AltimeterSource-isPrimary">
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#AltimeterSource"/>
-        <rdfs:comment xml:lang="en">Indication whether the altimeter is primary.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#AltimeterSource-isRemote -->
-
-    <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#AltimeterSource-isRemote">
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#AltimeterSource"/>
-        <rdfs:comment xml:lang="en">Indication whether the altimeter is remote.</rdfs:comment>
     </owl:Class>
     
 
@@ -4126,7 +4018,6 @@
     <!-- http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#AltimeterSourceStatus -->
 
     <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#AltimeterSourceStatus">
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#_AerodromeInfrastructure_"/>
         <rdfs:comment xml:lang="en">The operational status of an altimeter source.</rdfs:comment>
     </owl:Class>
     
@@ -4136,26 +4027,7 @@
 
     <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#ApproachLightingSystem">
         <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#GroundLightSystem"/>
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#_AerodromeInfrastructure_"/>
         <rdfs:comment xml:lang="en">An airport lighting facility which provides visual guidance to landing aircraft by radiating light beams in a directional pattern by which the pilot aligns the aircraft with the final approach path for landing.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#ApproachLightingSystem-isAlignmentIndicatorAvailable -->
-
-    <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#ApproachLightingSystem-isAlignmentIndicatorAvailable">
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#ApproachLightingSystem"/>
-        <rdfs:comment xml:lang="en">An indication that a runway alignment indicator is available for the approach lighting system.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#ApproachLightingSystem-isSequencedFlashingAvailable -->
-
-    <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#ApproachLightingSystem-isSequencedFlashingAvailable">
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#ApproachLightingSystem"/>
-        <rdfs:comment xml:lang="en">An indication that sequenced flashing is available for the approach lighting system.</rdfs:comment>
     </owl:Class>
     
 
@@ -4163,17 +4035,7 @@
     <!-- http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#Apron -->
 
     <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#Apron">
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#_AerodromeInfrastructure_"/>
         <rdfs:comment xml:lang="en">A defined area, on a land aerodrome/heliport, intended to accommodate aircraft/helicopters for purposes of loading and unloading passengers, mail or cargo, and for fuelling, parking or maintenance.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#Apron-isAbandoned -->
-
-    <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#Apron-isAbandoned">
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#Apron"/>
-        <rdfs:comment xml:lang="en">An indicator that an apron is no longer in operational use, but it is still physically present and visible, although usually in a degraded state.</rdfs:comment>
     </owl:Class>
     
 
@@ -4181,7 +4043,6 @@
     <!-- http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#ApronAreaAvailability -->
 
     <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#ApronAreaAvailability">
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#_AerodromeInfrastructure_"/>
         <rdfs:comment xml:lang="en">Information about the operational status of an element situated in an aerodrome apron area.</rdfs:comment>
     </owl:Class>
     
@@ -4191,7 +4052,6 @@
 
     <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#ApronAreaUsage">
         <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#UsageCondition"/>
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#_AerodromeInfrastructure_"/>
         <rdfs:comment xml:lang="en">A rule governing the usage of an element situated in the apron area.</rdfs:comment>
     </owl:Class>
     
@@ -4206,44 +4066,7 @@
     <!-- http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#ApronElement -->
 
     <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#ApronElement">
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#_AerodromeInfrastructure_"/>
         <rdfs:comment xml:lang="en">A part of a defined apron area.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#ApronElement-isDockingAvailable -->
-
-    <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#ApronElement-isDockingAvailable">
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#ApronElement"/>
-        <rdfs:comment xml:lang="en">An indicator of the availability of docking station system at an apron element.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#ApronElement-isGroundPowerAvailable -->
-
-    <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#ApronElement-isGroundPowerAvailable">
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#ApronElement"/>
-        <rdfs:comment xml:lang="en">An indicator of the availability of ground power at an apron element.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#ApronElement-isJetwayAvailable -->
-
-    <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#ApronElement-isJetwayAvailable">
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#ApronElement"/>
-        <rdfs:comment xml:lang="en">An indicator of the availability of jetway at an apron element.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#ApronElement-isTowingAvailable -->
-
-    <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#ApronElement-isTowingAvailable">
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#ApronElement"/>
-        <rdfs:comment xml:lang="en">Availability of towing service at an apron element.</rdfs:comment>
     </owl:Class>
     
 
@@ -4252,7 +4075,6 @@
 
     <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#ApronLightSystem">
         <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#GroundLightSystem"/>
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#_AerodromeInfrastructure_"/>
         <rdfs:comment xml:lang="en">The lighting system provided for illuminating apron areas of an aerodrome.</rdfs:comment>
     </owl:Class>
     
@@ -4262,7 +4084,6 @@
 
     <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#ApronMarking">
         <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#Marking"/>
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#_AerodromeInfrastructure_"/>
         <rdfs:comment xml:lang="en">A symbol or group of symbols displayed on the surface of an apron of an aerodrome.</rdfs:comment>
     </owl:Class>
     
@@ -4271,17 +4092,7 @@
     <!-- http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#ArrestingGear -->
 
     <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#ArrestingGear">
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#_AerodromeInfrastructure_"/>
         <rdfs:comment xml:lang="en">A series of devices (for example: engaging or catching devices and energy absorption devices) that are used to stop an aircraft by absorbing its momentum in a routine landing, emergency landing or aborted take-off.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#ArrestingGear-isBidirectional -->
-
-    <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#ArrestingGear-isBidirectional">
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#ArrestingGear"/>
-        <rdfs:comment xml:lang="en">An indicator of whether or not both runway directions utilise arresting gear which consists of a series of devices used to stop an aircraft by absorbing its momentum.</rdfs:comment>
     </owl:Class>
     
 
@@ -4757,7 +4568,6 @@
     <!-- http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#DeicingArea -->
 
     <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#DeicingArea">
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#_AerodromeInfrastructure_"/>
         <rdfs:comment xml:lang="en">An area comprising an inner area for the parking of an aeroplane to receive de-icing / anti-icing treatment and an outer area for the manoeuvring of two or more mobile de-icing / anti-icing equipment.</rdfs:comment>
     </owl:Class>
     
@@ -4767,7 +4577,6 @@
 
     <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#DeicingAreaMarking">
         <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#Marking"/>
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#_AerodromeInfrastructure_"/>
         <rdfs:comment xml:lang="en">A symbol or group of symbols displayed on the surface of a deicing area</rdfs:comment>
     </owl:Class>
     
@@ -4776,7 +4585,6 @@
     <!-- http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#DeicingGroup -->
 
     <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#DeicingGroup">
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#_AerodromeInfrastructure_"/>
         <rdfs:comment xml:lang="en">A group of deicing areas. </rdfs:comment>
     </owl:Class>
     
@@ -4803,7 +4611,6 @@
     <!-- http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#FloatingDockSite -->
 
     <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#FloatingDockSite">
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#_AerodromeInfrastructure_"/>
         <rdfs:comment xml:lang="en">Floating facility which can serve as a mooring place for vessels or as a floating dry dock.</rdfs:comment>
     </owl:Class>
     
@@ -4812,17 +4619,7 @@
     <!-- http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#Gate -->
 
     <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#Gate">
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#_AerodromeInfrastructure_"/>
         <rdfs:comment xml:lang="en">Access to an airport terminal on the passenger side.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#Gate-isUsableForTransit -->
-
-    <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#Gate-isUsableForTransit">
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#Gate"/>
-        <rdfs:comment xml:lang="en">Indication that the gate can be used for transit.</rdfs:comment>
     </owl:Class>
     
 
@@ -4830,17 +4627,7 @@
     <!-- http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#GroundLightSystem -->
 
     <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#GroundLightSystem">
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#_AerodromeInfrastructure_"/>
         <rdfs:comment xml:lang="en">One or more light sources located on the ground that provide visual assistance for air and ground navigation.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#GroundLightSystem-isEmergencyLightingAvailable -->
-
-    <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#GroundLightSystem-isEmergencyLightingAvailable">
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#GroundLightSystem"/>
-        <rdfs:comment xml:lang="en">The availability of a back-up lighting system to be used in case of failure of the main lighting system.</rdfs:comment>
     </owl:Class>
     
 
@@ -4848,7 +4635,6 @@
     <!-- http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#GroundLightingAvailability -->
 
     <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#GroundLightingAvailability">
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#_AerodromeInfrastructure_"/>
         <rdfs:comment xml:lang="en">Information about the operational status of a ground light.</rdfs:comment>
     </owl:Class>
     
@@ -4857,7 +4643,6 @@
     <!-- http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#GuidanceLine -->
 
     <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#GuidanceLine">
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#_AerodromeInfrastructure_"/>
         <rdfs:comment xml:lang="en">A line used to guide aircraft on and between airport movement areas.</rdfs:comment>
     </owl:Class>
     
@@ -4867,7 +4652,6 @@
 
     <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#GuidanceLineLightSystem">
         <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#GroundLightSystem"/>
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#_AerodromeInfrastructure_"/>
         <rdfs:comment xml:lang="en">The lighting system for the centreline guidance line.</rdfs:comment>
     </owl:Class>
     
@@ -4877,7 +4661,6 @@
 
     <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#GuidanceLineMarking">
         <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#Marking"/>
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#_AerodromeInfrastructure_"/>
         <rdfs:comment xml:lang="en">A symbol or group of symbols displayed as the guidance line.</rdfs:comment>
     </owl:Class>
     
@@ -4893,7 +4676,6 @@
 
     <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#LandAndHoldShortOperationsMarking">
         <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#Marking"/>
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#_AerodromeInfrastructure_"/>
         <rdfs:comment xml:lang="en">Marking used for Land and Hold Short Operations (LAHSO).</rdfs:comment>
     </owl:Class>
     
@@ -4914,7 +4696,6 @@
     <!-- http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#ManoeuvringArea -->
 
     <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#ManoeuvringArea">
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#_AerodromeInfrastructure_"/>
         <rdfs:comment xml:lang="en">That part of an aerodrome to be used for the take-off, landing and taxiing of aircraft, excluding aprons.</rdfs:comment>
     </owl:Class>
     
@@ -4923,7 +4704,6 @@
     <!-- http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#ManoeuvringAreaAvailability -->
 
     <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#ManoeuvringAreaAvailability">
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#_AerodromeInfrastructure_"/>
         <rdfs:comment xml:lang="en">Information about the operational status of the manoeuvring area elements.</rdfs:comment>
     </owl:Class>
     
@@ -4933,7 +4713,6 @@
 
     <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#ManoeuvringAreaUsage">
         <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#UsageCondition"/>
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#_AerodromeInfrastructure_"/>
         <rdfs:comment xml:lang="en">A rule governing the usage of the manoeuvring area element.</rdfs:comment>
     </owl:Class>
     
@@ -4942,17 +4721,7 @@
     <!-- http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#Marking -->
 
     <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#Marking">
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#_AerodromeInfrastructure_"/>
         <rdfs:comment xml:lang="en">A symbol or group of symbols displayed on the surface of the movement area in order to convey aeronautical information.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#Marking-isMarkingICAOStandard -->
-
-    <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#Marking-isMarkingICAOStandard">
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#Marking"/>
-        <rdfs:comment xml:lang="en">Indicates the aerodrome protection area surface marking is in accordance with International Civil Aviation Organization (ICAO) standard as described in Annex 14.</rdfs:comment>
     </owl:Class>
     
 
@@ -4960,7 +4729,6 @@
     <!-- http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#MarkingBuoy -->
 
     <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#MarkingBuoy">
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#_AerodromeInfrastructure_"/>
         <rdfs:comment xml:lang="en">A floating object moored to the bottom in a particular place, as an aid to navigation or for other specific purposes.</rdfs:comment>
     </owl:Class>
     
@@ -4969,7 +4737,6 @@
     <!-- http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#MarkingElement -->
 
     <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#MarkingElement">
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#_AerodromeInfrastructure_"/>
         <rdfs:comment xml:lang="en">A symbol displayed on an aerodrome surface in order to convey aeronautical information.</rdfs:comment>
     </owl:Class>
     
@@ -4978,7 +4745,6 @@
     <!-- http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#MovementArea -->
 
     <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#MovementArea">
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#_AerodromeInfrastructure_"/>
         <rdfs:comment xml:lang="en">That part of an aerodrome to be used for the take-off, landing and taxiing of aircraft, consisting of the manoeuvring area and the apron(s).</rdfs:comment>
     </owl:Class>
     
@@ -4987,7 +4753,6 @@
     <!-- http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#NavaidEquipmentDistance -->
 
     <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#NavaidEquipmentDistance">
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#_AerodromeInfrastructure_"/>
         <rdfs:comment xml:lang="en">The distances between various runway centreline points and a radio navigation aid.</rdfs:comment>
     </owl:Class>
     
@@ -4996,7 +4761,6 @@
     <!-- http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#NonMovementArea -->
 
     <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#NonMovementArea">
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#_AerodromeInfrastructure_"/>
         <rdfs:comment xml:lang="en">Area where aircraft cannot be seen by a control tower and therefore are restricted to move.</rdfs:comment>
     </owl:Class>
     
@@ -5017,7 +4781,6 @@
     <!-- http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#ParkingConfiguration -->
 
     <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#ParkingConfiguration">
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#_AerodromeInfrastructure_"/>
         <rdfs:comment xml:lang="en">Grouping of non-overlapping aircraft parking positions: a single ParkingConfiguration defines a way to divide the stand&apos;s area into one or more non-overlapping parking positions.</rdfs:comment>
     </owl:Class>
     
@@ -5026,7 +4789,6 @@
     <!-- http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#PassengerLoadingBridge -->
 
     <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#PassengerLoadingBridge">
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#_AerodromeInfrastructure_"/>
         <rdfs:comment xml:lang="en">A mechanically operated, adjustable ramp to provide direct passenger access between aircraft and buildings.</rdfs:comment>
     </owl:Class>
     
@@ -5035,17 +4797,7 @@
     <!-- http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#PositionMarking -->
 
     <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#PositionMarking">
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#_AerodromeInfrastructure_"/>
         <rdfs:comment xml:lang="en">Location on the movement area surface used for Air Traffic Control clearances. Position marking could be a painted marking or a sign.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#PositionMarking-isUsedInLVO -->
-
-    <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#PositionMarking-isUsedInLVO">
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#PositionMarking"/>
-        <rdfs:comment xml:lang="en">Usage of the feature instance for Low Visibility Operations</rdfs:comment>
     </owl:Class>
     
 
@@ -5053,17 +4805,7 @@
     <!-- http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#Road -->
 
     <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#Road">
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#_AerodromeInfrastructure_"/>
         <rdfs:comment xml:lang="en">An established surface route on the movement area meant for the exclusive use of vehicles.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#Road-isAbandoned -->
-
-    <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#Road-isAbandoned">
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#Road"/>
-        <rdfs:comment xml:lang="en">An indicator that a road is no longer in operational use, but it is still physically present and visible, although usually in a degraded state.</rdfs:comment>
     </owl:Class>
     
 
@@ -5071,17 +4813,7 @@
     <!-- http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#Runway -->
 
     <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#Runway">
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#_AerodromeInfrastructure_"/>
         <rdfs:comment xml:lang="en">A defined rectangular area on a land aerodrome prepared for the landing and take-off of aircraft.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#Runway-isAbandoned -->
-
-    <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#Runway-isAbandoned">
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#Runway"/>
-        <rdfs:comment xml:lang="en">An indicator that the surface is no longer in operational use, but is still physically present and visible, although usually in a degraded state.</rdfs:comment>
     </owl:Class>
     
 
@@ -5089,7 +4821,6 @@
     <!-- http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#RunwayBlastPad -->
 
     <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#RunwayBlastPad">
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#_AerodromeInfrastructure_"/>
         <rdfs:comment xml:lang="en">Specially prepared surface placed adjacent to the end of a runway to eliminate the erosive effect of the high wind forces produced by airplanes at the beginning of their take-off rolls.</rdfs:comment>
     </owl:Class>
     
@@ -5098,7 +4829,6 @@
     <!-- http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#RunwayConfiguration -->
 
     <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#RunwayConfiguration">
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#_AerodromeInfrastructure_"/>
         <rdfs:comment xml:lang="en">Configuration of runway directions available for use in a given airport operational mode.</rdfs:comment>
     </owl:Class>
     
@@ -5113,7 +4843,6 @@
     <!-- http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#RunwayDeclaredDistance -->
 
     <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#RunwayDeclaredDistance">
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#_AerodromeInfrastructure_"/>
         <rdfs:comment xml:lang="en">A conventional operational distance declared for a runway direction.</rdfs:comment>
     </owl:Class>
     
@@ -5122,17 +4851,7 @@
     <!-- http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#RunwayDirection -->
 
     <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#RunwayDirection">
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#_AerodromeInfrastructure_"/>
         <rdfs:comment xml:lang="en">One of the two possible landing and/or take-off directions of a runway or Final Approach and Take-off Area (FATO).</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#RunwayDirection-isTakeoffHoldLightSystemInstalled -->
-
-    <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#RunwayDirection-isTakeoffHoldLightSystemInstalled">
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#RunwayDirection"/>
-        <rdfs:comment xml:lang="en">Indicates if Take-off Hold Light system is installed at that end of the runway.</rdfs:comment>
     </owl:Class>
     
 
@@ -5141,7 +4860,6 @@
 
     <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#RunwayDirectionLightSystem">
         <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#GroundLightSystem"/>
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#_AerodromeInfrastructure_"/>
         <rdfs:comment xml:lang="en">The lighting system provided for a landing and take-off direction, including the stopway lights.</rdfs:comment>
     </owl:Class>
     
@@ -5150,7 +4868,6 @@
     <!-- http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#RunwayElement -->
 
     <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#RunwayElement">
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#_AerodromeInfrastructure_"/>
         <rdfs:comment xml:lang="en">A portion of a runway.</rdfs:comment>
     </owl:Class>
     
@@ -5160,7 +4877,6 @@
 
     <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#RunwayExitLine">
         <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#GuidanceLine"/>
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#_AerodromeInfrastructure_"/>
         <rdfs:comment xml:lang="en">Guidance line painted on the runway exit.</rdfs:comment>
     </owl:Class>
     
@@ -5170,7 +4886,6 @@
 
     <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#RunwayMarking">
         <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#Marking"/>
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#_AerodromeInfrastructure_"/>
         <rdfs:comment xml:lang="en">A symbol or group of symbols displayed on the surface of the runway in order to convey aeronautical information.</rdfs:comment>
     </owl:Class>
     
@@ -5180,7 +4895,6 @@
 
     <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#RunwayProtectArea">
         <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#AerodromeProtectionArea"/>
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#_AerodromeInfrastructure_"/>
         <rdfs:comment xml:lang="en">An area situated in the vicinity of a runway or provided to protect aircraft during manoeuvring, take-off and landing operations.</rdfs:comment>
     </owl:Class>
     
@@ -5190,7 +4904,6 @@
 
     <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#RunwayProtectAreaLightSystem">
         <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#GroundLightSystem"/>
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#_AerodromeInfrastructure_"/>
         <rdfs:comment xml:lang="en">The lighting for the runway protect area.</rdfs:comment>
     </owl:Class>
     
@@ -5211,7 +4924,6 @@
     <!-- http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#SeaplaneLandingArea -->
 
     <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#SeaplaneLandingArea">
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#_AerodromeInfrastructure_"/>
         <rdfs:comment xml:lang="en">A defined area on water at an aerodrome prescribed for the landing and take-off of seaplanes.</rdfs:comment>
     </owl:Class>
     
@@ -5220,7 +4932,6 @@
     <!-- http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#SeaplaneRampSite -->
 
     <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#SeaplaneRampSite">
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#_AerodromeInfrastructure_"/>
         <rdfs:comment xml:lang="en">Ramps specifically designed to transit seaplanes from land to water and vice versa.</rdfs:comment>
     </owl:Class>
     
@@ -5236,7 +4947,6 @@
 
     <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#StandMarking">
         <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#Marking"/>
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#_AerodromeInfrastructure_"/>
         <rdfs:comment xml:lang="en">A symbol or group of symbols displayed on the surface of the Aircraft Stand.</rdfs:comment>
     </owl:Class>
     
@@ -5245,7 +4955,6 @@
     <!-- http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#SurfaceCharacteristics -->
 
     <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#SurfaceCharacteristics">
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#_AerodromeInfrastructure_"/>
         <rdfs:comment xml:lang="en">The characteristics of an aerodrome surface.</rdfs:comment>
     </owl:Class>
     
@@ -5266,17 +4975,7 @@
     <!-- http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#TaxiRoute -->
 
     <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#TaxiRoute">
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#_AerodromeInfrastructure_"/>
         <rdfs:comment xml:lang="en">A predefined path from a Runway to an aircraft Stand (and vice versa). A taxi route is a sequence of taxiways. </rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#TaxiRoute-isAllowed -->
-
-    <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#TaxiRoute-isAllowed">
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#TaxiRoute"/>
-        <rdfs:comment xml:lang="en">Indication whether the usage of the taxi route is allowed or prohibited, depending on runway configuration.</rdfs:comment>
     </owl:Class>
     
 
@@ -5284,7 +4983,6 @@
     <!-- http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#Taxiway -->
 
     <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#Taxiway">
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#_AerodromeInfrastructure_"/>
         <rdfs:comment xml:lang="en">A defined path on a land aerodrome established for the taxiing of aircraft and intended to provide a link between one part of the aerodrome and another, including:
 a) Aircraft stand taxilane. A portion of an apron designated as a taxiway and intended to provide access to aircraft stands only.
 b) Apron taxiway. A portion of a taxiway system located on an apron and intended to provide a through taxi route across the apron.
@@ -5293,19 +4991,9 @@ c) Rapid exit taxiway. A taxiway connected to a runway at an acute angle and des
     
 
 
-    <!-- http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#Taxiway-isAbandoned -->
-
-    <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#Taxiway-isAbandoned">
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#Taxiway"/>
-        <rdfs:comment xml:lang="en">An indicator that a taxiway is no longer in operational use, but it is still physically present and visible, although usually in a degraded state.</rdfs:comment>
-    </owl:Class>
-    
-
-
     <!-- http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#TaxiwayConfiguration -->
 
     <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#TaxiwayConfiguration">
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#_AerodromeInfrastructure_"/>
         <rdfs:comment xml:lang="en">Configuration of taxiways available for use in a given airport operational mode.</rdfs:comment>
     </owl:Class>
     
@@ -5320,7 +5008,6 @@ c) Rapid exit taxiway. A taxiway connected to a runway at an acute angle and des
     <!-- http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#TaxiwayElement -->
 
     <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#TaxiwayElement">
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#_AerodromeInfrastructure_"/>
         <rdfs:comment xml:lang="en">A portion of a taxiway.</rdfs:comment>
     </owl:Class>
     
@@ -5329,7 +5016,6 @@ c) Rapid exit taxiway. A taxiway connected to a runway at an acute angle and des
     <!-- http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#TaxiwayHoldingPosition -->
 
     <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#TaxiwayHoldingPosition">
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#_AerodromeInfrastructure_"/>
         <rdfs:comment xml:lang="en">A designated position at which taxiing aircraft and vehicles must stop and hold position, unless otherwise authorized by the aerodrome control tower.</rdfs:comment>
     </owl:Class>
     
@@ -5339,7 +5025,6 @@ c) Rapid exit taxiway. A taxiway connected to a runway at an acute angle and des
 
     <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#TaxiwayHoldingPositionLightSystem">
         <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#GroundLightSystem"/>
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#_AerodromeInfrastructure_"/>
         <rdfs:comment xml:lang="en">Lighting system for a taxiway hold position.</rdfs:comment>
     </owl:Class>
     
@@ -5349,17 +5034,7 @@ c) Rapid exit taxiway. A taxiway connected to a runway at an acute angle and des
 
     <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#TaxiwayHoldingPositionMarking">
         <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#Marking"/>
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#_AerodromeInfrastructure_"/>
         <rdfs:comment xml:lang="en">A symbol or group of symbols displayed on the surface of a Taxiway indicating the location of the Taxiway Holding Position.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#TaxiwayHoldingPositionMarking-isRunwayEntryLightSystemInstalled -->
-
-    <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#TaxiwayHoldingPositionMarking-isRunwayEntryLightSystemInstalled">
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#TaxiwayHoldingPositionMarking"/>
-        <rdfs:comment xml:lang="en">Indicates if Runway Entry Light system is installed at holding position</rdfs:comment>
     </owl:Class>
     
 
@@ -5368,7 +5043,6 @@ c) Rapid exit taxiway. A taxiway connected to a runway at an acute angle and des
 
     <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#TaxiwayIntersectionMarking">
         <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#TaxiwayMarking"/>
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#_AerodromeInfrastructure_"/>
         <rdfs:comment xml:lang="en">A marking painted at a position at which taxiing aircraft and vehicles are expected to stop and hold until further cleared to proceed, when so instructed by the aerodrome control tower.</rdfs:comment>
     </owl:Class>
     
@@ -5378,7 +5052,6 @@ c) Rapid exit taxiway. A taxiway connected to a runway at an acute angle and des
 
     <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#TaxiwayLightSystem">
         <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#GroundLightSystem"/>
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#_AerodromeInfrastructure_"/>
         <rdfs:comment xml:lang="en">The lighting system provided for a taxiway at an aerodrome.</rdfs:comment>
     </owl:Class>
     
@@ -5388,7 +5061,6 @@ c) Rapid exit taxiway. A taxiway connected to a runway at an acute angle and des
 
     <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#TaxiwayMarking">
         <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#Marking"/>
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#_AerodromeInfrastructure_"/>
         <rdfs:comment xml:lang="en">A symbol or group of symbols displayed on the surface of the taxiway.</rdfs:comment>
     </owl:Class>
     
@@ -5397,7 +5069,6 @@ c) Rapid exit taxiway. A taxiway connected to a runway at an acute angle and des
     <!-- http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#Terminal -->
 
     <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#Terminal">
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#_AerodromeInfrastructure_"/>
         <rdfs:comment xml:lang="en">An installation on an aerodrome with facilities for loading and unloading aircraft and processing traffic (passengers, baggage, cargo and mail).</rdfs:comment>
     </owl:Class>
     
@@ -5406,17 +5077,7 @@ c) Rapid exit taxiway. A taxiway connected to a runway at an acute angle and des
     <!-- http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#TouchDownLiftOff -->
 
     <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#TouchDownLiftOff">
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#_AerodromeInfrastructure_"/>
         <rdfs:comment xml:lang="en">A load bearing area on which a helicopter may touch down or lift off.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#TouchDownLiftOff-isAbandoned -->
-
-    <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#TouchDownLiftOff-isAbandoned">
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#TouchDownLiftOff"/>
-        <rdfs:comment xml:lang="en">An indicator that the touch down and lift-off area is no longer in operational use, but it is still physically present and visible, although usually in a degraded state.</rdfs:comment>
     </owl:Class>
     
 
@@ -5431,7 +5092,6 @@ c) Rapid exit taxiway. A taxiway connected to a runway at an acute angle and des
 
     <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#TouchDownLiftOffLightSystem">
         <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#GroundLightSystem"/>
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#_AerodromeInfrastructure_"/>
         <rdfs:comment xml:lang="en">The lighting system provided for a touch down and lift-off surface at an aerodrome.</rdfs:comment>
     </owl:Class>
     
@@ -5441,7 +5101,6 @@ c) Rapid exit taxiway. A taxiway connected to a runway at an acute angle and des
 
     <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#TouchDownLiftOffMarking">
         <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#Marking"/>
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#_AerodromeInfrastructure_"/>
         <rdfs:comment xml:lang="en">A symbol or group of symbols displayed on the surface of the touch down and lift-off area at an aerodrome.</rdfs:comment>
     </owl:Class>
     
@@ -5451,7 +5110,6 @@ c) Rapid exit taxiway. A taxiway connected to a runway at an acute angle and des
 
     <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#TouchDownLiftOffSafeArea">
         <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#AerodromeProtectionArea"/>
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#_AerodromeInfrastructure_"/>
         <rdfs:comment xml:lang="en">An obstacle-free area situated in the vicinity of a touchdown and lift-off area, provided to protect helicopters during manoeuvring, take-off and / or landing operations.</rdfs:comment>
     </owl:Class>
     
@@ -5466,7 +5124,6 @@ c) Rapid exit taxiway. A taxiway connected to a runway at an acute angle and des
     <!-- http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#UsageCondition -->
 
     <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#UsageCondition">
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#_AerodromeInfrastructure_"/>
         <rdfs:comment xml:lang="en">A rule governing the usage of an aerodrome or one of its surfaces.</rdfs:comment>
     </owl:Class>
     
@@ -5512,17 +5169,7 @@ c) Rapid exit taxiway. A taxiway connected to a runway at an acute angle and des
 
     <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#VisualGlideSlopeIndicator">
         <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#GroundLightSystem"/>
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#_AerodromeInfrastructure_"/>
         <rdfs:comment xml:lang="en">A visual guidance system that provides &apos;below/above glidepath&apos; information to an aircraft executing an approach to a specific runway direction.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#VisualGlideSlopeIndicator-isPortable -->
-
-    <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#VisualGlideSlopeIndicator-isPortable">
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#VisualGlideSlopeIndicator"/>
-        <rdfs:comment xml:lang="en">An indicator of whether or not a runway&apos;s visual glide slope indicator system is capable of being transported or conveyed.</rdfs:comment>
     </owl:Class>
     
 
@@ -5530,7 +5177,6 @@ c) Rapid exit taxiway. A taxiway connected to a runway at an acute angle and des
     <!-- http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#WorkArea -->
 
     <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#WorkArea">
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#_AerodromeInfrastructure_"/>
         <rdfs:comment xml:lang="en">A part of an aerodrome in which maintenance or construction works are in progress.</rdfs:comment>
     </owl:Class>
     
@@ -5539,25 +5185,7 @@ c) Rapid exit taxiway. A taxiway connected to a runway at an acute angle and des
     <!-- http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#WorkAreaActivity -->
 
     <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#WorkAreaActivity">
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#_AerodromeInfrastructure_"/>
         <rdfs:comment xml:lang="en">Aerodrome work area activity information.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#WorkAreaActivity-isActive -->
-
-    <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#WorkAreaActivity-isActive">
-        <rdfs:subClassOf rdf:resource="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#WorkAreaActivity"/>
-        <rdfs:comment xml:lang="en">An indication that an aerodrome work area is active.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#_AerodromeInfrastructure_ -->
-
-    <owl:Class rdf:about="http://www.project-best.eu/owl/airm-mod/aerodromeinfrastructure.owl#_AerodromeInfrastructure_">
-        <rdfs:comment xml:lang="en">The aerodrome including any installations and equipment.</rdfs:comment>
     </owl:Class>
 </rdf:RDF>
 

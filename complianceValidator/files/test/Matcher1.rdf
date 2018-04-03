@@ -97,14 +97,14 @@
       <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
     </Cell>
   </map>
-  <map>
+<!--  <map>
     <Cell>
       <entity1 rdf:resource='http://oaei.ontologymatching.org/tests/101/onto.rdf#Booklet'/>
       <entity2 rdf:resource='http://purl.org/ontology/bibo#Book'/>
       <relation>=</relation>
       <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>0.9181818181818182</measure>
     </Cell>
-  </map>
+  </map>-->
   <map>
     <Cell>
       <entity1 rdf:resource='http://oaei.ontologymatching.org/tests/101/onto.rdf#Collection'/>
@@ -126,7 +126,7 @@
       <entity1 rdf:resource='http://oaei.ontologymatching.org/tests/101/onto.rdf#Journal'/>
       <entity2 rdf:resource='http://purl.org/ontology/bibo#Journal'/>
       <relation>=</relation>
-      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>0.8</measure>
     </Cell>
   </map>
 </Alignment>
