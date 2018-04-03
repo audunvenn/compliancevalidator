@@ -37,6 +37,7 @@ public class AutoWeightPlusPlus {
 		BasicAlignment a = (BasicAlignment)parser.parse(aFile.toURI().toString());
 		BasicAlignment b = (BasicAlignment)parser.parse(bFile.toURI().toString());
 		BasicAlignment c = (BasicAlignment)parser.parse(cFile.toURI().toString());
+
 		
 		ArrayList<BasicAlignment> initialAlignments = new ArrayList<BasicAlignment>();
 
@@ -45,71 +46,54 @@ public class AutoWeightPlusPlus {
 		initialAlignments.add(c);
 
 
-		
-		BasicAlignment aHigh = getHighestCorrespondencesFromSingleAlignment(a);
-		BasicAlignment bHigh = getHighestCorrespondencesFromSingleAlignment(b);
-		BasicAlignment cHigh = getHighestCorrespondencesFromSingleAlignment(c);
-
-		List<BasicAlignment> aHighList = new ArrayList<BasicAlignment>();
-		aHighList.add(aHigh);
-		aHighList.add(bHigh);
-		aHighList.add(cHigh);
-
-		BasicAlignment finalAlignment = autoweightPlusPlus(initialAlignments);
-//		
-//		System.out.println("\nPrinting final alignment: (" + finalAlignment.nbCells() + ")");
-//		
-//		for (Cell cell : finalAlignment) {
-//			System.out.println(cell.getObject1AsURI().getFragment() + " - " + cell.getObject2AsURI().getFragment() + " - " + cell.getRelation().getRelation() + " : " + cell.getStrength());
-//		}
+		BasicAlignment finalAlignment = runAutoweightPlusPlus(initialAlignments);
 
 	}
 
-	public static BasicAlignment autoweightPlusPlus(ArrayList<BasicAlignment> initialAlignments) throws AlignmentException {
-
+	public static BasicAlignment runAutoweightPlusPlus(ArrayList<BasicAlignment> initialAlignments) throws AlignmentException {
+		
 		BasicAlignment finalAlignment = new URIAlignment();
 		
-
 		ArrayList<BasicAlignment> highestCorrs = new ArrayList<BasicAlignment>();
 		
-	
-
-		for (BasicAlignment a : initialAlignments) {
-			highestCorrs.add(getHighestCorrespondencesFromSingleAlignment(a));
+		ArrayList<BasicAlignment> initialsClone = new ArrayList<BasicAlignment>(initialAlignments);
+		
+		//clone the initialAlignments list, otherwise the references are messed up
+		for (BasicAlignment b : initialsClone) {
+			BasicAlignment bClone = (BasicAlignment) b.clone();
+			highestCorrs.add(getHighestCorrespondencesFromSingleAlignment(bClone));
 		}
 
 		//test print highest correspondences for each alignment
-		int count = 1;
-		
-		for (BasicAlignment ba : highestCorrs) {
-			System.out.println("Alignment " + count++);
-			for (Cell c : ba) {
-				System.out.println(c.getObject1() + " - " + c.getObject2() + " : " + c.getStrength());
-			}
-		}
-		
+//		int count = 1;
+//		
+//		for (BasicAlignment ba : highestCorrs) {
+//			System.out.println("Alignment " + count++);
+//			for (Cell c : ba) {
+//				System.out.println(c.getObject1() + " - " + c.getObject2() + " : " + c.getStrength());
+//			}
+//		}
 		//-> now we have an ArrayList of all highest correspondence alignments
 
 		//get all cells that are highest correspondence (for comparison only)
 		Map<Cell, Double> highCorrCoefficients = getHighestCorrespondencesCoefficient(highestCorrs);
-		
-		System.out.println("The highest correspondences are: ");
-		for (Entry<Cell, Double> e : highCorrCoefficients.entrySet()) {
-			System.out.println(e.getKey().getObject1AsURI().getFragment() + " - " + e.getKey().getObject2AsURI().getFragment() + ": " + e.getValue());
-		}
 
-		//calculate matcher weight
+//		System.out.println("\nTest: The highest correspondence coefficients are: ");
+//		for (Entry<Cell, Double> e : highCorrCoefficients.entrySet()) {
+//			System.out.println(e.getKey().getObject1AsURI().getFragment() + " - " + e.getKey().getObject2AsURI().getFragment() + ": " + e.getValue());
+//		}
+
 		//calculate importance coefficient for each matcher
 		Map<BasicAlignment, Double> matcherCoefficient = getMatcherCoefficient(highCorrCoefficients, initialAlignments);
 
 		//calculate matcher weight
 		Map<BasicAlignment, Double> matcherWeight = getMatcherWeight(matcherCoefficient);
 		
-		System.out.println("The matcher weights are: ");
-		
-		for (Entry<BasicAlignment, Double> e : matcherWeight.entrySet()) {
-			System.out.println(e.getKey() + ": " + e.getValue());
-		}
+//		System.out.println("Test: The matcher weights are: ");
+//		
+//		for (Entry<BasicAlignment, Double> e : matcherWeight.entrySet()) {
+//			System.out.println(e.getKey() + ": " + e.getValue());
+//		}
 
 
 		//produce final alignment
@@ -117,26 +101,42 @@ public class AutoWeightPlusPlus {
 
 		ArrayList<BasicAlignment> initialAlignmentsWeighted = new ArrayList<BasicAlignment>();
 		
-		//revise the strength for each cell in the initial alignment according to the matcher weight
-		for (BasicAlignment a : initialAlignments) {
-			
-			weight = matcherWeight.get(a);
-			for (Cell c : a) {
-				c.setStrength(c.getStrength()*weight);
-			}
 
-			a.normalise();
-			initialAlignmentsWeighted.add(a);
-		}
 		
-		System.out.println("Printing initialalignmentsweighted");
-		for (BasicAlignment ra : initialAlignmentsWeighted) {
-			System.out.println("\nAlignment");
-			for (Cell cell : ra) {
-				System.out.println(cell.getObject1() + " - " + cell.getObject2() + " - " + cell.getStrength());
+//		System.out.println("Number of alignments: " + initialAlignments.size());
+//		System.out.println("Printing initial alignments");
+//		for (BasicAlignment b : initialAlignments) {
+//			System.out.println("Alignment " + b + " contains " + b.nbCells() + " cells");
+//			for (Cell c : b) {
+//				System.out.println(c.getObject1() + " - " + c.getObject2()  + " - " + c.getRelation().getRelation()  + " - " + c.getStrength());
+//			}
+//		}
+
+		
+		//revise the strength for each cell in the initial alignment according to the matcher weight
+		for (BasicAlignment b : initialAlignments) {
+			//create a new alignment holding the weighted cells and add this alignment to initialAlignmentsWeighted
+			BasicAlignment newAlignment = new URIAlignment();
+
+			//get the matcher weight for this particular matcher/alignment
+			weight = matcherWeight.get(b);
+			
+			for (Cell c : b) {
+				newAlignment.addAlignCell(c.getObject1(), c.getObject2(), c.getRelation().getRelation(), c.getStrength()*weight);
 			}
+			initialAlignmentsWeighted.add(newAlignment);
+	
 		}
+
 		
+//		System.out.println("Printing initialalignmentsweighted");
+//		for (BasicAlignment ra : initialAlignmentsWeighted) {
+//			System.out.println("\nAlignment");
+//			for (Cell cell : ra) {
+//				System.out.println(cell.getObject1() + " - " + cell.getObject2() + " - " + cell.getStrength());
+//			}
+//		}
+				
 		BasicAlignment ca = createCommonAlignment(initialAlignmentsWeighted);
 
 		//produce final alignment
@@ -175,6 +175,11 @@ public class AutoWeightPlusPlus {
 			}
 		}
 		
+//		System.out.println("Printing cellsList:");
+//		for (String s : cellsList) {
+//			System.out.println(s);
+//		}
+		
 		//count occurrences of each cell
 		Map<String, Integer> cellCountMap = new HashMap<String, Integer>();
 		
@@ -184,6 +189,11 @@ public class AutoWeightPlusPlus {
 			occurrences = Collections.frequency(cellsList, s);
 			cellCountMap.put(s, occurrences);
 		}
+		
+//		System.out.println("PRinting cellCountMap");
+//		for (Entry<String, Integer> e : cellCountMap.entrySet()) {
+//			System.out.println(e);
+//		}
 		
 		//adding a temporary alignment in order to fetch cells
 		BasicAlignment tempAlignment = new URIAlignment();
@@ -210,7 +220,7 @@ public class AutoWeightPlusPlus {
 						sumStrength += cs.getStrength();
 					}
 					avgStrength = sumStrength / numAlignments;
-					System.out.println("Average strength for " + c.getObject1() + " - " + c.getObject2() + " is " + avgStrength + " (sumStrength is " + sumStrength + "), and (numAlignments are " + numAlignments + ")");
+					//System.out.println("Average strength for " + c.getObject1() + " - " + c.getObject2() + " is " + avgStrength + " (sumStrength is " + sumStrength + "), and (numAlignments are " + numAlignments + ")");
 				}
 				if (avgStrength > 1.0) {
 					avgStrength = 1.0;
