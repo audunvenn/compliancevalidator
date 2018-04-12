@@ -75,6 +75,29 @@ public class AlignmentOperations {
 
 		return subsumptionAlignment;
 	}
+	
+	public static Alignment extractRewrittenRelations(File inputAlignmentFile) throws AlignmentException {
+
+		AlignmentParser parser = new AlignmentParser();
+		BasicAlignment inputAlignment = (BasicAlignment)parser.parse(inputAlignmentFile.toURI().toString());
+
+		BasicAlignment rewrittenAlignment = new URIAlignment();
+		
+		URI onto1URI = inputAlignment.getOntology1URI();
+		URI onto2URI = inputAlignment.getOntology2URI();
+
+		//need to initialise the alignment with ontology URIs and the type of relation (e.g. A5AlgebraRelation) otherwise exceptions are thrown
+		rewrittenAlignment.init( onto1URI, onto2URI, A5AlgebraRelation.class, BasicConfidence.class );
+
+		for (Cell c : inputAlignment) {
+			if (c.getRelation().getRelation().equals(")(")) {
+				rewrittenAlignment.addAlignCell(c.getObject1(), c.getObject2(), c.getRelation().getRelation(), c.getStrength());
+			}
+		}
+
+		return rewrittenAlignment;
+	}
+	
 
 	/**
 	 * Prints a BasicAlignment to file
@@ -194,28 +217,39 @@ public class AlignmentOperations {
 			}
 		}
 
-
-
 		return extractedAlignment;
 
 	}
+	
+	public static void countAlignmentCells(File inputAlignmentFile) throws AlignmentException {
+		
+		AlignmentParser parser = new AlignmentParser();
+		BasicAlignment inputAlignment = (BasicAlignment)parser.parse(inputAlignmentFile.toURI().toString());
+		
+		System.out.println("This alignment contains: " + inputAlignment.nbCells() + " cells");
+	}
 
 	public static void main(String[] args) throws OWLOntologyCreationException, AlignmentException, IOException {
-
+		
+		File alignmentFile = new File("./files/experiment_06032018/datasets/d1/refalign/ref-align_aixm-airportheliport-airm-aerodromeinfrastructure-EquivalenceComplete.rdf");
+		//File alignmentFile = new File("./files/inputAlignments/ref-align_aixm-airportheliport-airm-aerodromeinfrastructure-Rewritten.rdf");
+		
+		countAlignmentCells(alignmentFile);
+		
 		//***** EXTRACT REFERENCE ALIGNMENT FROM TRANSFORMED REFERENCE ALIGNMENT ****
-		 
-		File alignmentFile = new File("./files/referenceAlignments/AIXM_Compliance_Mapping-Evidence_for_AIRM_Compliance_L1.rdf");
-		File ontologyFile = new File("./files/ontologies/aixm/aixm_shared.owl");
+		 /*
+		File alignmentFile = new File("./files/inputAlignments/ref-align_aixm-airportheliport-airm-aerodromeinfrastructure-RewrittenComplete.rdf");
+		File ontologyFile = new File("./files/ontologies/airm/aerodromeinfrastructure.owl");
 
-		String onto1 = "aixm-shared";
-		String onto2 = "airm-mono";
+		String onto1 = "aixm-airportheliport";
+		String onto2 = "airm-aerodromeinfrastructure";
 
 		Alignment extractedAlignment = extractAlignment(alignmentFile, ontologyFile);
 
 		System.out.println("The extracted alignment contains " + extractedAlignment.nbCells() + " cells");
 
 		//store the alignment
-		String alignmentFileName = "./files/referenceAlignments/ref-align_" + onto1 + "-" + onto2 + ".rdf";
+		String alignmentFileName = "./files/inputAlignments/ref-align_" + onto1 + "-" + onto2 + "-RewrittenComplete.rdf";
 		File outputAlignment = new File(alignmentFileName);
 		PrintWriter writer = new PrintWriter(
 				new BufferedWriter(
@@ -224,12 +258,12 @@ public class AlignmentOperations {
 		extractedAlignment.render(renderer);
 		writer.flush();
 		writer.close();
+		*/
 		
 		
-
-		
-		//***** EXTRACT SUBSUMPTION OR EQUIVALENCE REFERENCE ALIGNMENT FROM COMBINED REFERENCE ALIGNMENT ****
-		/*File alignmentFile = new File("./files/experiment_06032018/datasets/d1/refalign/ref-align_aixm-airportheliport-airm-aerodromeinfrastructure.rdf");
+		/*
+		//***** EXTRACT SUBSUMPTION, REWRITTEN OR EQUIVALENCE REFERENCE ALIGNMENT FROM COMBINED REFERENCE ALIGNMENT ****
+		File alignmentFile = new File("./files/inputAlignments/AIXM2AIRM.rdf");
 		
 		Alignment extractedAlignment = extractEquivalenceRelations(alignmentFile);
 		
@@ -237,12 +271,12 @@ public class AlignmentOperations {
 		
 		String relationType = "Equivalence";
 
-		String onto1 = "aixm-airportheliport";
-		String onto2 = "airm-aerodromeinfrastructure";
+		String onto1 = "aixm";
+		String onto2 = "airm";
 
 
 		//store the alignment
-		String alignmentFileName = "./files/referenceAlignments/ref-align_" + onto1 + "-" + onto2 + "-" + relationType + ".rdf";
+		String alignmentFileName = "./files/inputAlignments/ref-align_" + onto1 + "-" + onto2 + "-" + relationType + ".rdf";
 		File outputAlignment = new File(alignmentFileName);
 		PrintWriter writer = new PrintWriter(
 				new BufferedWriter(
@@ -250,8 +284,8 @@ public class AlignmentOperations {
 		AlignmentVisitor renderer = new RDFRendererVisitor(writer);
 		extractedAlignment.render(renderer);
 		writer.flush();
-		writer.close();*/
-
+		writer.close();
+*/
 	}
 
 

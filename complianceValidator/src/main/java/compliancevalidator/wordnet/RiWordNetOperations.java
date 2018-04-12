@@ -94,7 +94,7 @@ public class RiWordNetOperations {
 		
 		File wdDomains = new File("./files/WDDomains/wn-domains-3.2-20070223");
 		
-		String inputWord = "publisher";
+		String inputWord = "area";
 		String[] synonyms = getSynonyms(inputWord);
 		String[] hypernyms = getHypernyms(inputWord);
 		String[] hyponyms = getHyponyms(inputWord);

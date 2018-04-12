@@ -19,15 +19,15 @@
       <location>http://www.project-best.eu/owl/airm-mono/airm.owl#</location>
     </Ontology>
   </onto2>
-  <map>
+<!--  <map>
     <Cell>
       <entity1 rdf:resource='http://project-best.eu/owl/iwxxm-mod/metar#AerodromePresentWeather'/>
       <entity2 rdf:resource='http://www.project-best.eu/owl/airm-mono/airm.owl#AerodromeCondition'/>
       <relation>=</relation>
       <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
     </Cell>
-  </map>
-  <map>
+  </map>-->
+  <!--<map>
     <Cell>
       <entity1 rdf:resource='http://project-best.eu/owl/iwxxm-mod/metar#AerodromePresentWeather'/>
       <entity2 rdf:resource='http://www.project-best.eu/owl/airm-mono/airm.owl#CodePrecipitationType'/>
@@ -66,7 +66,7 @@
       <relation>=</relation>
       <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
     </Cell>
-  </map>
+  </map>-->
   <map>
     <Cell>
       <entity1 rdf:resource='http://project-best.eu/owl/iwxxm-mod/metar#AerodromeHorizontalVisibility'/>
@@ -75,14 +75,14 @@
       <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
     </Cell>
   </map>
-  <map>
+  <!--<map>
     <Cell>
       <entity1 rdf:resource='http://project-best.eu/owl/iwxxm-mod/metar#RunwayContamination'/>
       <entity2 rdf:resource='http://www.project-best.eu/owl/airm-mono/airm.owl#RunwayCondition'/>
       <relation>=</relation>
       <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
     </Cell>
-  </map>
+  </map>-->
 <!--  <map>
     <Cell>
       <entity1 rdf:resource='http://project-best.eu/owl/iwxxm-mod/metar#RunwayDeposits'/>
@@ -91,7 +91,7 @@
       <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
     </Cell>
   </map>-->
-  <map>
+ <!-- <map>
     <Cell>
       <entity1 rdf:resource='http://project-best.eu/owl/iwxxm-mod/metar#MeteorologicalAerodromeTrendForecastRecord'/>
       <entity2 rdf:resource='http://www.project-best.eu/owl/airm-mono/airm.owl#TREND'/>
@@ -114,6 +114,6 @@
       <relation>=</relation>
       <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
     </Cell>
-  </map>
+  </map>-->
 </Alignment>
 </rdf:RDF>

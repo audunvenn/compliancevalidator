@@ -444,6 +444,104 @@ public class OntologyStatistics {
 	}
 
 	/**
+	 * Returns a double stating the percentage of how many classes and object
+	 * properties are present as words in WordNet. For object properties their
+	 * prefix (e.g. isA, hasA, etc.) is stripped so only their "stem" is
+	 * retained.
+	 * 
+	 * @param ontoFile
+	 *            the file path of the input OWL ontology
+	 * @return wordNetCoverage a double stating a percentage of how many of the
+	 *         classes and object properties are represented in WordNet
+	 * @throws OWLOntologyCreationException
+	 *             An exception which describes an error during the creation of
+	 *             an ontology. If an ontology cannot be created then subclasses
+	 *             of this class will describe the reasons.
+	 * @throws JWNLException 
+	 * @throws FileNotFoundException 
+	 *//*
+	public static double getWordNetCoverageComp(File ontoFile) throws OWLOntologyCreationException, FileNotFoundException, JWNLException {
+
+		OWLOntologyManager manager = OWLManager.createOWLOntologyManager();
+		OWLOntology onto = manager.loadOntologyFromOntologyDocument(ontoFile);
+		Set<OWLClass> classes = onto.getClassesInSignature();
+
+		int classCounter = 0;
+
+		for (OWLClass cl : classes) {
+			//get all tokens of the class name
+			String[] tokens = cl.getIRI().getFragment().split("(?<=.)(?=\\p{Lu})");
+
+			if (WordNetOperations.containedInWordNetComp(tokens)) {
+				classCounter++;
+			}
+
+		}
+
+		int numClasses = onto.getClassesInSignature().size();
+
+		double wordNetCoverage = ((double) classCounter / (double) numClasses);
+
+		return wordNetCoverage;
+	}*/
+
+	/**
+	 * Returns a double stating the percentage of how many classes and object
+	 * properties are present as words in WordNet. For object properties their
+	 * prefix (e.g. isA, hasA, etc.) is stripped so only their "stem" is
+	 * retained.
+	 * 
+	 * @param ontoFile
+	 *            the file path of the input OWL ontology
+	 * @return wordNetCoverage a double stating a percentage of how many of the
+	 *         classes and object properties are represented in WordNet
+	 * @throws OWLOntologyCreationException
+	 *             An exception which describes an error during the creation of
+	 *             an ontology. If an ontology cannot be created then subclasses
+	 *             of this class will describe the reasons.
+	 * @throws JWNLException 
+	 * @throws FileNotFoundException 
+	 */
+	public static double getWordNetCoverageComp(File ontoFile) throws OWLOntologyCreationException, FileNotFoundException, JWNLException {
+
+		OWLOntologyManager manager = OWLManager.createOWLOntologyManager();
+		OWLOntology onto = manager.loadOntologyFromOntologyDocument(ontoFile);
+		Set<OWLClass> classes = onto.getClassesInSignature();
+
+		int classCounter = 0;
+
+		for (OWLClass cl : classes) {
+			//get all tokens of the class name
+			String[] tokens = cl.getIRI().getFragment().split("(?<=.)(?=\\p{Lu})");
+
+			int numTokens = tokens.length;
+			int tokenCounter = 0;
+			int totalCounter = 0;
+
+			for (int i = 0; i < tokens.length; i++) {
+
+				if (WordNetOperations.containedInWordNet(tokens[i])) {
+					tokenCounter++;
+				}
+			}
+
+			if (tokenCounter == numTokens) {
+				totalCounter++;
+			}
+			
+			classCounter += totalCounter;
+			
+		}
+
+		
+		int numClasses = onto.getClassesInSignature().size();
+
+		double wordNetCoverage = ((double) classCounter / (double) numClasses);
+
+		return wordNetCoverage;
+	}
+
+	/**
 	 * Returns the average number of hyponyms in WordNet for each class in an
 	 * ontology
 	 * 
@@ -477,7 +575,113 @@ public class OntologyStatistics {
 
 	/**
 	 * Returns the average number of synonyms in WordNet for each class in an
-	 * ontology
+	 * ontology. The class name is tokenized and synonyms for each token is retrieved.
+	 * 
+	 * @param ontoFile:
+	 *            an ontology file
+	 * @return the average number of synonyms per class in an ontology
+	 * @throws OWLOntologyCreationException
+	 */
+	public static double getSynonymRichnessComp(File ontoFile) throws OWLOntologyCreationException {
+
+		RiWordNet database = new RiWordNet("/Users/audunvennesland/Documents/PhD/Development/WordNet/WordNet-3.0/dict");
+
+		double synonymRichness = 0;
+
+		OWLOntologyManager manager = OWLManager.createOWLOntologyManager();
+		OWLOntology onto = manager.loadOntologyFromOntologyDocument(ontoFile);
+
+		Set<OWLClass> classes = onto.getClassesInSignature();
+
+		for (OWLClass cl : classes) {
+			String[] tokens = cl.getIRI().getFragment().split("(?<=.)(?=\\p{Lu})");
+
+			int numTokens = tokens.length;
+			int tokenCounter = 0;
+			int totalCounter = 0;
+
+			Set<String> synTest = new HashSet<String>();
+
+			//check if synonyms exists for all tokens
+			for (int i = 0; i < tokens.length; i++) {
+				String[] synonyms = RiWordNetOperations
+						.getSynonyms(tokens[i].toLowerCase());
+
+				if (synonyms.length > 0) {
+					tokenCounter++;
+				}
+
+			}
+
+			if (tokenCounter == numTokens) {
+				totalCounter++;
+			}
+
+
+			//accumulate the synonym score for each class into a synonym richness score for all classes in the ontology
+			synonymRichness += totalCounter;
+		}
+
+		//average synonym richness per class
+		return (double)synonymRichness/classes.size();
+	}
+
+	/**
+	 * Returns the average number of synonyms in WordNet for each class in an
+	 * ontology. The class name is tokenized and synonyms for each token is retrieved.
+	 * 
+	 * @param ontoFile:
+	 *            an ontology file
+	 * @return the average number of synonyms per class in an ontology
+	 * @throws OWLOntologyCreationException
+	 *//*
+	public static double getSynonymRichnessComp(File ontoFile) throws OWLOntologyCreationException {
+
+		RiWordNet database = new RiWordNet("/Users/audunvennesland/Documents/PhD/Development/WordNet/WordNet-3.0/dict");
+
+		double synonymRichness = 0;
+
+		OWLOntologyManager manager = OWLManager.createOWLOntologyManager();
+		OWLOntology onto = manager.loadOntologyFromOntologyDocument(ontoFile);
+
+		Set<OWLClass> classes = onto.getClassesInSignature();
+
+		String[] synonyms = null;
+
+		for (OWLClass cl : classes) {
+			String[] tokens = cl.getIRI().getFragment().split("(?<=.)(?=\\p{Lu})");
+			int numTokens = tokens.length;
+			int sumSynPerToken = 0;
+			double synScore = 0;
+
+			for (int i = 0; i < tokens.length; i++) {
+
+				//System.out.println("Getting synonym for " + tokens[i].toLowerCase());
+
+				synonyms = RiWordNetOperations
+						.getSynonyms(tokens[tokens.length-1].toLowerCase());
+
+				sumSynPerToken = synonyms.length;
+
+
+			}
+
+			//compute a synonym score for each class
+			synScore = sumSynPerToken/numTokens;
+
+			System.out.println("The synonym richness is " + synonymRichness + " from synscore: " + synScore + " and " + "numClasses: " + classes.size());
+
+			//accumulate the synonym score for each class into a synonym richness score for all classes in the ontology
+			synonymRichness += synScore;
+		}
+
+		//average synonym richness per class
+		return (double)synonymRichness/classes.size();
+	}*/
+
+	/**
+	 * Returns the average number of synonyms in WordNet for each class in an
+	 * ontology without processing the class name
 	 * 
 	 * @param ontoFile:
 	 *            an ontology file
@@ -497,7 +701,7 @@ public class OntologyStatistics {
 
 		for (OWLClass cl : classes) {
 			String[] synonyms = RiWordNetOperations
-					.getSynonyms(StringUtilities.stringTokenize(cl.getIRI().getFragment(), true));
+					.getSynonyms(cl.getIRI().getFragment());
 
 			int numSynonyms = synonyms.length;
 
@@ -506,7 +710,7 @@ public class OntologyStatistics {
 
 		return (double) synonymRichness / classes.size();
 	}
-	
+
 	/**
 	 * Returns a measure stating how many WordNet domains a single ontology is
 	 * associated with averaged by the number of classes in the ontology
@@ -817,52 +1021,52 @@ public class OntologyStatistics {
 	// *** Methods not in use ***
 
 	/*	*//**
-			 * Returns a count of how many object properties are considered
-			 * compound words in an ontology. For object properties we need to
-			 * strip the prefix (e.g. is, has) to get to the "stem" of the
-			 * property. This is taken care of by the StringUtils.stripOPPrefix
-			 * method.
-			 * 
-			 * @param ontoFile
-			 *            the file path of the input OWL ontology
-			 * @return numCompounds a double stating the percentage of how many
-			 *         of the object properties in the ontology are compounds
-			 * @throws OWLOntologyCreationException
-			 *             An exception which describes an error during the
-			 *             creation of an ontology. If an ontology cannot be
-			 *             created then subclasses of this class will describe
-			 *             the reasons.
-			 *//*
-			 * public static double getNumPropertyCompounds(File ontoFile)
-			 * throws OWLOntologyCreationException {
-			 * 
-			 * OWLOntologyManager manager =
-			 * OWLManager.createOWLOntologyManager(); OWLOntology onto =
-			 * manager.loadOntologyFromOntologyDocument(ontoFile);
-			 * 
-			 * Iterator<OWLObjectProperty> itr =
-			 * onto.getObjectPropertiesInSignature().iterator();
-			 * 
-			 * String thisOP;
-			 * 
-			 * int numOPs = onto.getObjectPropertiesInSignature().size();
-			 * System.out.println("Number of object properties in total: " +
-			 * numOPs);
-			 * 
-			 * int counter = 0;
-			 * 
-			 * while(itr.hasNext()) { thisOP =
-			 * StringUtils.replaceUnderscore(StringUtils.stripPrefix(itr.next().
-			 * getIRI().getFragment())); //System.out.println(
-			 * "Printing object property including the replaceUnderscore method: "
-			 * + thisOP); if (isCompound(thisOP) == true) { counter++;
-			 * 
-			 * } }
-			 * 
-			 * double numCompounds = ((double)counter/(double)numOPs);
-			 * 
-			 * return numCompounds; }
-			 */
+	 * Returns a count of how many object properties are considered
+	 * compound words in an ontology. For object properties we need to
+	 * strip the prefix (e.g. is, has) to get to the "stem" of the
+	 * property. This is taken care of by the StringUtils.stripOPPrefix
+	 * method.
+	 * 
+	 * @param ontoFile
+	 *            the file path of the input OWL ontology
+	 * @return numCompounds a double stating the percentage of how many
+	 *         of the object properties in the ontology are compounds
+	 * @throws OWLOntologyCreationException
+	 *             An exception which describes an error during the
+	 *             creation of an ontology. If an ontology cannot be
+	 *             created then subclasses of this class will describe
+	 *             the reasons.
+	 *//*
+	 * public static double getNumPropertyCompounds(File ontoFile)
+	 * throws OWLOntologyCreationException {
+	 * 
+	 * OWLOntologyManager manager =
+	 * OWLManager.createOWLOntologyManager(); OWLOntology onto =
+	 * manager.loadOntologyFromOntologyDocument(ontoFile);
+	 * 
+	 * Iterator<OWLObjectProperty> itr =
+	 * onto.getObjectPropertiesInSignature().iterator();
+	 * 
+	 * String thisOP;
+	 * 
+	 * int numOPs = onto.getObjectPropertiesInSignature().size();
+	 * System.out.println("Number of object properties in total: " +
+	 * numOPs);
+	 * 
+	 * int counter = 0;
+	 * 
+	 * while(itr.hasNext()) { thisOP =
+	 * StringUtils.replaceUnderscore(StringUtils.stripPrefix(itr.next().
+	 * getIRI().getFragment())); //System.out.println(
+	 * "Printing object property including the replaceUnderscore method: "
+	 * + thisOP); if (isCompound(thisOP) == true) { counter++;
+	 * 
+	 * } }
+	 * 
+	 * double numCompounds = ((double)counter/(double)numOPs);
+	 * 
+	 * return numCompounds; }
+	 */
 
 	/*
 	 * public static List<Long> getOffsetList(File ontoFile) throws
@@ -907,24 +1111,24 @@ public class OntologyStatistics {
 	 * @throws JWNLException
 	 * @throws FileNotFoundException
 	 *//*
-		 * public static Map<String, List<Long>> createOffsetMap(File ontoFile)
-		 * throws OWLOntologyCreationException, FileNotFoundException,
-		 * JWNLException { Map<String, List<Long>> offsetMap = new
-		 * HashMap<String, List<Long>>();
-		 * 
-		 * List<Long> offsetList = new ArrayList<Long>();
-		 * 
-		 * //get a list of all class names in ontology ArrayList<String>
-		 * classNameList = createClassList(ontoFile);
-		 * 
-		 * //for every class name, get its domain by using the synset offset of
-		 * the class as query for (String s : classNameList) { //get all offsets
-		 * associated with s offsetList = WNDomain.findSynsetOffset(s); //put
-		 * class name s as key and the list of offsets associated with s as
-		 * value in the Map offsetMap.put(s, offsetList); }
-		 * 
-		 * return offsetMap; }
-		 */
+	 * public static Map<String, List<Long>> createOffsetMap(File ontoFile)
+	 * throws OWLOntologyCreationException, FileNotFoundException,
+	 * JWNLException { Map<String, List<Long>> offsetMap = new
+	 * HashMap<String, List<Long>>();
+	 * 
+	 * List<Long> offsetList = new ArrayList<Long>();
+	 * 
+	 * //get a list of all class names in ontology ArrayList<String>
+	 * classNameList = createClassList(ontoFile);
+	 * 
+	 * //for every class name, get its domain by using the synset offset of
+	 * the class as query for (String s : classNameList) { //get all offsets
+	 * associated with s offsetList = WNDomain.findSynsetOffset(s); //put
+	 * class name s as key and the list of offsets associated with s as
+	 * value in the Map offsetMap.put(s, offsetList); }
+	 * 
+	 * return offsetMap; }
+	 */
 
 	/*
 	 * public static Map<String, ArrayList<String>> createDomainMap(Map<String,
@@ -948,36 +1152,36 @@ public class OntologyStatistics {
 	 */
 
 	/* *//**
-			 * Returns an arraylist of class names in an ontology
-			 * 
-			 * @param ontoFile
-			 *            The file path to the owl file
-			 * @return an ArrayList<String> holding the class names of the input
-			 *         ontology
-			 * @throws OWLOntologyCreationException
-			 *//*
-			 * private static ArrayList<String> createClassList(File ontoFile)
-			 * throws OWLOntologyCreationException { ArrayList<String> classList
-			 * = new ArrayList<String>();
-			 * 
-			 * OWLOntologyManager manager =
-			 * OWLManager.createOWLOntologyManager(); OWLOntology onto =
-			 * manager.loadOntologyFromOntologyDocument(ontoFile);
-			 * 
-			 * Set<OWLClass> clsSet = onto.getClassesInSignature();
-			 * //Iterator<OWLClass> itr = clsSet.iterator(); String thisClass =
-			 * null;
-			 * 
-			 * for (OWLClass cl : clsSet) { thisClass =
-			 * cl.getIRI().getFragment(); System.out.println("The class is " +
-			 * thisClass); classList.add(StringUtils.stringTokenize(thisClass,
-			 * true)); System.out.println("Adding " + thisClass +
-			 * " to the ArrayList"); System.out.println(
-			 * "The number of class names in classList is " + classList.size());
-			 * }
-			 * 
-			 * return classList; }
-			 */
+	 * Returns an arraylist of class names in an ontology
+	 * 
+	 * @param ontoFile
+	 *            The file path to the owl file
+	 * @return an ArrayList<String> holding the class names of the input
+	 *         ontology
+	 * @throws OWLOntologyCreationException
+	 *//*
+	 * private static ArrayList<String> createClassList(File ontoFile)
+	 * throws OWLOntologyCreationException { ArrayList<String> classList
+	 * = new ArrayList<String>();
+	 * 
+	 * OWLOntologyManager manager =
+	 * OWLManager.createOWLOntologyManager(); OWLOntology onto =
+	 * manager.loadOntologyFromOntologyDocument(ontoFile);
+	 * 
+	 * Set<OWLClass> clsSet = onto.getClassesInSignature();
+	 * //Iterator<OWLClass> itr = clsSet.iterator(); String thisClass =
+	 * null;
+	 * 
+	 * for (OWLClass cl : clsSet) { thisClass =
+	 * cl.getIRI().getFragment(); System.out.println("The class is " +
+	 * thisClass); classList.add(StringUtils.stringTokenize(thisClass,
+	 * true)); System.out.println("Adding " + thisClass +
+	 * " to the ArrayList"); System.out.println(
+	 * "The number of class names in classList is " + classList.size());
+	 * }
+	 * 
+	 * return classList; }
+	 */
 
 	/*
 	 * public static int getNumDataProperties(File ontoFile) throws

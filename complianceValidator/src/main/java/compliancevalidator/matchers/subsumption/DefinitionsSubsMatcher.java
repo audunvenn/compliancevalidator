@@ -87,6 +87,14 @@ public class DefinitionsSubsMatcher extends ObjectAlignment implements Alignment
 			measure = 0;
 		}
 		
+		//test
+		if (sim > 0.95) {
+		System.out.println("Testing definitions subsumption sim");
+		System.out.println("Definition 1 (" + o1.toString() + "): " + def1);
+		System.out.println("\nDefinition 2 (" + o2.toString() + "): " + def2);
+		System.out.println("Sim: " + sim);
+		
+		}
 		matchingMap.put(relation, measure);
 		
 		return matchingMap;

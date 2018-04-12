@@ -32,8 +32,6 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/Users/audunvennesland/git/compliancevalidator/complianceValidator/lib/align.jar"/>
-	<classpathentry kind="lib" path="/Users/audunvennesland/git/compliancevalidator/complianceValidator/lib/alignsvc.jar"/>
 	<classpathentry kind="lib" path="/Users/audunvennesland/git/compliancevalidator/complianceValidator/lib/HermiT.jar"/>
 	<classpathentry kind="lib" path="/Users/audunvennesland/git/compliancevalidator/complianceValidator/lib/jaws-bin.jar"/>
 	<classpathentry kind="lib" path="/Users/audunvennesland/git/compliancevalidator/complianceValidator/lib/jwnl.jar"/>
@@ -43,9 +41,11 @@
 	<classpathentry kind="lib" path="/Users/audunvennesland/git/compliancevalidator/complianceValidator/lib/pellet-core-2.3.2-SNAPSHOT.jar"/>
 	<classpathentry kind="lib" path="/Users/audunvennesland/git/compliancevalidator/complianceValidator/lib/pellet-examples-2.3.2-SNAPSHOT.jar"/>
 	<classpathentry kind="lib" path="/Users/audunvennesland/git/compliancevalidator/complianceValidator/lib/pellet-owlapiv3-2.3.2-SNAPSHOT.jar"/>
-	<classpathentry kind="lib" path="/Users/audunvennesland/git/compliancevalidator/complianceValidator/lib/procalign.jar"/>
 	<classpathentry kind="lib" path="/Users/audunvennesland/git/compliancevalidator/complianceValidator/lib/rita.jar"/>
 	<classpathentry kind="lib" path="/Users/audunvennesland/git/compliancevalidator/complianceValidator/lib/rita.support.jar"/>
 	<classpathentry kind="lib" path="/Users/audunvennesland/git/compliancevalidator/complianceValidator/lib/ws4j-1.0.1.jar"/>
+	<classpathentry kind="lib" path="/Users/audunvennesland/OneDrive - SINTEF/PhD/Libraries/AlignmentAPI/align-4.8/lib/align.jar"/>
+	<classpathentry kind="lib" path="/Users/audunvennesland/OneDrive - SINTEF/PhD/Libraries/AlignmentAPI/align-4.8/lib/alignsvc.jar"/>
+	<classpathentry kind="lib" path="/Users/audunvennesland/OneDrive - SINTEF/PhD/Libraries/AlignmentAPI/align-4.8/lib/procalign.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

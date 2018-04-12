@@ -87,9 +87,9 @@ public class SequentialComposition {
 			//if two other alignments have this cell
 			} else if (e.getValue() == (2)) {
 				newAlignment.addAlignCell(e.getKey().getObject1(), e.getKey().getObject2(), StringUtilities.validateRelationType(e.getKey().getRelation().getRelation()), e.getKey().getStrength());
-			//if all other alignments have this cell
+			//if all other alignments have this cell, give it 100 percent confidence
 			} else if (e.getValue() == (3)) {
-				newAlignment.addAlignCell(e.getKey().getObject1(), e.getKey().getObject2(), StringUtilities.validateRelationType(e.getKey().getRelation().getRelation()), e.getKey().getStrength()*2);
+				newAlignment.addAlignCell(e.getKey().getObject1(), e.getKey().getObject2(), StringUtilities.validateRelationType(e.getKey().getRelation().getRelation()), 1.0);
 			}
 		}
 		
@@ -376,13 +376,9 @@ public class SequentialComposition {
 
 	public static void main(String[] args) throws AlignmentException, IOException, URISyntaxException {
 
-		String task = "103/101-103-";
-
-
-		File af1 = new File("./files/OAEI2009/alignments/"+task+"OppositeSubclass0.9.rdf");
-		File af2 = new File("./files/OAEI2009/alignments/"+task+"Compound0.9.rdf");
-		File af3 = new File("./files/OAEI2009/alignments/"+task+"WNHyponym0.9.rdf");
-		File af4 = new File("./files/OAEI2009/alignments/"+task+"Parent0.9.rdf");
+		File af1 = new File("./files/experiment_06032018/datasets/d1/alignments/equivalence/aixm_airportheliport-aerodromeinfrastructure-PropertyMatcher0.5.rdf");
+		File af2 = new File("./files/experiment_06032018/datasets/d1/alignments/equivalence/aixm_airportheliport-aerodromeinfrastructure-RangeMatcher0.5.rdf");
+		File af3 = new File("./files/experiment_06032018/datasets/d1/alignments/equivalence/aixm_airportheliport-aerodromeinfrastructure-WNSyn0.95.rdf");
 
 		ArrayList<Alignment> inputAlignments = new ArrayList<Alignment>();
 
@@ -390,19 +386,29 @@ public class SequentialComposition {
 		BasicAlignment a1 = (BasicAlignment) parser.parse(af1.toURI().toString());
 		BasicAlignment a2 = (BasicAlignment) parser.parse(af2.toURI().toString());
 		BasicAlignment a3 = (BasicAlignment) parser.parse(af3.toURI().toString());
-		BasicAlignment a4 = (BasicAlignment) parser.parse(af4.toURI().toString());
 
 		inputAlignments.add(a2);
 		inputAlignments.add(a3);
-		inputAlignments.add(a4);
 		inputAlignments.add(a1);
 
-		Alignment newAlignment = weightedSequentialComposition(inputAlignments);
+		Alignment weightedSequentialAlignment = weightedSequentialComposition(inputAlignments);
 
 		System.out.println("\n");
-		for (Cell c : newAlignment) {
+		for (Cell c : weightedSequentialAlignment) {
 			System.out.println(c.getObject1AsURI().getFragment() + " - " + c.getObject2AsURI().getFragment() + " : " + c.getRelation().getRelation() + " : " + c.getStrength());
 		}
+		
+		//Store the combined alignment
+		File outputAlignment = new File("./files/experiment_06032018/datasets/d1/combination/wsc-PropM05_Range05_WNSyn095.rdf");
+
+		PrintWriter writer = new PrintWriter(
+				new BufferedWriter(
+						new FileWriter(outputAlignment)), true); 
+		AlignmentVisitor renderer = new RDFRendererVisitor(writer);
+
+		weightedSequentialAlignment.render(renderer);
+		writer.flush();
+		writer.close();
 
 	}
 }

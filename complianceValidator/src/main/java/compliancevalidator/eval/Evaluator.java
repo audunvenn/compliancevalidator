@@ -262,14 +262,14 @@ public class Evaluator {
 
 
 
-
+	
 
 	public static void main(String[] args) throws AlignmentException, URISyntaxException, FileNotFoundException {
 
-		//String singleAlignment = "./files/computedAlignments/iwxxm_common-airm-mono-AnnotationMatcher.rdf";
+		//String singleAlignment = "./files/experiment_06032018/datasets/d1/combination/intersect_relaxed-PropM05_Range05_WNSyn095.rdf";
 		String alignmentFolder = "./files/experiment_06032018/datasets/d1/alignments/equivalence";
-		String refalign = "./files/experiment_06032018/datasets/d1/refalign/ref-align_aixm-airportheliport-airm-aerodromeinfrastructure-Equivalence.rdf";
-		String outputEvaluationFile = "./files/experiment_06032018/evaluation/D1-EQ-test.xslx";
+		String refalign = "./files/experiment_06032018/datasets/d1/refalign/ref-align_aixm-airportheliport-airm-aerodromeinfrastructure-EquivalenceComplete.rdf";
+		String outputEvaluationFile = "./files/experiment_06032018/evaluation/D1-EQ-NEW.xslx";
 		String datasetName = "D1";
 
 		//evaluateSingleAlignment(singleAlignment, refalign);

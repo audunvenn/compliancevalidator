@@ -204,16 +204,16 @@ public class OntologyProcessor {
 	 * @throws JWNLException 
 	 * @throws FileNotFoundException 
 	 */
-	public static double computeWordNetCoverage(File ontoFile1, File ontoFile2) throws OWLOntologyCreationException, FileNotFoundException, JWNLException{
+	public static double computeWordNetCoverageComp(File ontoFile1, File ontoFile2) throws OWLOntologyCreationException, FileNotFoundException, JWNLException{
 		
-		double WC = (OntologyStatistics.getWordNetCoverage(ontoFile1) + OntologyStatistics.getWordNetCoverage(ontoFile2)) / 2;
+		double WC = (OntologyStatistics.getWordNetCoverageComp(ontoFile1) + OntologyStatistics.getWordNetCoverageComp(ontoFile2)) / 2;
 		
 		return WC;
 	}
 	
-	public static double computeWordNetCoverage(File ontoFile1) throws OWLOntologyCreationException, FileNotFoundException, JWNLException{
+	public static double computeWordNetCoverageComp(File ontoFile1) throws OWLOntologyCreationException, FileNotFoundException, JWNLException{
 		
-		double WC = OntologyStatistics.getWordNetCoverage(ontoFile1);
+		double WC = OntologyStatistics.getWordNetCoverageComp(ontoFile1);
 		
 		return WC;
 	}
@@ -256,8 +256,8 @@ public class OntologyProcessor {
 	
 	public static void main(String[] args) throws OWLOntologyCreationException, URISyntaxException, OntowrapException, FileNotFoundException, JWNLException {
 		
-		File onto1 = new File("./files/experiment_06032018/datasets/d7/ontologies/aixm_organisation.owl");
-		File onto2 = new File("./files/experiment_06032018/datasets/d7/ontologies/airm-mono.owl");
+		File onto1 = new File("./files/experiment_06032018/datasets/d6/ontologies/aixm_obstacle.owl");
+		File onto2 = new File("./files/experiment_06032018/datasets/d6/ontologies/airm-mono.owl");
 		
 		System.out.println("*** Number of Compounds ***");
 		System.out.println("The Num Compounds (NC) of " + onto1.getName() + " is: " + OntologyStatistics.getNumClassCompounds(onto1));
@@ -281,14 +281,14 @@ public class OntologyProcessor {
 		System.out.println("The Relationship Richness (RR) of " + onto1.getName() + " and " + onto2.getName() + " is: " + computeRelationshipRichness(onto1, onto2) + " (" + round((computeRelationshipRichness(onto1, onto2))*100,2) + " percent)");
 		
 		System.out.println("\n*** WordNet Coverage ***");
-		System.out.println("The WordNet Coverage (WC) of " + onto1.getName() + " is: " + computeWordNetCoverage(onto1));
-		System.out.println("The WordNet Coverage (WC) of " + onto2.getName() + " is: " + computeWordNetCoverage(onto2));
-		System.out.println("The WordNet Coverage (WC) of " + onto1.getName() + " and " + onto2.getName() + " is: " + computeWordNetCoverage(onto1, onto2) + " (" + round(computeWordNetCoverage(onto1, onto2)*100,2) + " percent)");
+		System.out.println("The WordNet Coverage (WC) of " + onto1.getName() + " is: " + computeWordNetCoverageComp(onto1));
+		System.out.println("The WordNet Coverage (WC) of " + onto2.getName() + " is: " + computeWordNetCoverageComp(onto2));
+		System.out.println("The WordNet Coverage (WC) of " + onto1.getName() + " and " + onto2.getName() + " is: " + computeWordNetCoverageComp(onto1, onto2) + " (" + round(computeWordNetCoverageComp(onto1, onto2)*100,2) + " percent)");
 		
 		System.out.println("\n*** Synonym Richness (Real number) ***");
-		System.out.println("The Synonym Richness (SR) of " + onto1.getName() + " is " + OntologyStatistics.getSynonymRichness(onto1));
-		System.out.println("The Synonym Richness (SR) of " + onto2.getName() + " is " + OntologyStatistics.getSynonymRichness(onto2));
-		System.out.println("The Synonym Richness (SR) of " + onto1.getName() + " and " + onto2.getName() + " is " + (OntologyStatistics.getSynonymRichness(onto1) + OntologyStatistics.getSynonymRichness(onto2))/2);
+		System.out.println("The Synonym Richness (Comp) (SR_comp) of " + onto1.getName() + " is " + OntologyStatistics.getSynonymRichnessComp(onto1));
+		System.out.println("The Synonym Richness (Comp) (SR_comp) of " + onto2.getName() + " is " + OntologyStatistics.getSynonymRichnessComp(onto2));
+		System.out.println("The Synonym Richness (Comp) (SR_comp) of " + onto1.getName() + " and " + onto2.getName() + " is " + (OntologyStatistics.getSynonymRichnessComp(onto1) + OntologyStatistics.getSynonymRichnessComp(onto2))/2);
 		
 		//System.out.println("The Common Substring (CS) of " + onto1.getName() + " and " + onto2.getName() + " is: " + OntologyStatistics.commonSubstringRatio(onto1, onto2));
 		

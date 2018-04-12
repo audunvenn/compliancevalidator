@@ -7,6 +7,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -70,6 +71,45 @@ public class WordNetOperations
 	 * @throws FileNotFoundException
 	 * @throws JWNLException
 	 */
+	public static boolean containedInWordNetComp(String[] inputTokens) throws FileNotFoundException, JWNLException {
+		
+		JWNL.initialize(new FileInputStream("/Users/audunvennesland/git/Compose/compose/file_property.xml"));
+
+		Dictionary dictionary = Dictionary.getInstance();
+		
+		Set<IndexWord> indexWordSet = new HashSet<IndexWord>();
+		
+		IndexWord indexWord = null;
+
+		for (int i = 0; i < inputTokens.length; i++) {
+			indexWord = dictionary.lookupIndexWord(pos, inputTokens[i]);
+			if (indexWord != null) {
+			indexWordSet.add(indexWord);
+			}
+		}
+
+		//System.out.println("The lemma of " + inputWord + " is " + indexWord.getLemma());
+		
+		JWNL.shutdown();
+		
+		if (indexWordSet.size() > 0)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}		
+
+	}
+	
+	/**
+	 * A method that checks if an input word is present in WordNet
+	 * @param inputWord The input word for which presence in WordNet is checked
+	 * @return a boolean stating whether or not the input word resides in WordNet
+	 * @throws FileNotFoundException
+	 * @throws JWNLException
+	 */
 	public static boolean containedInWordNet(String inputWord) throws FileNotFoundException, JWNLException {
 		
 		JWNL.initialize(new FileInputStream("/Users/audunvennesland/git/Compose/compose/file_property.xml"));
@@ -79,7 +119,7 @@ public class WordNetOperations
 		
 		IndexWord indexWord = dictionary.lookupIndexWord(pos, inputWord);
 		
-		//System.out.println("The lemma of " + inputWord + " is " + indexWord.getLemma());
+		System.out.println("The lemma of " + inputWord + " is " + indexWord.getLemma());
 		
 		JWNL.shutdown();
 		
@@ -91,9 +131,7 @@ public class WordNetOperations
 		{
 			return true;
 		}		
-		
-		
-		
+
 	}
 	
 /*	*//**
@@ -179,7 +217,9 @@ public class WordNetOperations
     public static void main(final String[] args) throws FileNotFoundException, JWNLException, OWLOntologyCreationException
     {
     	
-    	String inputWord = "test";
+    	String inputWord = "protection aerodrome area";
+    	
+    	System.out.println("Is " + inputWord + " contained in WordNet?: " +  containedInWordNet( inputWord) );
     	
     	Synset[] synsets = getSynsets(inputWord);
     	

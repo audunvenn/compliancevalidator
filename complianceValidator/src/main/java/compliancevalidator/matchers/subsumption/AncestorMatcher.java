@@ -164,7 +164,8 @@ public Map<String, Double> computePath(Object o1, Object o2) throws OWLOntologyC
 			//constrain so that there has to be some terminological similarity between the concepts
 			double conceptSimScore = iSubMatcher.score(s1, s2);
 			
-			//constrain so that the respective distance between o1 and common parent and o2 and common parent is not more than 1
+			//constrain so that the respective distance between (o1 and common parent) and (o2 and common parent) is not more than 1
+			//NOTE: respective distance is currently not used!
 			int respectiveDistance = 0;
 			if (o1Distance > o2Distance) {
 			respectiveDistance = o1Distance - o2Distance;

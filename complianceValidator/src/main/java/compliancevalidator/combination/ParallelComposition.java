@@ -331,6 +331,21 @@ public class ParallelComposition {
 		return completeMatchAlignment;		
 	}
 	
+	public static ArrayList<Alignment> packageAlignments(File folder) {
+		ArrayList<Alignment> alignmentList = new ArrayList<Alignment>();
+		
+		File[] filesInDir = folder.listFiles();
+		
+		AlignmentParser parser = new AlignmentParser();
+		
+		for (int i = 0; i < filesInDir.length; i++) {
+			
+			
+			
+		}
+		
+		return alignmentList;
+	}
 	
 
 
@@ -343,63 +358,42 @@ public class ParallelComposition {
 	 */
 	public static void main(String[] args) throws AlignmentException, IOException, URISyntaxException {
 
-		File af1 = new File("./files/OAEI2009/alignments/103/101-103-Compound0.9.rdf");
-		File af2 = new File("./files/OAEI2009/alignments/103/101-103-OppositeSubclass0.9.rdf");
-		File af3 = new File("./files/OAEI2009/alignments/103/101-103-Parent0.9.rdf");
-		File af4 = new File("./files/OAEI2009/alignments/103/101-103-WNHyponym0.9.rdf");
-		
-		ArrayList<File> files = new ArrayList();
-		
-		files.add(af3);
-		files.add(af1);
-		files.add(af2);
-		files.add(af4);
+		File af1 = new File("./files/experiment_06032018/datasets/d1/alignments/equivalence/aixm_airportheliport-aerodromeinfrastructure-PropertyMatcher0.5.rdf");
+		File af2 = new File("./files/experiment_06032018/datasets/d1/alignments/equivalence/aixm_airportheliport-aerodromeinfrastructure-RangeMatcher0.5.rdf");
+		File af3 = new File("./files/experiment_06032018/datasets/d1/alignments/equivalence/aixm_airportheliport-aerodromeinfrastructure-WNSyn0.95.rdf");
 
-		//BasicAlignment parallelWithPriorityAlignment = (BasicAlignment) completeMatchWithPriority4(files.get(0), files.get(1), files.get(2), files.get(3));
-		//System.out.println("Running " + files.get(0).getName() + ", " + files.get(1).getName() + ", " + files.get(2).getName() + ", " + files.get(3).getName());
-		
+		ArrayList<Alignment> inputAlignments = new ArrayList<Alignment>();
+
 		AlignmentParser parser = new AlignmentParser();
 		BasicAlignment a1 = (BasicAlignment) parser.parse(af1.toURI().toString());
 		BasicAlignment a2 = (BasicAlignment) parser.parse(af2.toURI().toString());
 		BasicAlignment a3 = (BasicAlignment) parser.parse(af3.toURI().toString());
-		BasicAlignment a4 = (BasicAlignment) parser.parse(af4.toURI().toString());
 
-		ArrayList<Alignment> inputAlignments = new ArrayList<Alignment>();
-		inputAlignments.add(a1);
 		inputAlignments.add(a2);
 		inputAlignments.add(a3);
-		inputAlignments.add(a4);
-		
-		int numCells = (a1.nbCells() + a2.nbCells() + a3.nbCells() + a4.nbCells());
-		
-		System.out.println("Printing all cells in inputAlignments (" + numCells + ") cells");
-		
-		for (Alignment a : inputAlignments) {
-			for (Cell c : a) {
-				System.out.println(c.getObject1AsURI().getFragment() + " - " + c.getObject2AsURI().getFragment() + " : " + c.getRelation().getRelation() + " : " + c.getStrength());
-			}
-		}
-		
+		inputAlignments.add(a1);
+
 		BasicAlignment simpleVoteAlignment = simpleVote(inputAlignments);
 
-		File outputAlignment = new File("./files/OAEI2009/combinedAlignments/SimpleVote(comp-osc-par-wn).rdf");
+		//Store the combined alignment
+				File outputAlignment = new File("./files/experiment_06032018/datasets/d1/combination/simpleVote-PropM05_Range05_WNSyn095.rdf");
 
-		PrintWriter writer = new PrintWriter(
-				new BufferedWriter(
-						new FileWriter(outputAlignment)), true); 
-		AlignmentVisitor renderer = new RDFRendererVisitor(writer);
+				PrintWriter writer = new PrintWriter(
+						new BufferedWriter(
+								new FileWriter(outputAlignment)), true); 
+				AlignmentVisitor renderer = new RDFRendererVisitor(writer);
 
-		simpleVoteAlignment.render(renderer);
-		writer.flush();
-		writer.close();
+				simpleVoteAlignment.render(renderer);
+				writer.flush();
+				writer.close();
 		
-		//perform evaluation
-		Evaluator eval = new Evaluator();
-
-		String evaluatedAlignment = outputAlignment.getAbsolutePath();
-		String referenceAlignment = "./files/OAEI2009/103/refalign.rdf";
-		
-		eval.evaluateSingleAlignment(evaluatedAlignment,referenceAlignment);
+//		//perform evaluation
+//		Evaluator eval = new Evaluator();
+//
+//		String evaluatedAlignment = outputAlignment.getAbsolutePath();
+//		String referenceAlignment = "./files/OAEI2009/103/refalign.rdf";
+//		
+//		eval.evaluateSingleAlignment(evaluatedAlignment,referenceAlignment);
 		
 
 	}

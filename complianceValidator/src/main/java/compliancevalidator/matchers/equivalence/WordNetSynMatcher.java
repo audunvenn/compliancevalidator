@@ -40,7 +40,7 @@ public class WordNetSynMatcher extends ObjectAlignment implements AlignmentProce
 		String s1 = ontology1().getEntityName(o1);
 		String s2 = ontology2().getEntityName(o2);
 		
-		System.out.println("Trying to match " + s1 + " and " + s2);
+		
 
 		String[] s1Array = s1.split("(?<=.)(?=\\p{Lu})");
 		String[] s2Array = s2.split("(?<=.)(?=\\p{Lu})");
@@ -63,12 +63,30 @@ public class WordNetSynMatcher extends ObjectAlignment implements AlignmentProce
 				synonymsS2.add(t);
 			}
 		}
+		
 
 		if (!synonymsS1.isEmpty() && !synonymsS2.isEmpty()) {
 			jaccardSim = Jaccard.jaccardSetSim(synonymsS1, synonymsS2);
 		}
 		
-		System.out.println("The jaccardSim is " + jaccardSim);
+		
+		
+		if (jaccardSim > 0.7) {
+			
+			System.out.println("Matching " + s1 + " and " + s2);
+			System.out.println("The jaccardSim is " + jaccardSim);
+			
+			//print synonymsets
+			System.out.println("Synonym set 1: ");
+			for (String s : synonymsS1) {
+				System.out.println(s);
+			}
+			
+			System.out.println("Synonym set 2: ");
+			for (String s : synonymsS2) {
+				System.out.println(s);
+			}
+		}
 
 		return jaccardSim;
 

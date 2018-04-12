@@ -53,14 +53,11 @@ import fr.inrialpes.exmo.align.parser.AlignmentParser;
 public class RunExperiment {
 
 	//final static double threshold = 0.95;
-	final static File datasetDir = new File("./files/experiment_06032018/datasets/d1/alignments/equivalence");
+	final static File datasetDir = new File("./files/experiment_06032018/datasets/d5/alignments/equivalence");
 	final static String prefix = "file:";
 	
-	final static File onto1 = new File("./files/experiment_06032018/datasets/d1/ontologies/aixm_airportheliport.owl");
-	final static File onto2 = new File("./files/experiment_06032018/datasets/d1/ontologies/aerodromeinfrastructure.owl");
-	
-
-	
+	final static File onto1 = new File("./files/experiment_06032018/datasets/d5/ontologies/aixm_geometry.owl");
+	final static File onto2 = new File("./files/experiment_06032018/datasets/d5/ontologies/airm-mono.owl");
 
 	//for the combination strategies
 	//final static File topFolder = new File("./files/OAEI2009/alignments");
@@ -72,35 +69,37 @@ public class RunExperiment {
 		long elapsedTime = 0;
 		//EQUIVALENCE MATCHERS
 		
+		/*
 		startTime = System.currentTimeMillis();
 		System.out.println("\nRunning WordNet Synonym Matcher");
 		runWNSynMatcher();
 		stopTime = System.currentTimeMillis();
 	    elapsedTime = stopTime - startTime;
 	    System.out.println("The WordNet Synonym executed in " + elapsedTime/1000 + " seconds");
-		
-//		startTime = System.currentTimeMillis();
-//		System.out.println("\nRunning ISub Matcher");
-//		runISubMatcher();
-//		stopTime = System.currentTimeMillis();
-//	    elapsedTime = stopTime - startTime;
-//	    System.out.println("The ISub matcher executed in " + elapsedTime/1000 + " seconds");
+	   
 	    
-/*		startTime = System.currentTimeMillis();
+		startTime = System.currentTimeMillis();
+		System.out.println("\nRunning ISub Matcher");
+		runISubMatcher();
+		stopTime = System.currentTimeMillis();
+	    elapsedTime = stopTime - startTime;
+	    System.out.println("The ISub matcher executed in " + elapsedTime/1000 + " seconds");
+	    
+		startTime = System.currentTimeMillis();
 		System.out.println("\nRunning Property Matcher");
 		runPropertyMatcher();
 		stopTime = System.currentTimeMillis();
 	    elapsedTime = stopTime - startTime;
-	    System.out.println("The property matcher executed in " + elapsedTime/1000 + " seconds");*/
+	    System.out.println("The property matcher executed in " + elapsedTime/1000 + " seconds");
 
-//	    startTime = System.currentTimeMillis();
-//		System.out.println("\nRunning Definitions Equivalence Matcher");
-//		runDefinitionsMatcher();
-//		stopTime = System.currentTimeMillis();
-//	    elapsedTime = stopTime - startTime;
-//	    System.out.println("The definitions equivalence matcher executed in " + elapsedTime/1000 + " seconds");
+	    startTime = System.currentTimeMillis();
+		System.out.println("\nRunning Definitions Equivalence Matcher");
+		runDefinitionsMatcher();
+		stopTime = System.currentTimeMillis();
+	    elapsedTime = stopTime - startTime;
+	    System.out.println("The definitions equivalence matcher executed in " + elapsedTime/1000 + " seconds");
 		
-		/*startTime = System.currentTimeMillis();
+		startTime = System.currentTimeMillis();
 		System.out.println("\nRunning Range Matcher");
 		runRangeMatcher();
 		stopTime = System.currentTimeMillis();
@@ -109,13 +108,13 @@ public class RunExperiment {
 	    
 //		//SUBSUMPTION MATCHERS
 	
-/*	    startTime = System.currentTimeMillis();
-		System.out.println("\nRunning Compound Matcher");
-		runCompoundMatcher();
-		stopTime = System.currentTimeMillis();
-	    elapsedTime = stopTime - startTime;
-	    System.out.println("The Compound Matcher executed in " + elapsedTime/1000 + " seconds");
-
+//	    startTime = System.currentTimeMillis();
+//		System.out.println("\nRunning Compound Matcher");
+//		runCompoundMatcher();
+//		stopTime = System.currentTimeMillis();
+//	    elapsedTime = stopTime - startTime;
+//	    System.out.println("The Compound Matcher executed in " + elapsedTime/1000 + " seconds");
+//
 		startTime = System.currentTimeMillis();
 		System.out.println("\nRunning Definitions Subsumption Matcher");
 		runDefinitionsSubsMatcher();
@@ -123,19 +122,19 @@ public class RunExperiment {
 	    elapsedTime = stopTime - startTime;
 	    System.out.println("The Definitions Subsumption Matcher executed in " + elapsedTime/1000 + " seconds");
 
-		startTime = System.currentTimeMillis();
-		System.out.println("\nRunning Closest Parent Matcher");
-		runClosestParentMatcher();
-		stopTime = System.currentTimeMillis();
-	    elapsedTime = stopTime - startTime;
-	    System.out.println("The Closest Parent Matcher executed in " + elapsedTime/1000 + " seconds");
-	
-		startTime = System.currentTimeMillis();
-		System.out.println("\nRunning Ancestor Matcher");
-		runAncestorMatcher();
-		stopTime = System.currentTimeMillis();
-	    elapsedTime = stopTime - startTime;
-	    System.out.println("The Ancestor Matcher executed in " + elapsedTime/1000 + " seconds");*/
+//		startTime = System.currentTimeMillis();
+//		System.out.println("\nRunning Closest Parent Matcher");
+//		runClosestParentMatcher();
+//		stopTime = System.currentTimeMillis();
+//	    elapsedTime = stopTime - startTime;
+//	    System.out.println("The Closest Parent Matcher executed in " + elapsedTime/1000 + " seconds");
+//	
+//		startTime = System.currentTimeMillis();
+//		System.out.println("\nRunning Ancestor Matcher");
+//		runAncestorMatcher();
+//		stopTime = System.currentTimeMillis();
+//	    elapsedTime = stopTime - startTime;
+//	    System.out.println("The Ancestor Matcher executed in " + elapsedTime/1000 + " seconds");
 
 		//System.out.println("\nRunning OppositeSubclass Matcher");
 		//runOppositeSubclassMatcher();
