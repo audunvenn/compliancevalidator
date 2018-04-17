@@ -71,22 +71,22 @@ public class WordNetSynMatcher extends ObjectAlignment implements AlignmentProce
 		
 		
 		
-		if (jaccardSim > 0.7) {
-			
-			System.out.println("Matching " + s1 + " and " + s2);
-			System.out.println("The jaccardSim is " + jaccardSim);
-			
-			//print synonymsets
-			System.out.println("Synonym set 1: ");
-			for (String s : synonymsS1) {
-				System.out.println(s);
-			}
-			
-			System.out.println("Synonym set 2: ");
-			for (String s : synonymsS2) {
-				System.out.println(s);
-			}
-		}
+//		if (jaccardSim > 0.7) {
+//			
+//			System.out.println("Matching " + s1 + " and " + s2);
+//			System.out.println("The jaccardSim is " + jaccardSim);
+//			
+//			//print synonymsets
+//			System.out.println("Synonym set 1: ");
+//			for (String s : synonymsS1) {
+//				System.out.println(s);
+//			}
+//			
+//			System.out.println("Synonym set 2: ");
+//			for (String s : synonymsS2) {
+//				System.out.println(s);
+//			}
+//		}
 
 		return jaccardSim;
 

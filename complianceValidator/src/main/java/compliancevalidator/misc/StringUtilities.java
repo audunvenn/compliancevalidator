@@ -6,9 +6,8 @@ import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-//import org.apache.commons.io.FileUtils;
-//import org.apache.jena.ext.com.google.common.collect.ArrayListMultimap;
-//import org.apache.jena.ext.com.google.common.collect.Multimap;
+//NOTE: There is a Lucene conflict between this implementation of Lucene and the Lucene version used by Neo4J. When running this method the Lucene import declarations in the POM.xml file needs to be "uncommented", and...
+	//...when running Neo4J they have to be commented out. 
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.StopAnalyzer;
 import org.apache.lucene.analysis.TokenStream;
@@ -299,27 +298,8 @@ public class StringUtilities {
 		return stripped;
 	}
 
-/*	public static String removeStopWordsfromFile(File inputFile) throws IOException {
-
-		StringBuilder tokens = new StringBuilder();
-
-		FileUtils fs = new FileUtils();
-
-		String text = fs.readFileToString(inputFile);
-
-		Analyzer analyzer = new StopAnalyzer(Version.LUCENE_36);
-		TokenStream tokenStream = analyzer.tokenStream(
-				LuceneConstants.CONTENTS, new StringReader(text));
-		TermAttribute term = tokenStream.addAttribute(TermAttribute.class);
-		while(tokenStream.incrementToken()) {
-			tokens.append(term + " ");
-		}
-
-		String tokenizedText = tokens.toString();
-		return tokenizedText;
-
-	}*/
-	
+	//NOTE: There is a Lucene conflict between this implementation of Lucene and the Lucene version used by Neo4J. When running this method the Lucene import declarations in the POM.xml file needs to be "uncommented", and...
+	//...when running Neo4J they have to be commented out. 
 	public static String removeStopWordsFromString(String inputText) throws IOException {
 
 		StringBuilder tokens = new StringBuilder();
@@ -338,126 +318,7 @@ public class StringUtilities {
 
 	}
 
-	// ***Methods not in use***
-
-	/*	*//**
-	 * Takes as input a Set of strings along with a separator (usually whitespace) and uses StringBuilder to create a string from the Set.
-	 * @param set
-	 * @param sep
-	 * @return result
-	 *//*
-	public static String join(Set<String> set, String sep) {
-		String result = null;
-		if(set != null) {
-			StringBuilder sb = new StringBuilder();
-			Iterator<String> it = set.iterator();
-			if(it.hasNext()) {
-				sb.append(it.next());
-			}
-			while(it.hasNext()) {
-				sb.append(sep).append(it.next());
-			}
-			result = sb.toString();
-		}
-		return result;
-	}*/
-
-	/*	*//**
-	 * Takes as input a String and produces an array of Strings from this String
-	 * @param s
-	 * @return result
-	 *//*
-	public static String[] split(String s) {
-		String[] result = s.split(" ");
-
-		return result;
-	}*/
-
-	/*	*//**
-	 * Takes as input two arrays of String and compares each string in one array with each string in the other array if they are equal
-	 * @param s1
-	 * @param s2
-	 * @return results - basically an iterator that counts the number of equal strings in the two arrays
-	 *//*
-	public static int commonWords(String[] s1, String[] s2) {
-
-		int results = 0;
-
-		for (int i = 0; i < s1.length; i++) {
-			for (int j = 0; j < s2.length; j++) {
-				if (s1[i].equals(s2[j])) {
-					results++;
-				}
-			}
-		}
-
-		return results;
-	}*/
-
-	/*	public static String removeDuplicates(String s) {
-
-		return new LinkedHashSet<String>(Arrays.asList(s.split(" "))).toString().replaceAll("(^\\[|\\]$)", "").replace(", ", " ");
-
-
-	}*/
-
-	/*public static String getString(OWLEntity e, OWLOntology ontology) {
-
-		String label = e.getIRI().toString();
-
-		if (label.contains("#")) {
-			label = label.substring(label.indexOf('#')+1);
-			return label;
-		}
-
-		if (label.contains("/")) {
-			label = label.substring(label.lastIndexOf('/')+1);
-			return label;
-		}
-
-		Set<OWLAnnotation> labels = e.getAnnotations(ontology);
-		//.getAnnotationPropertiesInSignature();
-
-		if (labels != null && labels.size() > 0) {
-			label = ((OWLAnnotation) labels.toArray()[0]).getValue().toString();
-			if (label.startsWith("\"")) {
-				label = label.substring(1);
-			}
-
-			if (label.contains("\"")) {
-				label = label.substring(0, label.lastIndexOf('"'));
-			}
-		}
-
-		return label;
-	}*/
-
-	public static void main(String args[]) {
-		String testString = "motionPicture";
-		String experiment = "biblio-bibo";
-
-		System.out.println(tokenize(testString, true));
-
-		String onto1 = experiment.substring(0, experiment.lastIndexOf("-"));
-		String onto2 = experiment.substring(experiment.lastIndexOf("-")+1, experiment.length());
-		System.out.println(onto1);
-
-		System.out.println(onto2);
-
-		String test = "academicArticle";
-
-		String newString = stringTokenize(test, false);
-
-		System.out.println("Original string: " + test + ", tokenized string: " + newString);
-
-		String prop = "hasCar";
-		System.out.println("Without prefix the property name is " + stripPrefix(prop));
-
-		String s = "Testing underscore";
-		System.out.println("Without underscore: " + replaceUnderscore(s));
-
-	}
-
+	
 
 
 }

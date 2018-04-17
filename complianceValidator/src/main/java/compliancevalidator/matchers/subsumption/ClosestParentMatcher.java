@@ -63,7 +63,7 @@ public class ClosestParentMatcher extends ObjectAlignment implements AlignmentPr
 				for ( Object cl1: ontology1().getClasses() ){
 
 					//get map from matchSubClasses2Class where the relation is the key and the value is the score
-					Map<String, Double> matchingMap = matchSubClasses2Class(cl1, cl2);
+					Map<String, Double> matchingMap = compareParents(cl1, cl2);
 
 					// add mapping into alignment object for each entry in the matching map
 					for (Map.Entry<String, Double> entry : matchingMap.entrySet()) {
@@ -89,71 +89,47 @@ public class ClosestParentMatcher extends ObjectAlignment implements AlignmentPr
 	 * @throws OntowrapException
 	 * @throws IOException
 	 */
-	private Map<String,Double> matchSubClasses2Class(Object o1, Object o2) throws OWLOntologyCreationException, OntowrapException, IOException {
+	private Map<String,Double> compareParents(Object o1, Object o2) throws OWLOntologyCreationException, OntowrapException, IOException {
 
 		String s1 = ontology1().getEntityName(o1);
-		//System.out.println("s1 is " + s1);
 		String s2 = ontology2().getEntityName(o2);
-		//System.out.println("s2 is " + s2);
-		
-		//System.out.println("Labels are " + labelOnto1.toString() + " and " + labelOnto2.toString());
-		
+				
 		//Whenever I use the GraphOperations class for using Neo4J methods I get a nullpointerexception in TestMatcher...
 		//GraphOperations op = new GraphOperations();
 
 		//get the s1 node from ontology 1
-		//Node s1Node = GraphOperations.getNode(s1, labelOnto1);
 		Node s1Node = getNode(s1, labelOnto1);
-		//System.out.println("s1Node is " + s1Node.getId());
 
 		//get the s2 node from ontology 2
-		//Node s2Node = GraphOperations.getNode(s2, labelOnto2);
 		Node s2Node = getNode(s2, labelOnto2);
-		//System.out.println("s2Node is " + s1Node.getId());
 
 		//get the parent nodes of a class from ontology 1
-		//ArrayList onto1Parents = GraphOperations.getClosestParentNode(s1Node, labelOnto1);
 		ArrayList onto1Parents = getClosestParentNode(s1Node, labelOnto1);
-		for (int i = 0; i < onto1Parents.size(); i++) {
-		}
 
 		//get the parent nodes of a class from ontology 2
-		//ArrayList onto2Parents = GraphOperations.getClosestParentNode(s2Node,labelOnto2);
 		ArrayList onto2Parents = getClosestParentNode(s2Node,labelOnto2);
-		for (int i = 0; i < onto2Parents.size(); i++) {
-		}
 
-		//double score = 0;
 		double iSubSimScore = 0;
 		ISub iSubMatcher = new ISub();
 
 		//map to keep the relation and matching score
 		Map<String,Double> matchingMap = new HashMap<String,Double>();
 
-		//System.out.println("\n");
-		//System.out.println("------- Matching task: " + s1 + " and " + s2 + " -------");
-
 		//match o1 with the parent nodes of o2
 		for (int i = 0; i < onto2Parents.size(); i++) {
 			iSubSimScore = iSubMatcher.score(s1, onto2Parents.get(i).toString());
-			//System.out.println("Matching " + s1 + " with " + s2 + "´s parent " + onto2Parents.get(i) + " with a score of " + iSubSimScore);
 			if (iSubSimScore >= THRESHOLD) {
 				matchingMap.put(hasA, iSubSimScore);
-				//System.out.println("Conclusion: " + s1 + " " + hasA + " " + s2);
 			}
 		}
 		//match parent nodes of o1 with o2
 		for (int i = 0; i < onto1Parents.size(); i++) {
 			iSubSimScore = iSubMatcher.score(s2, onto1Parents.get(i).toString());
-			//System.out.println("Matching " + s2 + " with " + s1 + "´s parent " +  onto1Parents.get(i) + " with a score of " + iSubSimScore);
 			if (iSubSimScore >= THRESHOLD) {
 				matchingMap.put(isA, iSubSimScore);
-				//System.out.println("Conclusion: " + s1 + " " + isA + " " + s2);
 			}
 		}
 
-		//System.out.println("------- End Matching task: " + s1 + " and " + s2 + " -------");
-		//System.out.println("\n");
 		return matchingMap;
 
 	}
