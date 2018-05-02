@@ -77,25 +77,30 @@ public class DefinitionsExtractor {
 		Set<OWLClass> classes = ontology.getClassesInSignature();
 
 		//compare the class names (fragments) with the key of the definitions map and if they are equal, add the definition as rdfs comment to the class
+		
+		//test defMap
+		for (Entry<String, String> e : defMap.entrySet()) {
+			System.out.println("Concept name: " + e.getKey() + "\nDefinition: " + e.getValue());
+		}
 
 		for (OWLClass cls : classes) {
 			String className = cls.getIRI().getFragment();
 			//for code lists
-			if (className.contains("Type")) {
-				//System.err.println(className + " contains Type");
-				String classNameCode = (className.substring(0, className.indexOf("Type"))) + "BaseType";
-				//System.err.println("The classNameCode is " + classNameCode);
-				if (defMap.containsKey(classNameCode)) {
-					System.err.println("Searching defMap for " + classNameCode);
-					String def = defMap.get(classNameCode);
-
-					OWLAnnotation comment = df.getOWLAnnotation(df.getRDFSComment(), df.getOWLLiteral(def, "en"));
-					OWLAxiom ax = df.getOWLAnnotationAssertionAxiom(cls.getIRI(), comment);
-					manager.applyChange(new AddAxiom(ontology, ax));
-				}
-			}
-
-			else {
+//			if (className.contains("Type")) {
+//				//System.err.println(className + " contains Type");
+//				String classNameCode = (className.substring(0, className.indexOf("Type"))) + "BaseType";
+//				//System.err.println("The classNameCode is " + classNameCode);
+//				if (defMap.containsKey(classNameCode)) {
+//					System.err.println("Searching defMap for " + classNameCode);
+//					String def = defMap.get(classNameCode);
+//
+//					OWLAnnotation comment = df.getOWLAnnotation(df.getRDFSComment(), df.getOWLLiteral(def, "en"));
+//					OWLAxiom ax = df.getOWLAnnotationAssertionAxiom(cls.getIRI(), comment);
+//					manager.applyChange(new AddAxiom(ontology, ax));
+//				}
+//			}
+//
+//			else {
 				if (defMap.containsKey(className)) {
 			
 				//System.err.println(className + " is in the definitions file");
@@ -104,7 +109,7 @@ public class DefinitionsExtractor {
 				OWLAnnotation comment = df.getOWLAnnotation(df.getRDFSComment(), df.getOWLLiteral(def, "en"));
 				OWLAxiom ax = df.getOWLAnnotationAssertionAxiom(cls.getIRI(), comment);
 				manager.applyChange(new AddAxiom(ontology, ax));
-			} 
+			//} 
 		}}
 
 		manager.saveOntology(ontology);
@@ -196,16 +201,16 @@ public class DefinitionsExtractor {
 
 	public static void main(String[] args) throws FileNotFoundException, OWLOntologyCreationException, OWLOntologyStorageException {
 
-		File defFile = new File("./files/BEST/iwxxm/definitions/iWXXMDefs.txt");
+		File defFile = new File("./files/AIRMDefinitions.txt");
 
 		Map<String, String> defMap = createDefinitionsMap(defFile);
 
 
 		//add definitions
-		File aixmOnto = new File("./files/BEST/iwxxm/ontologies/iwxxm_taf.owl");
+		File aixmOnto = new File("./files/aerodromeinfrastructure.owl");
 		addClassDefinitions(aixmOnto, defMap);
-		addIndividualsDefinitions(aixmOnto, defMap);
-		addPropertyDefinitions(aixmOnto, defMap);
+		//addIndividualsDefinitions(aixmOnto, defMap);
+		//addPropertyDefinitions(aixmOnto, defMap);
 
 	}
 

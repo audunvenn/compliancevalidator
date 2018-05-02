@@ -289,12 +289,7 @@ public class OntologyProcessor {
 		System.out.println("The Synonym Richness (Comp) (SR_comp) of " + onto1.getName() + " is " + OntologyStatistics.getSynonymRichnessComp(onto1));
 		System.out.println("The Synonym Richness (Comp) (SR_comp) of " + onto2.getName() + " is " + OntologyStatistics.getSynonymRichnessComp(onto2));
 		System.out.println("The Synonym Richness (Comp) (SR_comp) of " + onto1.getName() + " and " + onto2.getName() + " is " + (OntologyStatistics.getSynonymRichnessComp(onto1) + OntologyStatistics.getSynonymRichnessComp(onto2))/2);
-		
-		//System.out.println("The Common Substring (CS) of " + onto1.getName() + " and " + onto2.getName() + " is: " + OntologyStatistics.commonSubstringRatio(onto1, onto2));
-		
-		//System.out.println("The Hyponymy Richness (HR) of " + onto1.getName() + " is " + OntologyStatistics.getHyponymRichness(onto1));
-		//System.out.println("The Hyponymy Richness (HR) of " + onto2.getName() + " is " + OntologyStatistics.getHyponymRichness(onto2));
-		//System.out.println("The Hyponymy Richness (HR) of " + onto1.getName() + " and " + onto2.getName() + " is " + (OntologyStatistics.getHyponymRichness(onto1) + OntologyStatistics.getHyponymRichness(onto2))/2);
+
 		
 
 	}

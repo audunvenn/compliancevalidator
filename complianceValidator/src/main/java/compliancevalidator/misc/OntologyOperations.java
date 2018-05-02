@@ -18,7 +18,7 @@ import org.semanticweb.owlapi.util.OWLEntityRemover;
 public class OntologyOperations {
 	
 	public static void main(String[] args) throws OWLOntologyCreationException, OWLOntologyStorageException {
-		File ontology = new File("./files/experiment_06032018/datasets/d1/ontologies/aerodromeinfrastructure.owl");
+		File ontology = new File("./files/KEOD18/datasets_refined/d1/ontologies/aixm_airportheliport.owl");
 		
 		OWLOntologyManager manager = OWLManager.createOWLOntologyManager();
 		
@@ -34,6 +34,7 @@ public class OntologyOperations {
 		Set<OWLClass> classesToRemove = new HashSet<OWLClass>();
 		
 		for (OWLClass cls : allClasses) {
+			System.out.println(cls.getIRI());
 			if (cls.getIRI().getFragment().contains("_") || cls.getIRI().getFragment().contains("-")) {
 				classesToRemove.add(cls);
 			}
@@ -49,7 +50,7 @@ public class OntologyOperations {
 		manager.applyChanges(remover.getChanges());
 		manager.saveOntology(inputOnto);
 		
-		//deleteClasses(manager, inputOnto);
+		deleteClasses(manager, inputOnto);
 		deleteObjectProperties(manager, inputOnto);
 		deleteDataProperties(manager, inputOnto);
 		
@@ -141,5 +142,7 @@ public static void deleteDataProperties (OWLOntologyManager manager, OWLOntology
 		
 	
 }
+
+
 
 }

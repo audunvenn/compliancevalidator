@@ -35,9 +35,22 @@ public class AutoWeightPlusPlus {
 
 		//get all cells that are highest correspondence (for comparison only)
 		Map<Cell, Double> highCorrCoefficients = getHighestCorrespondencesCoefficient(highestCorrs);
+		
+		System.out.println("Test highest corr coefficient");
+		for (Entry<Cell, Double> e : highCorrCoefficients.entrySet()) {
+			System.out.println(e.getKey() + " - " + e.getValue());
+			
+		}
 
 		//calculate importance coefficient for each matcher
 		Map<BasicAlignment, Double> matcherCoefficient = getMatcherCoefficient(highCorrCoefficients, initialAlignments);
+		
+		System.out.println("Test matcher coefficient");
+		for (Entry<BasicAlignment, Double> e : matcherCoefficient.entrySet()) {
+			System.out.println(e.getKey() + " - " + e.getValue());
+			
+		}
+		
 
 		//calculate matcher weight
 		Map<BasicAlignment, Double> matcherWeight = getMatcherWeight(matcherCoefficient);
@@ -62,7 +75,8 @@ public class AutoWeightPlusPlus {
 			//get the matcher weight for this particular matcher/alignment
 			weight = matcherWeight.get(b);
 
-			for (Cell c : b) {
+			for (Cell c : b) {				
+				
 				newAlignment.addAlignCell(c.getObject1(), c.getObject2(), c.getRelation().getRelation(), c.getStrength()*weight);
 			}
 			initialAlignmentsWeighted.add(newAlignment);
@@ -192,7 +206,13 @@ public class AutoWeightPlusPlus {
 			double matcherSum = 0;
 			for (Cell c : a) {
 				for (Entry<Cell, Double> e : highCorrCoefficient.entrySet()) {
-					if (c.equals(e.getKey())) {
+					
+					//Note: Fixed so that object1 and object 2 and relation are compared rather than their cell identifier
+					if ((c.getObject1AsURI().equals(e.getKey().getObject1AsURI()) 
+							&& (c.getObject2AsURI().equals(e.getKey().getObject2AsURI()) 
+									&& (c.getRelation().getRelation().equals(e.getKey().getRelation().getRelation()))))) {
+					
+					//if (c.equals(e.getKey())) {
 
 						matcherSum+=e.getValue();
 					} 

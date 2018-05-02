@@ -119,7 +119,7 @@ public class WordNetOperations
 		
 		IndexWord indexWord = dictionary.lookupIndexWord(pos, inputWord);
 		
-		System.out.println("The lemma of " + inputWord + " is " + indexWord.getLemma());
+		//System.out.println("The lemma of " + inputWord + " is " + indexWord.getLemma());
 		
 		JWNL.shutdown();
 		

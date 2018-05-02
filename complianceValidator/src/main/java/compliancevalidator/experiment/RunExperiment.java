@@ -8,10 +8,7 @@ import java.io.PrintWriter;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.sql.Timestamp;
-import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.Properties;
-import java.util.Set;
 
 import org.neo4j.graphdb.DynamicLabel;
 import org.neo4j.graphdb.GraphDatabaseService;
@@ -29,22 +26,18 @@ import org.semanticweb.owlapi.model.OWLOntologyManager;
 //import compliancevalidator.combination.ParallelComposition;
 //import compliancevalidator.combination.SequentialComposition;
 import compliancevalidator.graph.GraphCreator;
+import compliancevalidator.matchers.equivalence.CodeListMatcher;
 import compliancevalidator.matchers.equivalence.DefinitionsMatcher;
 import compliancevalidator.matchers.equivalence.ISubMatcher;
 import compliancevalidator.matchers.equivalence.PropertyMatcher;
 import compliancevalidator.matchers.equivalence.RangeMatcher;
 import compliancevalidator.matchers.equivalence.WordNetSynMatcher;
+import compliancevalidator.matchers.subsumption.ClosestParentMatcher;
 import compliancevalidator.matchers.subsumption.CompoundMatcher;
 import compliancevalidator.matchers.subsumption.DefinitionsSubsMatcher;
-import compliancevalidator.matchers.subsumption.OppositeSubclassMatcher;
-import compliancevalidator.matchers.subsumption.AncestorMatcher;
-import compliancevalidator.matchers.subsumption.ClosestParentMatcher;
-//import compliancevalidator.matchers.subsumption.WNHyponymMatcher;
 import compliancevalidator.misc.StringUtilities;
 import fr.inrialpes.exmo.align.impl.BasicAlignment;
-import fr.inrialpes.exmo.align.impl.eval.PRecEvaluator;
 import fr.inrialpes.exmo.align.impl.renderer.RDFRendererVisitor;
-import fr.inrialpes.exmo.align.parser.AlignmentParser;
 
 /**
  * @author audunvennesland
@@ -53,11 +46,11 @@ import fr.inrialpes.exmo.align.parser.AlignmentParser;
 public class RunExperiment {
 
 	//final static double threshold = 0.95;
-	final static File datasetDir = new File("./files/experiment_06032018/datasets/d5/alignments/equivalence");
+	final static File datasetDir = new File("./files/KEOD18/datasets_refined/d5/alignments/equivalence");
 	final static String prefix = "file:";
 	
-	final static File onto1 = new File("./files/experiment_06032018/datasets/d5/ontologies/aixm_geometry.owl");
-	final static File onto2 = new File("./files/experiment_06032018/datasets/d5/ontologies/airm-mono.owl");
+	final static File onto1 = new File("./files/KEOD18/datasets_refined/d5/ontologies/aixm_geometry.owl");
+	final static File onto2 = new File("./files/KEOD18/datasets_refined/d5/ontologies/airm-mono.owl");
 
 	//for the combination strategies
 	//final static File topFolder = new File("./files/OAEI2009/alignments");
@@ -67,44 +60,54 @@ public class RunExperiment {
 		long startTime = 0;
 		long stopTime = 0;
 		long elapsedTime = 0;
+		
+		//Testing code list relations
+		startTime = System.currentTimeMillis();
+		System.out.println("\nRunning CodeList Matcher");
+		runCodeListMatcher();
+		stopTime = System.currentTimeMillis();
+	    elapsedTime = stopTime - startTime;
+	    System.out.println("The CodeList Matcher executed in " + elapsedTime/1000 + " seconds");
+		
+		
 		//EQUIVALENCE MATCHERS
 		
-		/*
-		startTime = System.currentTimeMillis();
-		System.out.println("\nRunning WordNet Synonym Matcher");
-		runWNSynMatcher();
-		stopTime = System.currentTimeMillis();
-	    elapsedTime = stopTime - startTime;
-	    System.out.println("The WordNet Synonym executed in " + elapsedTime/1000 + " seconds");
-	   
-	    
-		startTime = System.currentTimeMillis();
-		System.out.println("\nRunning ISub Matcher");
-		runISubMatcher();
-		stopTime = System.currentTimeMillis();
-	    elapsedTime = stopTime - startTime;
-	    System.out.println("The ISub matcher executed in " + elapsedTime/1000 + " seconds");
-	    
-		startTime = System.currentTimeMillis();
-		System.out.println("\nRunning Property Matcher");
-		runPropertyMatcher();
-		stopTime = System.currentTimeMillis();
-	    elapsedTime = stopTime - startTime;
-	    System.out.println("The property matcher executed in " + elapsedTime/1000 + " seconds");
-
-	    startTime = System.currentTimeMillis();
-		System.out.println("\nRunning Definitions Equivalence Matcher");
-		runDefinitionsMatcher();
-		stopTime = System.currentTimeMillis();
-	    elapsedTime = stopTime - startTime;
-	    System.out.println("The definitions equivalence matcher executed in " + elapsedTime/1000 + " seconds");
 		
-		startTime = System.currentTimeMillis();
-		System.out.println("\nRunning Range Matcher");
-		runRangeMatcher();
-		stopTime = System.currentTimeMillis();
-	    elapsedTime = stopTime - startTime;
-	    System.out.println("The range matcher executed in " + elapsedTime/1000 + " seconds");*/
+//		startTime = System.currentTimeMillis();
+//		System.out.println("\nRunning WordNet Synonym Matcher");
+//		runWNSynMatcher();
+//		stopTime = System.currentTimeMillis();
+//	    elapsedTime = stopTime - startTime;
+//	    System.out.println("The WordNet Synonym executed in " + elapsedTime/1000 + " seconds");
+//	   
+//	    
+//		startTime = System.currentTimeMillis();
+//		System.out.println("\nRunning ISub Matcher");
+//		runISubMatcher();
+//		stopTime = System.currentTimeMillis();
+//	    elapsedTime = stopTime - startTime;
+//	    System.out.println("The ISub matcher executed in " + elapsedTime/1000 + " seconds");
+//	    
+//		startTime = System.currentTimeMillis();
+//		System.out.println("\nRunning Property Matcher");
+//		runPropertyMatcher();
+//		stopTime = System.currentTimeMillis();
+//	    elapsedTime = stopTime - startTime;
+//	    System.out.println("The property matcher executed in " + elapsedTime/1000 + " seconds");
+//
+//	    startTime = System.currentTimeMillis();
+//		System.out.println("\nRunning Definitions Equivalence Matcher");
+//		runDefinitionsMatcher();
+//		stopTime = System.currentTimeMillis();
+//	    elapsedTime = stopTime - startTime;
+//	    System.out.println("The definitions equivalence matcher executed in " + elapsedTime/1000 + " seconds");
+//		
+//		startTime = System.currentTimeMillis();
+//		System.out.println("\nRunning Range Matcher");
+//		runRangeMatcher();
+//		stopTime = System.currentTimeMillis();
+//	    elapsedTime = stopTime - startTime;
+//	    System.out.println("The range matcher executed in " + elapsedTime/1000 + " seconds");
 	    
 //		//SUBSUMPTION MATCHERS
 	
@@ -115,12 +118,12 @@ public class RunExperiment {
 //	    elapsedTime = stopTime - startTime;
 //	    System.out.println("The Compound Matcher executed in " + elapsedTime/1000 + " seconds");
 //
-		startTime = System.currentTimeMillis();
-		System.out.println("\nRunning Definitions Subsumption Matcher");
-		runDefinitionsSubsMatcher();
-		stopTime = System.currentTimeMillis();
-	    elapsedTime = stopTime - startTime;
-	    System.out.println("The Definitions Subsumption Matcher executed in " + elapsedTime/1000 + " seconds");
+//		startTime = System.currentTimeMillis();
+//		System.out.println("\nRunning Definitions Subsumption Matcher");
+//		runDefinitionsSubsMatcher();
+//		stopTime = System.currentTimeMillis();
+//	    elapsedTime = stopTime - startTime;
+//	    System.out.println("The Definitions Subsumption Matcher executed in " + elapsedTime/1000 + " seconds");
 
 //		startTime = System.currentTimeMillis();
 //		System.out.println("\nRunning Closest Parent Matcher");
@@ -154,6 +157,46 @@ public class RunExperiment {
 
 		//------------perform evaluation
 		
+	}
+	
+	private static void runCodeListMatcher() throws AlignmentException, URISyntaxException, IOException {
+
+		PrintWriter writer = null;
+		AlignmentVisitor renderer = null;	
+		BasicAlignment evaluatedAlignment = null;	
+		Properties params = new Properties();
+		String alignmentFileName = null;
+		File outputAlignment = null;
+
+			AlignmentProcess a = new CodeListMatcher();
+
+			System.out.println("Matching " + onto1 + " and " + onto2 );
+			a.init( new URI(prefix.concat(onto1.toString().substring(2))), new URI(prefix.concat(onto2.toString().substring(2))));
+			params = new Properties();
+			params.setProperty("", "");
+			a.align((Alignment)null, params);	
+
+			alignmentFileName = datasetDir + "/" + StringUtilities.stripOntologyName(onto1.toString()) + 
+					"-" + StringUtilities.stripOntologyName(onto2.toString()) + "-CodeListMatcher.rdf";
+
+			outputAlignment = new File(alignmentFileName);
+
+
+			writer = new PrintWriter(
+					new BufferedWriter(
+							new FileWriter(outputAlignment)), true); 
+			renderer = new RDFRendererVisitor(writer);
+
+			evaluatedAlignment = (BasicAlignment)(a.clone());
+
+			evaluatedAlignment.normalise();
+
+			evaluatedAlignment.render(renderer);
+			writer.flush();
+			writer.close();
+			
+
+		System.out.println("\nCodeListMatcher completed!");
 	}
 	
 	private static void runWNSynMatcher() throws AlignmentException, URISyntaxException, IOException {
@@ -553,327 +596,6 @@ public class RunExperiment {
 		System.out.println("\nClosest Parent matcher completed!");
 	}
 
-	private static void runAncestorMatcher() throws AlignmentException, URISyntaxException, IOException, OWLOntologyCreationException {
-
-		PrintWriter writer = null;
-		AlignmentVisitor renderer = null;	
-		BasicAlignment evaluatedAlignment = null;
-
-		Properties params = new Properties();
-		String ontologyParameter1 = null;
-		String ontologyParameter2 = null;	
-		GraphCreator creator = null;
-		OWLOntologyManager manager = null;
-		OWLOntology o1 = null;
-		OWLOntology o2 = null;
-		Label labelO1 = null;
-		Label labelO2 = null;
-		double[] thresholds = {0.5, 0.7, 0.9, 0.95};
-		String alignmentFileName = null;
-		File outputAlignment = null;
-
-			//create a new instance of the neo4j database in each run
-			Timestamp timestamp = new Timestamp(System.currentTimeMillis());
-			String dbName = String.valueOf(timestamp.getTime());
-			//final File dbFile = new File("/Users/audunvennesland/Documents/phd/development/Neo4J_new/test");
-			File dbFile = new File("/Users/audunvennesland/Documents/phd/development/Neo4J_new/" + dbName);				
-			GraphDatabaseService db = new GraphDatabaseFactory().newEmbeddedDatabase(dbFile);
-			registerShutdownHook(db);
-
-			ontologyParameter1 = StringUtilities.stripPath(onto1.toString());
-			ontologyParameter2 = StringUtilities.stripPath(onto2.toString());
-
-			//create new graphs
-			manager = OWLManager.createOWLOntologyManager();
-			o1 = manager.loadOntologyFromOntologyDocument(onto1);
-			o2 = manager.loadOntologyFromOntologyDocument(onto2);
-			labelO1 = DynamicLabel.label( ontologyParameter1 );
-			labelO2 = DynamicLabel.label( ontologyParameter2 );
-
-			creator = new GraphCreator(db);
-			creator.createOntologyGraph(o1, labelO1);
-			creator.createOntologyGraph(o2, labelO2);
-
-			AlignmentProcess a = new AncestorMatcher(ontologyParameter1,ontologyParameter2, db);
-
-			System.out.println("Matching " + onto1 + " and " + onto2 );
-			a.init( new URI(prefix.concat(onto1.toString().substring(2))), new URI(prefix.concat(onto2.toString().substring(2))));
-			params = new Properties();
-			params.setProperty("", "");
-			a.align((Alignment)null, params);	
-			
-			for (int i = 0; i < thresholds.length; i++) {
-
-			alignmentFileName = datasetDir + "/" + StringUtilities.stripOntologyName(onto1.toString()) + 
-					"-" + StringUtilities.stripOntologyName(onto2.toString()) + "-Ancestor"+thresholds[i]+".rdf";
-
-			outputAlignment = new File(alignmentFileName);
-
-
-			writer = new PrintWriter(
-					new BufferedWriter(
-							new FileWriter(outputAlignment)), true); 
-			renderer = new RDFRendererVisitor(writer);
-
-			evaluatedAlignment = (BasicAlignment)(a.clone());
-
-			evaluatedAlignment.normalise();
-
-			evaluatedAlignment.cut(thresholds[i]);
-
-			evaluatedAlignment.render(renderer);
-			writer.flush();
-			writer.close();
-			}
-
-		System.out.println("\nAncestor matcher completed!");
-	}
-
-	private static void runOppositeSubclassMatcher() throws AlignmentException, URISyntaxException, IOException, OWLOntologyCreationException {
-
-		PrintWriter writer = null;
-		AlignmentVisitor renderer = null;	
-		BasicAlignment evaluatedAlignment = null;
-
-		Properties params = new Properties();
-		String ontologyParameter1 = null;
-		String ontologyParameter2 = null;	
-		GraphCreator creator = null;
-		OWLOntologyManager manager = null;
-		OWLOntology o1 = null;
-		OWLOntology o2 = null;
-		Label labelO1 = null;
-		Label labelO2 = null;
-		double[] thresholds = {0.5, 0.7, 0.9, 0.95};
-		String alignmentFileName = null;
-		File outputAlignment = null;
-
-			//create a new instance of the neo4j database in each run
-			Timestamp timestamp = new Timestamp(System.currentTimeMillis());
-			String dbName = String.valueOf(timestamp.getTime());
-			File dbFile = new File("/Users/audunvennesland/Documents/phd/development/Neo4J_new/" + dbName);				
-			GraphDatabaseService db = new GraphDatabaseFactory().newEmbeddedDatabase(dbFile);
-			registerShutdownHook(db);
-
-			ontologyParameter1 = StringUtilities.stripPath(onto1.toString());
-			ontologyParameter2 = StringUtilities.stripPath(onto2.toString());
-
-			//create new graphs
-			manager = OWLManager.createOWLOntologyManager();
-			o1 = manager.loadOntologyFromOntologyDocument(onto1);
-			o2 = manager.loadOntologyFromOntologyDocument(onto2);
-			labelO1 = DynamicLabel.label( ontologyParameter1 );
-			labelO2 = DynamicLabel.label( ontologyParameter2 );
-
-			creator = new GraphCreator(db);
-			creator.createOntologyGraph(o1, labelO1);
-			creator.createOntologyGraph(o2, labelO2);
-
-			AlignmentProcess a = new OppositeSubclassMatcher(ontologyParameter1,ontologyParameter2, db);
-
-			System.out.println("Matching " + onto1 + " and " + onto2 );
-			a.init( new URI(prefix.concat(onto1.toString().substring(2))), new URI(prefix.concat(onto2.toString().substring(2))));
-			params = new Properties();
-			params.setProperty("", "");
-			a.align((Alignment)null, params);	
-			
-			for (int i = 0; i < thresholds.length; i++) {
-
-			alignmentFileName = datasetDir + "/" + StringUtilities.stripOntologyName(onto1.toString()) + 
-					"-" + StringUtilities.stripOntologyName(onto2.toString()) + "-OppositeSubclass"+thresholds[i]+".rdf";
-
-			outputAlignment = new File(alignmentFileName);
-
-
-			writer = new PrintWriter(
-					new BufferedWriter(
-							new FileWriter(outputAlignment)), true); 
-			renderer = new RDFRendererVisitor(writer);
-
-			evaluatedAlignment = (BasicAlignment)(a.clone());
-
-			evaluatedAlignment.normalise();
-
-			evaluatedAlignment.cut(thresholds[i]);
-
-			evaluatedAlignment.render(renderer);
-			writer.flush();
-			writer.close();
-			}
-
-		System.out.println("\nOpposite subclass matcher completed!");
-	}
-
-	/*private static void runWNHyponymMatcher() throws AlignmentException, URISyntaxException, IOException {
-
-		File[] filesInDir = ontologyDir.listFiles();
-		PrintWriter writer = null;
-		AlignmentVisitor renderer = null;	
-		BasicAlignment evaluatedAlignment = null;
-
-		Properties params = new Properties();
-
-		for (int i = 0; i < filesInDir.length; i++) {
-			AlignmentProcess a = new WNHyponymMatcher();
-
-			System.out.println("Matching " + onto1 + " and " + onto2 );
-			a.init( new URI(prefix.concat(onto1.toString().substring(2))), new URI(prefix.concat(onto2.toString().substring(2))));
-			params = new Properties();
-			params.setProperty("", "");
-			a.align((Alignment)null, params);	
-
-			String alignmentFileName = "./files/OAEI2009/alignments/" + StringUtils.stripOntologyName(onto2.toString()) + "/" + StringUtils.stripOntologyName(onto1.toString()) + 
-					"-" + StringUtils.stripOntologyName(onto2.toString()) + "-WNHyponym"+thresholds[i]+".rdf";
-
-			File outputAlignment = new File(alignmentFileName);
-
-
-			writer = new PrintWriter(
-					new BufferedWriter(
-							new FileWriter(outputAlignment)), true); 
-			renderer = new RDFRendererVisitor(writer);
-
-			evaluatedAlignment = (BasicAlignment)(a.clone());
-
-			evaluatedAlignment.normalise();
-
-			evaluatedAlignment.cut(thresholds[i]);
-
-			evaluatedAlignment.render(renderer);
-			writer.flush();
-			writer.close();
-
-		}
-		System.out.println("\nWordNet Hyponym matcher completed!");
-	}*/
-	
-	/*private static void runWeightedSequentialCombination() throws AlignmentException, IOException {
-
-
-	File[] dirs = topFolder.listFiles();
-
-	for (int i = 0; i < dirs.length; i++) {
-
-		//get the name of the folder to use for the stored (combined) alignment
-		String folderName = dirs[i].getPath();
-		String combinedAlignmentName = folderName.substring(folderName.length() -3);
-		System.out.println("Combining alignments in dataset " + combinedAlignmentName); 
-
-
-		File[] files = null;
-		if (dirs[i].isDirectory()) {
-			files = dirs[i].listFiles();
-			Alignment a = SequentialComposition.weightedSequentialComposition4(files[1], files[2], files[0], files[3]);
-
-			//store the alignment
-			File outputAlignment = new File("./files/OAEI2009/combinedAlignments/" + combinedAlignmentName + "/WeightedSequentialCombination-" + getMatcherName(files[1].getName()) + "-" + getMatcherName(files[2].getName()) + "-" + getMatcherName(files[0].getName()) + "-" + getMatcherName(files[3].getName()) + ".rdf");
-
-			PrintWriter writer = new PrintWriter(
-					new BufferedWriter(
-							new FileWriter(outputAlignment)), true); 
-			AlignmentVisitor renderer = new RDFRendererVisitor(writer);
-
-			a.render(renderer);
-			writer.flush();
-			writer.close();
-
-		}
-	}
-	
-	System.out.println("Weighted Sequential Combination completed!");
-}
-
-
-
-//completeMatchWithPriority4
-private static void runParallelPriority() throws AlignmentException, IOException {
-
-	File[] dirs = topFolder.listFiles();
-
-	for (int i = 0; i < dirs.length; i++) {
-
-		//get the name of the folder to use for the stored (combined) alignment
-		String folderName = dirs[i].getPath();
-		String combinedAlignmentName = folderName.substring(folderName.length() -3);
-		System.out.println("Combining alignments in dataset " + combinedAlignmentName); 
-
-
-		File[] files = null;
-		if (dirs[i].isDirectory()) {
-			files = dirs[i].listFiles();
-			
-			//run for all permutations of matcher order
-			
-			
-			Alignment a = ParallelComposition.completeMatchWithPriority4(files[1], files[2], files[0], files[3]);
-
-			//store the alignment
-			File outputAlignment = new File("./files/OAEI2009/combinedAlignments/" + combinedAlignmentName + "/ParallelPriority-" + getMatcherName(files[1].getName()) + "-" + getMatcherName(files[2].getName()) + "-" + getMatcherName(files[0].getName()) + "-" + getMatcherName(files[3].getName()) + ".rdf");
-
-			PrintWriter writer = new PrintWriter(
-					new BufferedWriter(
-							new FileWriter(outputAlignment)), true); 
-			AlignmentVisitor renderer = new RDFRendererVisitor(writer);
-
-			a.render(renderer);
-			writer.flush();
-			writer.close();
-
-		}
-	}
-	
-	System.out.println("\nPriority Combination completed!");
-}
-
-	private static void runParallelSimpleVote() throws AlignmentException, IOException {
-
-		File[] dirs = topFolder.listFiles();
-
-		for (int i = 0; i < dirs.length; i++) {
-
-			//get the name of the folder to use for the stored (combined) alignment
-			String folderName = dirs[i].getPath();
-			String combinedAlignmentName = folderName.substring(folderName.length() -3);
-			System.out.println("Combining alignments in dataset " + combinedAlignmentName); 
-			ArrayList<Alignment> alignments = null;
-			AlignmentParser parser = null;
-			Alignment a = null;
-			File outputAlignment = null;
-			PrintWriter writer = null;
-			AlignmentVisitor renderer= null;
-
-			File[] files = null;
-			if (dirs[i].isDirectory()) {
-				files = dirs[i].listFiles();
-				
-				//need to create a set of alignments from the files[]
-				alignments = new ArrayList<Alignment>();
-				parser = new AlignmentParser();
-
-				
-				for (int j = 0; j < files.length; j++) {
-					alignments.add(parser.parse(files[j].toURI().toString()));
-				}
-				
-				a = ParallelComposition.simpleVote(alignments);
-
-				//store the alignment
-				outputAlignment = new File("./files/OAEI2009/combinedAlignments/" + combinedAlignmentName + "/ParallelSimpleVote-2-" + getMatcherName(files[0].getName()) + "-" + getMatcherName(files[1].getName()) + "-" + getMatcherName(files[2].getName()) + "-" + getMatcherName(files[3].getName()) + ".rdf");
-
-				writer = new PrintWriter(
-						new BufferedWriter(
-								new FileWriter(outputAlignment)), true); 
-				renderer = new RDFRendererVisitor(writer);
-
-				a.render(renderer);
-				writer.flush();
-				writer.close();
-
-			}
-		}
-		
-		System.out.println("\nSimpleVote Combination completed!");
-	}*/
 
 	private static void registerShutdownHook(final GraphDatabaseService db)
 	{

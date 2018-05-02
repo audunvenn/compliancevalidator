@@ -80,7 +80,7 @@ public class SequentialComposition {
 		for (Entry<Cell, Integer> e : cellCountMap.entrySet()) {
 			//if no other alignments have this cell -> reduce its confidence by 50 percent
 			if (e.getValue() == (0)) {
-				newAlignment.addAlignCell(e.getKey().getObject1(), e.getKey().getObject2(), StringUtilities.validateRelationType(e.getKey().getRelation().getRelation()), e.getKey().getStrength()-0.41);
+				newAlignment.addAlignCell(e.getKey().getObject1(), e.getKey().getObject2(), StringUtilities.validateRelationType(e.getKey().getRelation().getRelation()), reduceCellStrength(e.getKey().getStrength()));
 				//if one other alignment have this cell
 			} else if (e.getValue() == (1)) {
 				newAlignment.addAlignCell(e.getKey().getObject1(), e.getKey().getObject2(), StringUtilities.validateRelationType(e.getKey().getRelation().getRelation()), e.getKey().getStrength()-0.2);

@@ -100,6 +100,8 @@ public class ParallelComposition {
 			simpleVoteAlignment.addAlignCell(c.getObject1(), c.getObject2(), StringUtilities.validateRelationType(c.getRelation().getRelation()),
 					c.getStrength());
 		}
+		
+		simpleVoteAlignment.normalise();
 
 
 		return simpleVoteAlignment;

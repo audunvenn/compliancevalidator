@@ -6,6 +6,8 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.net.URI;
+import java.net.URISyntaxException;
+import java.util.ArrayList;
 import java.util.Properties;
 import java.util.Set;
 
@@ -22,6 +24,7 @@ import org.semanticweb.owlapi.model.OWLOntologyManager;
 import fr.inrialpes.exmo.align.impl.BasicAlignment;
 import fr.inrialpes.exmo.align.impl.BasicConfidence;
 import fr.inrialpes.exmo.align.impl.URIAlignment;
+import fr.inrialpes.exmo.align.impl.eval.PRecEvaluator;
 import fr.inrialpes.exmo.align.impl.rel.A5AlgebraRelation;
 import fr.inrialpes.exmo.align.impl.renderer.RDFRendererVisitor;
 import fr.inrialpes.exmo.align.parser.AlignmentParser;
@@ -32,13 +35,14 @@ import fr.inrialpes.exmo.align.parser.AlignmentParser;
  */
 public class AlignmentOperations {
 
+
 	public static Alignment extractEquivalenceRelations(File inputAlignmentFile) throws AlignmentException {
 
 		AlignmentParser parser = new AlignmentParser();
 		BasicAlignment inputAlignment = (BasicAlignment)parser.parse(inputAlignmentFile.toURI().toString());
 
 		BasicAlignment equivalenceAlignment = new URIAlignment();
-		
+
 		URI onto1URI = inputAlignment.getOntology1URI();
 		URI onto2URI = inputAlignment.getOntology2URI();
 
@@ -60,7 +64,7 @@ public class AlignmentOperations {
 		BasicAlignment inputAlignment = (BasicAlignment)parser.parse(inputAlignmentFile.toURI().toString());
 
 		BasicAlignment subsumptionAlignment = new URIAlignment();
-		
+
 		URI onto1URI = inputAlignment.getOntology1URI();
 		URI onto2URI = inputAlignment.getOntology2URI();
 
@@ -75,14 +79,14 @@ public class AlignmentOperations {
 
 		return subsumptionAlignment;
 	}
-	
+
 	public static Alignment extractRewrittenRelations(File inputAlignmentFile) throws AlignmentException {
 
 		AlignmentParser parser = new AlignmentParser();
 		BasicAlignment inputAlignment = (BasicAlignment)parser.parse(inputAlignmentFile.toURI().toString());
 
 		BasicAlignment rewrittenAlignment = new URIAlignment();
-		
+
 		URI onto1URI = inputAlignment.getOntology1URI();
 		URI onto2URI = inputAlignment.getOntology2URI();
 
@@ -97,7 +101,7 @@ public class AlignmentOperations {
 
 		return rewrittenAlignment;
 	}
-	
+
 
 	/**
 	 * Prints a BasicAlignment to file
@@ -220,24 +224,137 @@ public class AlignmentOperations {
 		return extractedAlignment;
 
 	}
-	
+
 	public static void countAlignmentCells(File inputAlignmentFile) throws AlignmentException {
-		
+
 		AlignmentParser parser = new AlignmentParser();
 		BasicAlignment inputAlignment = (BasicAlignment)parser.parse(inputAlignmentFile.toURI().toString());
-		
+
 		System.out.println("This alignment contains: " + inputAlignment.nbCells() + " cells");
 	}
 
-	public static void main(String[] args) throws OWLOntologyCreationException, AlignmentException, IOException {
+	public static void computeDifferentConfidenceThresholds(String matcher, File datasetDir, File inputAlignmentFile) throws IOException, AlignmentException {
+
+		AlignmentParser parser = new AlignmentParser();
+		BasicAlignment inputAlignment = (BasicAlignment)parser.parse(inputAlignmentFile.toURI().toString());
+
+		String alignmentFileName = null;
+		File outputAlignment = null;
+		PrintWriter writer = null;
+		AlignmentVisitor renderer = null;
+		BasicAlignment evaluatedAlignment = null;
+
+
+		double[] thresholds = {0.5, 0.7, 0.9};
+
+		for (int i = 0; i < thresholds.length; i++) {
+
+			alignmentFileName = datasetDir + "/" + matcher + "-"+thresholds[i]+".rdf";
+
+			outputAlignment = new File(alignmentFileName);
+
+
+			writer = new PrintWriter(
+					new BufferedWriter(
+							new FileWriter(outputAlignment)), true); 
+			renderer = new RDFRendererVisitor(writer);
+
+			evaluatedAlignment = (BasicAlignment)(inputAlignment.clone());
+
+			evaluatedAlignment.normalise();
+
+			evaluatedAlignment.cut(thresholds[i]);
+
+			evaluatedAlignment.render(renderer);
+			writer.flush();
+			writer.close();
+		}
+
+	}
+	
+	private static void removeCodeRelations(String inputFolderName, String outputFolderName) throws AlignmentException, URISyntaxException, IOException {
 		
-		File alignmentFile = new File("./files/experiment_06032018/datasets/d1/refalign/ref-align_aixm-airportheliport-airm-aerodromeinfrastructure-EquivalenceComplete.rdf");
+		AlignmentParser aparser = new AlignmentParser(0);
+
+		File folder = new File(inputFolderName);
+		File[] filesInDir = folder.listFiles();
+		Alignment evaluatedAlignment = null;
+		BasicAlignment processedAlignment = null;
+		
+		PrintWriter writer = null;
+		File outputAlignment = null;
+		AlignmentVisitor renderer = null;
+
+		String alignmentName = null;
+
+		for (int i = 0; i < filesInDir.length; i++) {
+			
+			processedAlignment = new URIAlignment();
+
+			alignmentName = filesInDir[i].getName();
+
+			String URI = StringUtilities.convertToFileURL(inputFolderName) + "/" + StringUtilities.stripPath(filesInDir[i].toString());
+			System.out.println("Evaluating file " + URI);
+			evaluatedAlignment = aparser.parse(new URI(URI));
+			
+			System.out.println("The input alignment contains " + evaluatedAlignment.nbCells() + " cells");
+			
+			URI onto1URI = evaluatedAlignment.getOntology1URI();
+			URI onto2URI = evaluatedAlignment.getOntology2URI();
+			
+			//need to initialise the alignment with ontology URIs and the type of relation (e.g. A5AlgebraRelation) otherwise exceptions are thrown
+			processedAlignment.init( onto1URI, onto2URI, A5AlgebraRelation.class, BasicConfidence.class );
+			
+			
+			for (Cell c : evaluatedAlignment) {
+				
+				if (!c.getObject1AsURI().getFragment().startsWith("Code")) {
+					processedAlignment.addAlignCell(c.getObject1(), c.getObject2(), c.getRelation().getRelation(), c.getStrength());
+				}
+			}
+			
+			//store the processed alignment in outputfolder
+			String alignmentFileName = outputFolderName + "Rev-"+alignmentName;
+			outputAlignment = new File(alignmentFileName);
+			writer = new PrintWriter(
+					new BufferedWriter(
+							new FileWriter(outputAlignment)), true); 
+			renderer = new RDFRendererVisitor(writer);
+			processedAlignment.render(renderer);
+			
+			System.out.println("The processed alignment contains " + processedAlignment.nbCells() + " cells");
+			
+			writer.flush();
+			writer.close();
+
+		}
+
+	}
+
+
+	public static void main(String[] args) throws OWLOntologyCreationException, AlignmentException, IOException, URISyntaxException {
+
+
+		String inputFolderName = "./files/KEOD18/datasets_refined/d1/alignments/equivalence/";
+		String outputFolderName = "./files/KEOD18/datasets_refined/d1/alignments/equivalence/";
+		
+		removeCodeRelations(inputFolderName, outputFolderName);
+
+//		String matcher = "AML";
+//		File dataDir = new File("./files/KEOD18/datasets_refined/d1/AMLNew");
+//				
+//		File alignmentFile = new File("./files/KEOD18/datasets_refined/d1/AMLNew/AML-05.rdf");
+//				
+//		computeDifferentConfidenceThresholds(matcher, dataDir, alignmentFile);
+
+
+
 		//File alignmentFile = new File("./files/inputAlignments/ref-align_aixm-airportheliport-airm-aerodromeinfrastructure-Rewritten.rdf");
-		
-		countAlignmentCells(alignmentFile);
-		
+
+		//countAlignmentCells(alignmentFile);
+
 		//***** EXTRACT REFERENCE ALIGNMENT FROM TRANSFORMED REFERENCE ALIGNMENT ****
-		 /*
+		/*
 		File alignmentFile = new File("./files/inputAlignments/ref-align_aixm-airportheliport-airm-aerodromeinfrastructure-RewrittenComplete.rdf");
 		File ontologyFile = new File("./files/ontologies/airm/aerodromeinfrastructure.owl");
 
@@ -258,17 +375,17 @@ public class AlignmentOperations {
 		extractedAlignment.render(renderer);
 		writer.flush();
 		writer.close();
-		*/
-		
-		
+		 */
+
+
 		/*
 		//***** EXTRACT SUBSUMPTION, REWRITTEN OR EQUIVALENCE REFERENCE ALIGNMENT FROM COMBINED REFERENCE ALIGNMENT ****
 		File alignmentFile = new File("./files/inputAlignments/AIXM2AIRM.rdf");
-		
+
 		Alignment extractedAlignment = extractEquivalenceRelations(alignmentFile);
-		
+
 		System.out.println("The extracted alignment contains " + extractedAlignment.nbCells() + " relations");
-		
+
 		String relationType = "Equivalence";
 
 		String onto1 = "aixm";
@@ -285,7 +402,7 @@ public class AlignmentOperations {
 		extractedAlignment.render(renderer);
 		writer.flush();
 		writer.close();
-*/
+		 */
 	}
 
 

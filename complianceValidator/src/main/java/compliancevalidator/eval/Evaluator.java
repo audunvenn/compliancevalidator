@@ -166,8 +166,16 @@ public class Evaluator {
 			evalScore.setPrecision(precision);
 			evalScore.setRecall(recall);
 			evalScore.setfMeasure(fMeasure);
-
-			evalFolderMap.put(URI.substring(URI.lastIndexOf("-") +1), evalScore);
+			
+//			if (URI.toString().contains("_")) {
+//			evalFolderMap.put(URI.substring(URI.lastIndexOf("-") +1), evalScore);
+//			System.out.println("Adding " + URI.substring(URI.lastIndexOf("- ") +1) + "  to foldermap") ;
+//			} else {
+			evalFolderMap.put(URI.substring(URI.lastIndexOf("/") +1), evalScore);
+			//System.out.println("Adding " + URI.substring(URI.lastIndexOf("/") -3) + "  to foldermap") ;
+			//}
+			
+			//evalFolderMap.put(URI, evalScore);
 		}
 
 		return evalFolderMap;
@@ -266,14 +274,14 @@ public class Evaluator {
 
 	public static void main(String[] args) throws AlignmentException, URISyntaxException, FileNotFoundException {
 
-		//String singleAlignment = "./files/experiment_06032018/datasets/d1/combination/intersect_relaxed-PropM05_Range05_WNSyn095.rdf";
-		String alignmentFolder = "./files/experiment_06032018/datasets/d1/alignments/equivalence";
-		String refalign = "./files/experiment_06032018/datasets/d1/refalign/ref-align_aixm-airportheliport-airm-aerodromeinfrastructure-EquivalenceComplete.rdf";
-		String outputEvaluationFile = "./files/experiment_06032018/evaluation/D1-EQ-NEW.xslx";
-		String datasetName = "D1";
+		//String singleAlignment = "./files/KEOD18/datasets_refined/d1/alignments/equivalence/Rev-AML-0.9.rdf";
+		String alignmentFolder = "./files/KEOD18/datasets_refined/d7/combination/equivalence";
+		String refalign = "./files/KEOD18/datasets_refined/d7/refalign/ref-align_aixm-organisation-airm-mono-Equivalence.rdf";
+		String outputEvaluationFile = "./files/KEOD18/evaluation/D7-COMB-EQ-REV.xslx";
+		String datasetName = "D7";
 
 		//evaluateSingleAlignment(singleAlignment, refalign);
-		//evaluateAlignmentFolder(alignmentFolder,refalign);
+		evaluateAlignmentFolder(alignmentFolder,refalign);
 		runCompleteEvaluation(alignmentFolder, refalign, outputEvaluationFile, datasetName);
 
 		//public static Map<String, Double> evaluateAlignmentFolderMap (String folderName, String referenceAlignmentFileName) throws AlignmentException, URISyntaxException {
