@@ -46,11 +46,11 @@ import fr.inrialpes.exmo.align.impl.renderer.RDFRendererVisitor;
 public class RunExperiment {
 
 	//final static double threshold = 0.95;
-	final static File datasetDir = new File("./files/KEOD18/datasets_refined/d5/alignments/equivalence");
+	final static File datasetDir = new File("./files/KEOD18/datasets_refined/d1/alignments/equivalence");
 	final static String prefix = "file:";
 	
-	final static File onto1 = new File("./files/KEOD18/datasets_refined/d5/ontologies/aixm_geometry.owl");
-	final static File onto2 = new File("./files/KEOD18/datasets_refined/d5/ontologies/airm-mono.owl");
+	final static File onto1 = new File("./files/KEOD18/datasets_refined/d1/ontologies/aixm_airportheliport.owl");
+	final static File onto2 = new File("./files/KEOD18/datasets_refined/d1/ontologies/aerodromeinfrastructure.owl");
 
 	//for the combination strategies
 	//final static File topFolder = new File("./files/OAEI2009/alignments");

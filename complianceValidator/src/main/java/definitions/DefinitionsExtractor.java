@@ -207,7 +207,7 @@ public class DefinitionsExtractor {
 
 
 		//add definitions
-		File aixmOnto = new File("./files/aerodromeinfrastructure.owl");
+		File aixmOnto = new File("./files/KEOD18/datasets_refined/d4/ontologies/aerodromeinfrastructure.owl");
 		addClassDefinitions(aixmOnto, defMap);
 		//addIndividualsDefinitions(aixmOnto, defMap);
 		//addPropertyDefinitions(aixmOnto, defMap);
